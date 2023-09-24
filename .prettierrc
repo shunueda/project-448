@@ -1,0 +1,20 @@
+{
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "useTabs": true,
+  "overrides": [
+    {
+      "files": [
+        "*.yml"
+      ],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
