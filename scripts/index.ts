@@ -27,7 +27,9 @@ console.log('Download done!')
 const tracks = await getAllPlaylistItems(playlistId)
 
 const usersFile = 'public/users.json'
-await writeFile(usersFile, '[]')
+if (!existsSync(usersFile)) {
+	await writeFile(usersFile, '[]')
+}
 const users = JSON.parse(await readFile(usersFile, 'utf-8')) as User[]
 
 for (const plTrack of tracks) {
