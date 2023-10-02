@@ -33,6 +33,9 @@ if (!existsSync(usersFile)) {
 const users = JSON.parse(await readFile(usersFile, 'utf-8')) as User[]
 
 for (const plTrack of tracks) {
+	if (!users.find(u => u.id === plTrack.added_by.id)) {
+		users.push(await spotifyClient.users.profile(plTrack.added_by.id))
+	}
 	if (existsSync(`trackInfo/${plTrack.track.id}.json`)) {
 		console.log(`Skipping ${plTrack.track.name} (id: ${plTrack.track.id})`)
 		continue
@@ -42,9 +45,6 @@ for (const plTrack of tracks) {
 		const data: PlaylistedTrackWithLyrics = {
 			...plTrack,
 			lyricsData: lyricInfo
-		}
-		if (!users.find(u => u.id === plTrack.added_by.id)) {
-			users.push(await spotifyClient.users.profile(plTrack.added_by.id))
 		}
 		await writeFile(`trackInfo/${plTrack.track.id}.json`, JSON.stringify(data))
 	} catch (_) {
