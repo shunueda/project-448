@@ -1,12 +1,14 @@
 import spotifyClient from '../SpotifyClient'
-import { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
+import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
 
-export default async function getAllPlaylistItems(playlistId: string) {
+export default async function getAllPlaylistItems(
+	playlistId: string
+): Promise<PlaylistedTrack[]> {
 	const limit = 50
-	let offset = 0
-	let allTracks: PlaylistedTrack[] = []
-	// eslint-disable-next-line no-constant-condition
-	while (true) {
+	async function fetchTracks(
+		offset: number,
+		accumulatedTracks: PlaylistedTrack[] = []
+	): Promise<PlaylistedTrack[]> {
 		const response = await spotifyClient.playlists.getPlaylistItems(
 			playlistId,
 			undefined,
@@ -14,12 +16,10 @@ export default async function getAllPlaylistItems(playlistId: string) {
 			limit,
 			offset
 		)
-		allTracks = allTracks.concat(response.items)
-		if (response.items.length < limit) {
-			break
-		}
-		offset += limit
+		const newAccumulatedTracks = accumulatedTracks.concat(response.items)
+		return response.items.length < limit
+			? newAccumulatedTracks
+			: fetchTracks(offset + limit, newAccumulatedTracks)
 	}
-
-	return allTracks
+	return fetchTracks(0)
 }

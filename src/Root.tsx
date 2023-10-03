@@ -1,7 +1,7 @@
 import { Composition, staticFile } from 'remotion'
 import Main from './Main'
 import { getAudioDurationInSeconds } from '@remotion/media-utils'
-import type { PlaylistedTrackWithLyrics } from '../scripts/models/PlaylistedTrackWithLyrics'
+import type { PlaylistedTrackWithMetadata } from '../scripts/models/PlaylistedTrackWithMetadata'
 
 export default function RemotionRoot() {
 	const fps = parseInt(process.env.FPS || '60', 10)
@@ -14,8 +14,13 @@ export default function RemotionRoot() {
 			defaultProps={{}}
 			durationInFrames={0}
 			calculateMetadata={async ({ props }) => {
+				if (process.env.MODE === 'debug') {
+					return {
+						durationInFrames: fps * 2
+					}
+				}
 				const playlistedTrackWithLyrics =
-					props as unknown as PlaylistedTrackWithLyrics
+					props as unknown as PlaylistedTrackWithMetadata
 				const durationInSeconds = await getAudioDurationInSeconds(
 					staticFile(`audio/${playlistedTrackWithLyrics.track.id}.mp3`)
 				)

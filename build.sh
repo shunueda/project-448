@@ -1,12 +1,11 @@
-#!/bin/zsh
+#!/bin/bash
 
-dir="trackInfo"
+output=$(ts-node "$1")
 
-for file in "$dir"/*.json; do
-    output_file=out/"$(basename "$file" .json)".mp4
-    if [[ ! -f "$output_file" ]]; then
-        npx remotion render --props="$file" --output="$output_file"
-    else
-        echo "$output_file already exists, skipping..."
-    fi
+IFS=' ' read -r -a ids <<< "$output"
+
+for id in "${ids[@]}"; do
+    output_file=out/temp/"$(basename "$id")".mp4
+    npx remotion render --props="out/props/$id" --output="$output_file"
+    ts-node scripts/bash/attachMetadata.ts "$id"
 done

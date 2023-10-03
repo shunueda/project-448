@@ -1,22 +1,15 @@
 import LyricsDisplay from './LyricsDisplay'
-import type { PlaylistedTrackWithLyrics } from '../scripts/models/PlaylistedTrackWithLyrics'
+import type { PlaylistedTrackWithMetadata } from '../scripts/models/PlaylistedTrackWithMetadata'
 import { loadFont } from '@remotion/google-fonts/Poppins'
 import { AbsoluteFill, Img, staticFile, useVideoConfig } from 'remotion'
-import type { Track, User } from '@spotify/web-api-ts-sdk'
-import { useState } from 'react'
-import useAsyncEffect from 'use-async-effect'
+import type { Track } from '@spotify/web-api-ts-sdk'
 
 export default function Main(props: Record<string, unknown>) {
 	const font = loadFont()
 	const config = useVideoConfig()
-	const [users, setUsers] = useState<User[]>()
 	const playlistedTrackWithLyrics =
-		props as unknown as PlaylistedTrackWithLyrics
+		props as unknown as PlaylistedTrackWithMetadata
 	const track = playlistedTrackWithLyrics.track as Track
-	useAsyncEffect(async () => {
-		const res = await fetch(staticFile('users.json'))
-		setUsers(await res.json())
-	}, [])
 	return (
 		<AbsoluteFill
 			style={{
@@ -70,9 +63,7 @@ export default function Main(props: Record<string, unknown>) {
 				</div>
 				<div>
 					<LyricsDisplay
-						playlistedTrackWithLyrics={
-							props as unknown as PlaylistedTrackWithLyrics
-						}
+						playlistedTrackWithLyrics={playlistedTrackWithLyrics}
 						fontFamily={font.fontFamily}
 					/>
 				</div>
@@ -114,9 +105,7 @@ export default function Main(props: Record<string, unknown>) {
 							fontStyle: 'italic'
 						}}
 					>
-						{users?.find(
-							user => user.id === playlistedTrackWithLyrics.added_by.id
-						)?.display_name || ''}
+						{playlistedTrackWithLyrics.addedUser.display_name || ''}
 					</span>
 				</p>
 			</div>

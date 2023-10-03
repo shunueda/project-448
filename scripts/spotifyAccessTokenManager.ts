@@ -11,7 +11,7 @@ export function isCachedSpotifyTokenExpired(): boolean {
 	}
 	const cache = JSON.parse(readFileSync(cacheFile, 'utf-8'))
 	return (
-		cache.accessTokenExpirationTimestampMs < Date.now() - cacheExpirationBuffer
+		cache.accessTokenExpirationTimestampMs < Date.now() + cacheExpirationBuffer
 	)
 }
 
@@ -31,7 +31,7 @@ export async function refreshSpotifyAccessToken(): Promise<string> {
 	return auth.accessToken
 }
 
-export async function getSptifyAccessToken(): Promise<string> {
+export async function getSpotifyAccessToken(): Promise<string> {
 	if (isCachedSpotifyTokenExpired()) {
 		return refreshSpotifyAccessToken()
 	}
