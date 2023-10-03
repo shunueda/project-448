@@ -1,9 +1,9 @@
 import { type Ref, useEffect, useRef, useState } from 'react'
-import type { PlaylistedTrackWithLyrics } from '../scripts/models/PlaylistedTrackWithLyrics'
+import type { PlaylistedTrackWithMetadata } from '../scripts/models/PlaylistedTrackWithMetadata'
 import { Audio, staticFile, useCurrentFrame, useVideoConfig } from 'remotion'
 
 interface Props {
-	playlistedTrackWithLyrics: PlaylistedTrackWithLyrics
+	playlistedTrackWithLyrics: PlaylistedTrackWithMetadata
 	fontFamily: string
 }
 

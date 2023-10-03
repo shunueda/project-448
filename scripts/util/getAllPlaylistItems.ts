@@ -1,5 +1,5 @@
 import spotifyClient from '../SpotifyClient'
-import { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
+import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
 
 export default async function getAllPlaylistItems(
 	playlistId: string

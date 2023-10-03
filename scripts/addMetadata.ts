@@ -1,32 +1,43 @@
-import { exec } from 'child_process'
-import { rmSync } from 'fs'
+import { execa } from 'execa'
+import { rm } from 'fs/promises'
 
-addMetadata(`out/${id}.mp4`, {
-	name: props.name,
-	title: props.title,
-	album: props.album,
-	artist: props.artist,
-	cover: props.cover
-})
+interface Metadata {
+	title: string
+	album: string
+	artist: string
+	cover?: string
+}
 
-function addMetadata(inputFile: string, metadata: Record<string, string>) {
-	const outputFile = `out/${metadata.name}.mp4`
-	let coverArg = ''
-	let mapArgs = '-map 0'
+export default async function addMetadata(id: string, metadata: Metadata) {
+	let coverArg: string[] = []
+	const mapArgs = ['-map', '0']
 	if (metadata.cover) {
-		coverArg = `-i "${metadata.cover}"`
-		mapArgs += ' -map 1 -c:v copy -disposition:v:1 attached_pic'
+		coverArg = ['-i', metadata.cover]
+		mapArgs.push(
+			'-map',
+			'1',
+			'-c:v',
+			'copy',
+			'-disposition:v:1',
+			'attached_pic'
+		)
 		delete metadata.cover
 	}
-	const metadataArgs =
-		Object.entries(metadata)
-			.map(([key, value]) => {
-				return `-metadata ${key}="${value}"`
-			})
-			.join(' ') + ` -metadata comment=`
-	const command = `ffmpeg -i "${inputFile}" ${coverArg} ${mapArgs} ${metadataArgs} -c:a copy "${outputFile}" -y`
-	exec(command, () => {
-		rmSync(inputFile)
-		console.log('Metadata and cover image added successfully.')
+	const metadataArgs = Object.entries(metadata).flatMap(([key, value]) => {
+		return ['-metadata', `${key}=${value}`]
 	})
+	metadataArgs.push('-metadata', `comment=${id}`)
+	const inputFile = `out/temp/${id}.mp4`
+	await execa('ffmpeg', [
+		'-i',
+		inputFile,
+		...coverArg,
+		...mapArgs,
+		...metadataArgs,
+		'-c:a',
+		'copy',
+		`out/artifacts/${metadata.title}.mp4`,
+		'-y'
+	])
+	await rm(inputFile)
 }
