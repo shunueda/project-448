@@ -61,7 +61,11 @@ export default function Main(props: Record<string, unknown>) {
 						{track.artists.map(artist => artist.name).join(', ')}
 					</h2>
 				</div>
-				<div>
+				<div
+					style={{
+						marginLeft: '3em',
+					}}
+				>
 					<LyricsDisplay
 						playlistedTrackWithLyrics={playlistedTrackWithLyrics}
 						fontFamily={font.fontFamily}

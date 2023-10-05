@@ -7,11 +7,13 @@
     "render": "remotion render",
     "prebuild": "ts-node scripts",
     "build": "bash build.sh scripts/bash/getPropIds.ts",
+    "deploy": "remotion lambda sites create src/index.ts --site-name=project-448",
     "test": "ts-node test"
   },
   "dependencies": {
-    "@remotion/google-fonts": "^4.0.40",
-    "@remotion/media-utils": "^4.0.40",
+    "@remotion/google-fonts": "4.0.45",
+    "@remotion/lambda": "4.0.45",
+    "@remotion/media-utils": "4.0.45",
     "@spotify/web-api-ts-sdk": "^1.1.2",
     "dotenv": "^16.3.1",
     "listr2": "^7.0.1",
@@ -19,12 +21,13 @@
     "node-fetch": "^3.3.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "remotion": "^4.0.0",
+    "remotion": "4.0.45",
+    "remotion-animated": "^2.0.0",
     "use-async-effect": "^2.2.7"
   },
   "devDependencies": {
-    "@remotion/cli": "^4.0.0",
-    "@remotion/eslint-config": "^4.0.0",
+    "@remotion/cli": "4.0.45",
+    "@remotion/eslint-config": "4.0.45",
     "@swc/core": "1.3.78",
     "@swc/helpers": "^0.5.2",
     "@types/react": "^18.0.26",

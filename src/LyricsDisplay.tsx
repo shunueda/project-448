@@ -1,30 +1,31 @@
-import { type Ref, useEffect, useRef, useState } from 'react'
-import type { PlaylistedTrackWithMetadata } from '../scripts/models/PlaylistedTrackWithMetadata'
 import { Audio, staticFile, useCurrentFrame, useVideoConfig } from 'remotion'
+import type { PlaylistedTrackWithMetadata } from '../scripts/models/PlaylistedTrackWithMetadata'
+import { useEffect, useRef, useState } from 'react'
+import { Animated, Move } from 'remotion-animated'
+import Animation from 'remotion-animated/dist/animations/Animation'
 
 interface Props {
 	playlistedTrackWithLyrics: PlaylistedTrackWithMetadata
 	fontFamily: string
 }
 
+interface LineData {
+	timestamp: number
+	linesCount: number
+}
+
 export default function LyricsDisplay({
 	playlistedTrackWithLyrics,
 	fontFamily
 }: Props) {
-	const [
-		currentLyricsLineIndexWithMultipleOffset,
-		setCurrentLyricsLineIndexWithMultipleOffset
-	] = useState(-1)
-	const [differedOffset, setDifferedOffset] = useState(0)
-	const currentBlockRef = useRef<HTMLDivElement>(null)
-
-	const lineHeight = 6.25
-
-	const trackId = playlistedTrackWithLyrics.track.id
-	const lyrics = playlistedTrackWithLyrics.lyricsData.lyrics.lines
+	const lineHeight = 2.3
+	const mainWidth = 16
+	const ref = useRef<HTMLDivElement>(null)
+	const [animations, setAnimations] = useState<Animation[]>([])
 	const frame = useCurrentFrame()
-	const { fps } = useVideoConfig()
-	const playbackTimeInMs = Math.round((frame / fps) * 1000)
+	const videoConfig = useVideoConfig()
+	const playbackTimeInMs = Math.round((frame / videoConfig.fps) * 1000)
+	const lyrics = playlistedTrackWithLyrics.lyricsData.lyrics.lines
 	let currentLyricsLineIndex = -1
 	for (let i = 0; i < lyrics.length; i++) {
 		if (playbackTimeInMs >= parseInt(lyrics[i].startTimeMs, 10)) {
@@ -34,77 +35,73 @@ export default function LyricsDisplay({
 		}
 	}
 	useEffect(() => {
-		if (currentBlockRef.current) {
-			const divHeight = currentBlockRef.current.clientHeight
-			const style = window.getComputedStyle(currentBlockRef.current)
-			const lineHeight = parseInt(style.lineHeight, 10)
-			const count = divHeight / lineHeight
-			const differedOffsetTemp = Math.round(count) - 1
-			setCurrentLyricsLineIndexWithMultipleOffset(
-				curr => curr + 1 + differedOffset
-			)
-			setDifferedOffset(differedOffsetTemp)
-		}
-	}, [currentLyricsLineIndex])
+		ref.current!.innerText = 'PLACEHOLDER'
+		const divHeight = ref.current!.clientHeight
+		const lineData = lyrics.map(it => {
+			ref.current!.innerText = it.words
+			const style = window.getComputedStyle(ref.current!)
+			const divHeight = ref.current!.clientHeight
+			return {
+				timestamp: (parseInt(it.startTimeMs, 10) / 1000) * videoConfig.fps,
+				linesCount: Math.round(divHeight / parseInt(style.lineHeight, 10))
+			} as LineData
+		})
+		let differed = 0
+		const animation = lineData.map(it => {
+			const option = {
+				y: -(differed + 1) * divHeight,
+				start: it.timestamp
+			}
+			differed = Math.abs(1 - it.linesCount)
+			return option
+		})
+		setAnimations(animation.map(option => Move(option)))
+	}, [])
+
 	return (
 		<>
-			<Audio src={staticFile(`audio/${trackId}.mp3`)} />
-			<div
+			<Audio
+				src={staticFile(`audio/${playlistedTrackWithLyrics.track.id}.mp3`)}
+			/>
+			<Animated
 				style={{
-					fontFamily,
+					marginTop: `${videoConfig.height / 2}px`,
 					overflowY: 'hidden',
-					padding: '3em',
+					color: '#bbbbbb',
 					lineHeight: `${lineHeight}em`,
-					marginTop: `calc(40% - ${lineHeight}em - ${
-						currentLyricsLineIndexWithMultipleOffset * lineHeight
-					}em)`
+					fontSize: '3.2em',
+					fontFamily,
+					fontWeight: 700,
+					width: `${mainWidth}em`
 				}}
+				animations={animations}
 			>
-				{lyrics.map((line, i) => {
-					return (
-						<Block
-							lineNumber={i}
-							currentLineNumber={currentLyricsLineIndex}
-							refIfHighlighted={currentBlockRef}
+				<div>
+					{playlistedTrackWithLyrics.lyricsData.lyrics.lines.map((it, i) => (
+						<p
+							key={i}
+							style={{
+								margin: 0,
+								color: i === currentLyricsLineIndex ? '#ffffff' : '#464646'
+							}}
 						>
-							{line.words}
-						</Block>
-					)
-				})}
-			</div>
+							{it.words}
+						</p>
+					))}
+				</div>
+			</Animated>
+			<div
+				ref={ref}
+				style={{
+					lineHeight: `${lineHeight}em`,
+					fontSize: '3.2em',
+					fontFamily,
+					fontWeight: 700,
+					position: 'absolute',
+					width: `${mainWidth}em`,
+					visibility: 'hidden'
+				}}
+			/>
 		</>
-	)
-}
-
-interface BlockProps {
-	children: string
-	lineNumber: number
-	currentLineNumber: number
-	refIfHighlighted?: Ref<HTMLDivElement>
-}
-
-export function Block({
-	lineNumber,
-	currentLineNumber,
-	refIfHighlighted,
-	children
-}: BlockProps) {
-	return (
-		<div
-			ref={lineNumber === currentLineNumber ? refIfHighlighted : undefined}
-			style={{
-				textAlign: 'left',
-				fontWeight: 'bold',
-				fontSize: '2.5em',
-				color:
-					lineNumber > currentLineNumber
-						? '#525252'
-						: lineNumber < currentLineNumber
-						? '#8f8f8f'
-						: '#e8e8e8'
-			}}
-		>
-			{children}
-		</div>
 	)
 }
