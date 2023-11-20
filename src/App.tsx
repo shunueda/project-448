@@ -1,21 +1,27 @@
 import useAsyncEffect from 'use-async-effect'
-import { PlaylistedTrackWithMetadata } from './models/PlaylistedTrackWithMetadata.ts'
 import { useState } from 'react'
+import { PlaylistedTrackWithMetadata } from './models/PlaylistedTrackWithMetadata.ts'
 import getCurrentDeck from './util/vdj/getCurrentDeck.ts'
 import getTrackTitle from './util/vdj/getTrackTitle.ts'
 import getPlaylistedTrackFromTitle from './util/vdj/getPlaylistedTrackFromTitle.ts'
-import runScript from './util/vdj/runScript.ts'
+import { fetchFromUrl } from 'music-metadata-browser'
 
 function App() {
-	// const [currentPlaylistedTrack, setCurrentPlaylistedTrack] =
-	// 	useState<PlaylistedTrackWithMetadata | null>(null)
+	const [currentPlaylistedTrack, setCurrentPlaylistedTrack] = useState<
+		PlaylistedTrackWithMetadata | undefined
+	>()
 	useAsyncEffect(async () => {
-		// const deck = await getCurrentDeck()
-		// const trackTitle = await getTrackTitle(deck)
-		// console.log(await getPlaylistedTrackFromTitle(trackTitle))
-		console.log(await runScript('deck 1 get_filepath'))
+		const deck = await getCurrentDeck()
+		const title = await getTrackTitle(deck)
+		setCurrentPlaylistedTrack(await getPlaylistedTrackFromTitle(title))
+		console.log(await fetchFromUrl('/TWICE - The Feels.mp3'))
 	}, [])
-	return <></>
+	return (
+		<>
+			<h2>Current:</h2>
+			<p>{currentPlaylistedTrack}</p>
+		</>
+	)
 }
 
 export default App

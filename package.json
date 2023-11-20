@@ -3,20 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "workspaces": [
-    "proxy"
-  ],
   "scripts": {
-    "start": "vite",
+    "dev": "vite --mode development",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6",
-    "cors": "^2.8.5"
+    "music-metadata-browser": "^2.5.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@spotify/web-api-ts-sdk": "^1.1.2",

@@ -1,7 +1,7 @@
 import { SpotifyApi } from '@spotify/web-api-ts-sdk'
 
 const spotifyClient = SpotifyApi.withClientCredentials(
-	process.env.SPOTIPY_CLIENT_ID as string,
-	process.env.SPOTIPY_CLIENT_SECRET as string
+	import.meta.env.VITE_SPOTIFY_CLIENT_ID,
+	import.meta.env.VITE_SPOTIFY_CLIENT_SECRET
 )
 export default spotifyClient

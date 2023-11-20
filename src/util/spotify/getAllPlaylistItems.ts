@@ -1,10 +1,11 @@
-import spotifyClient from '../spotifyClient'
+import spotifyClient from './spotifyClient.ts'
 import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
 
 export default async function getAllPlaylistItems(
 	playlistId: string
 ): Promise<PlaylistedTrack[]> {
 	const limit = 50
+
 	async function fetchTracks(
 		offset: number,
 		accumulatedTracks: PlaylistedTrack[] = []
@@ -21,5 +22,6 @@ export default async function getAllPlaylistItems(
 			? newAccumulatedTracks
 			: fetchTracks(offset + limit, newAccumulatedTracks)
 	}
+
 	return fetchTracks(0)
 }
