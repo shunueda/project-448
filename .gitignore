@@ -1,5 +1,9 @@
-.env
-.env.development
+proxy/.env
+proxy/.env.development
+
+proxy/.spotify_cache
+
+tracks
 
 # Logs
 logs
