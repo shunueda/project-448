@@ -1,3 +1,13 @@
 .root {
-  color: #ef10b5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .lyricsContainer {
+    overflow: hidden;
+    width: 60%;
+    height: 32em;
+  }
 }

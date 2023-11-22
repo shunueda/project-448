@@ -7,26 +7,22 @@ const playlistedTracks = await getAllPlaylistItems(
 	import.meta.env.VITE_PLAYLIST_ID
 )
 
-console.log(playlistedTracks)
-
 const cache = new Map<string, PlaylistedTrackWithMetadata>()
 
-export default async function getPlaylistedTrackFromTitle(
-	title: string
+export default async function searchPlaylist(
+	id: string
 ): Promise<PlaylistedTrackWithMetadata | undefined> {
-	if (cache.has(title)) {
-		return cache.get(title)
+	if (cache.has(id)) {
+		return cache.get(id)
 	}
-	const playlistedTrack = playlistedTracks.find(
-		track => track.track.name === title
-	)
+	const playlistedTrack = playlistedTracks.find(track => track.track.id === id)
 	if (playlistedTrack) {
 		const playlistedTrackWithMetadata = {
 			...playlistedTrack,
 			lyricsData: await fetchLyrics(playlistedTrack.track.id),
 			addedUser: await spotifyClient.users.profile(playlistedTrack.added_by.id)
 		}
-		cache.set(title, playlistedTrackWithMetadata)
+		cache.set(id, playlistedTrackWithMetadata)
 		return playlistedTrackWithMetadata
 	}
 	return

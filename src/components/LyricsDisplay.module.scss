@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Circular';
+  src: url('../assets/fonts/Circular/CircularStd-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lyricsDisplay {
+  .lyricsSection {
+    transition: margin-top 0.2s ease-in-out;
+    font-family: Circular, serif;
+    font-size: 3em;
+    background: #e3e3cf;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .line {
+  }
+}

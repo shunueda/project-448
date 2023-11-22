@@ -1,6 +1,8 @@
 proxy/.env
 proxy/.env.development
 
+*.mp3
+
 proxy/.spotify_cache
 
 tracks

@@ -2,10 +2,10 @@ export default interface LyricsData {
 	lyrics: {
 		syncType: 'LINE_SYNCED' | 'UNSYNCED'
 		lines: Array<{
-			startTimeMs: string
+			startTimeMs: number
 			words: string
 			syllables: string[]
-			endTimeMs: string
+			endTimeMs: number
 		}>
 		provider: string
 		providerLyricsId: string
