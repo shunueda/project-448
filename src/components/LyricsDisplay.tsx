@@ -1,48 +1,21 @@
-import { useRef, useState } from 'react'
-import { PlaylistedTrackWithMetadata } from '../models/PlaylistedTrackWithMetadata.ts'
-import Deck from '../util/vdj/Deck.ts'
+import { useContext, useRef, useState } from 'react'
 import useAsyncEffect from 'use-async-effect'
-import getFilePathFromDeck from '../util/vdj/getFilePathFromDeck.ts'
 import getPlaybackPosition from '../util/vdj/getPlaybackPosition.ts'
-import { fetchFromUrl } from 'music-metadata-browser'
-import searchPlaylist from '../util/vdj/searchPlaylist.ts'
 import styles from './LyricsDisplay.module.scss'
-import getCurrentDeck from '../util/vdj/getCurrentDeck.ts'
+import { GlobalContext } from '../App.tsx'
 
 export default function LyricsDisplay() {
-	const [currentPlaylistedTrack, setCurrentPlaylistedTrack] = useState<
-		PlaylistedTrackWithMetadata | undefined
-	>()
-	const [deck, setDeck] = useState<Deck>(Deck.RIGHT)
 	const [currentMillisecond, setCurrentMillisecond] = useState(0)
-	const [titles, setTitles] = useState(['', ''])
 	const [currentLine, setCurrentLine] = useState(0)
 	const positionCheckInterval = useRef<NodeJS.Timeout>()
-	const deckCheckInterval = useRef<NodeJS.Timeout>()
 	const lyricsSectionRef = useRef<HTMLDivElement>(null)
-	useAsyncEffect(async () => {
-		if (deckCheckInterval.current) {
-			clearInterval(deckCheckInterval.current)
-		}
-		deckCheckInterval.current = setInterval(async () => {
-			setDeck(await getCurrentDeck())
-			setTitles([
-				await getFilePathFromDeck(Deck.LEFT),
-				await getFilePathFromDeck(Deck.RIGHT)
-			])
-		}, 50)
-		return () => {
-			if (deckCheckInterval.current) {
-				clearInterval(deckCheckInterval.current)
-			}
-		}
-	}, [])
+	const { currentDeck, currentPlaylistedTrack } = useContext(GlobalContext)
 	useAsyncEffect(async () => {
 		if (positionCheckInterval.current) {
 			clearInterval(positionCheckInterval.current)
 		}
 		positionCheckInterval.current = setInterval(async () => {
-			const playbackPosition = await getPlaybackPosition(deck)
+			const playbackPosition = await getPlaybackPosition(currentDeck)
 			setCurrentMillisecond(playbackPosition)
 			if (currentPlaylistedTrack) {
 				const lyricLines = currentPlaylistedTrack.lyricsData.lyrics.lines
@@ -59,17 +32,7 @@ export default function LyricsDisplay() {
 				clearInterval(positionCheckInterval.current)
 			}
 		}
-	}, [deck])
-	useAsyncEffect(async () => {
-		const filepath = await getFilePathFromDeck(deck)
-		const publicFileName = filepath.substring(
-			filepath.lastIndexOf('/public') + '/public'.length
-		)
-		const metadata = await fetchFromUrl(publicFileName)
-		const trackId = metadata.common.comment![0]
-		const playlistedTrack = await searchPlaylist(trackId)
-		setCurrentPlaylistedTrack(playlistedTrack)
-	}, [...titles, deck])
+	}, [currentDeck])
 	useAsyncEffect(async () => {
 		let offset = 0
 		for (let i = 0; i < currentLine; i++) {
@@ -78,7 +41,7 @@ export default function LyricsDisplay() {
 				offset += line.offsetHeight
 			}
 		}
-		lyricsSectionRef.current!.style.marginTop = `-${offset}px`
+		lyricsSectionRef.current!.style.marginTop = `calc(-${offset}px + 50%)`
 	}, [currentLine])
 	return (
 		<div className={styles.lyricsDisplay}>

@@ -1,7 +1,6 @@
-import type { PlaylistedTrack, User } from '@spotify/web-api-ts-sdk'
-import type LyricsData from './LyricsData.ts'
+import { PlaylistedTrackWithLyricsData } from './PlaylistedTrackWithLyricsData.ts'
+import { IAudioMetadata } from 'music-metadata-browser'
 
-export type PlaylistedTrackWithMetadata = PlaylistedTrack & {
-	lyricsData: LyricsData
-	addedUser: User
+export type PlaylistedTrackWithMetadata = PlaylistedTrackWithLyricsData & {
+	metadata: IAudioMetadata
 }
