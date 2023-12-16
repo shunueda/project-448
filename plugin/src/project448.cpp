@@ -1,14 +1,9 @@
 #include "project448.h"
 #include "vdj/vdjPlugin8.h"
-#include "util.h"
 #include <thread>
-#include "project448.h"
-#include "util.h"
-#include "vdj/vdjPlugin8.h"
 #include <utility>
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
-#include <iostream>
 
 typedef websocketpp::server<websocketpp::config::asio> server;
 
@@ -53,14 +48,13 @@ void Project448::start_server() {
         socket_server.clear_access_channels(websocketpp::log::alevel::frame_payload);
         socket_server.init_asio();
         socket_server.set_message_handler(
-                bind([this](server *s, websocketpp::connection_hdl hdl, server::message_ptr msg) {
+                bind([this](server *s, websocketpp::connection_hdl hdl, const server::message_ptr &msg) {
                     auto payload = msg->get_payload();
-                    post("Sending: " + payload);
                     char buffer[2048];
                     this->GetStringInfo(payload.c_str(), buffer, 2048);
                     s->send(std::move(hdl), std::string(buffer), msg->get_opcode());
                 }, &socket_server, ::_1, ::_2));
-        socket_server.listen(9002);
+        socket_server.listen(8000);
         socket_server.start_accept();
         socket_server.run();
     });
