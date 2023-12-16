@@ -6,7 +6,7 @@
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
 
-typedef websocketpp::server <websocketpp::config::asio> server;
+typedef websocketpp::server<websocketpp::config::asio> server;
 
 class Project448 : public IVdjPluginDsp8 {
 public:
@@ -20,11 +20,13 @@ public:
 
     HRESULT VDJ_API OnStop() override;
 
-    HRESULT VDJ_API OnProcessSamples(float *buffer, int nb) override;
+    HRESULT VDJ_API OnProcessSamples(float *buffer, int nb) override {
+        return S_OK;
+    };
 
     server socket_server;
 
-    void startServer();
+    void start_server();
 };
 
 #endif
