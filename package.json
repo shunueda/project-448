@@ -1,0 +1,13 @@
+{
+  "name": "project-448",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "downloader",
+    "frontend",
+    "shared"
+  ],
+  "repository": "https://github.com/shunueda/project-448.git",
+  "author": "Shun Ueda <62182668+shunueda@users.noreply.github.com>",
+  "license": "MIT"
+}
