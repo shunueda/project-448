@@ -2,7 +2,6 @@
 #define PROJECT448_H
 
 #include <vdj/vdjDsp8.h>
-#include "util.h"
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
 
