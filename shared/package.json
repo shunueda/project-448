@@ -1,9 +1,0 @@
-{
-  "name": "shared",
-  "version": "1.0.0",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
-}
