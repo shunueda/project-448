@@ -9,17 +9,23 @@ import { Writable } from 'stream'
 import { mkdirp } from 'mkdirp'
 import downloadImage from '../downloadImage'
 import fetchLyrics from '../spotify/fetchLyrics'
-import lyricsDataToLrc from '../lyricsDataToLrc'
 
 const tmp = 'tmp'
 
-ffmetadata.setFfmpegPath(ffmpeg)
+ffmetadata.setFfmpegPath(ffmpeg!)
 
-export default function downloadAudio(url: string, track: Track, direcotry: string) {
+export interface TrackWithLocalPath extends Track {
+  localPath: string
+}
+
+export default function downloadAudio(url: string, track: Track, direcotry: string): Promise<TrackWithLocalPath> {
   return new Promise(async (resolve, reject) => {
     const pathname = path.resolve(process.cwd(), direcotry, `${track.name}.mp3`)
     if (existsSync(pathname)) {
-      resolve()
+      resolve({
+        ...track,
+        localPath: pathname
+      })
       return
     }
     await mkdirp(tmp)
@@ -28,7 +34,7 @@ export default function downloadAudio(url: string, track: Track, direcotry: stri
       filter: 'audioonly',
       quality: 'highestaudio'
     })
-    const ffmpegProcess = spawn(ffmpeg, [
+    const ffmpegProcess = spawn(ffmpeg!, [
       '-loglevel', '8', '-hide_banner',
       '-progress', 'pipe:3',
       '-i', 'pipe:4',
@@ -39,17 +45,22 @@ export default function downloadAudio(url: string, track: Track, direcotry: stri
         'inherit', 'inherit', 'inherit',
         'pipe', 'pipe'
       ]
-    } as SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioNull>)
+    } as unknown as SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioNull>)
     const thumbnailPath = `${tmp}/${track.id}.jpg`
     if (!existsSync(thumbnailPath)) {
       await downloadImage(track.album.images[0].url, thumbnailPath)
+    }
+    const lyrics = await fetchLyrics(track.id)
+    if (lyrics === undefined) {
+      reject()
+      return
     }
     ffmpegProcess.on('close', async () => {
       const metadata = {
         artist: track.artists.map(artist => artist.name).join('/'),
         title: track.name,
         album: track.album.name,
-        lyrics: lyricsDataToLrc(await fetchLyrics(track.id))
+        lyrics
       }
       ffmetadata.write(pathname, metadata, {
         attachments: [path.resolve(process.cwd(), thumbnailPath)]
@@ -57,7 +68,10 @@ export default function downloadAudio(url: string, track: Track, direcotry: stri
         if (err) {
           reject(err)
         }
-        resolve()
+        resolve({
+          ...track,
+          localPath: pathname
+        })
       })
     })
     stream.pipe(ffmpegProcess.stdio[4] as Writable)
