@@ -5,14 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/downloader/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/downloader/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/components/LyricsDisplay.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/components/LyricsDisplay.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/Deck.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/createImageUrlFromBuffer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/getCurrentDeck.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/getCurrentDeckState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/getLyricsFromMetadata.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/getMetadata.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/models/ImageBufferData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/models/VDJState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/lib/runVdjScript.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/_document.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/api/getMetadata.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-BlackItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-BoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Book.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-BookItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Light Italic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/fonts/Circular/CircularStd-MediumItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/styles/Home.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/styles/globals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EBA0A2C5-598D-47F7-B721-33AE42452393}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EBA0A2C5-598D-47F7-B721-33AE42452393}.ssfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/downloadImage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/downloadImage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/lyricsDataToLrc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/accessTokenManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/accessTokenManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/fetchLyrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin/src/project448.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/src/project448.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin/src/project448.h" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/src/project448.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,21 +99,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;with-vdj-plugin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "with-vdj-plugin",
+    "javascript.nodejs.core.library.configured.version": "20.10.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.0",
+    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/frontend/public/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/me/.nvm/versions/node/v20.10.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/Users/me/dev/shunueda/project-448/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public/fonts" />
+      <recent name="$PROJECT_DIR$/frontend/lib" />
+      <recent name="$PROJECT_DIR$/frontend/lib/models" />
+      <recent name="$PROJECT_DIR$/downloader" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public/fonts/circular" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/downloader/src/models" />
+      <recent name="$PROJECT_DIR$/downloader/src/youtube" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,6 +147,7 @@
       <workItem from="1702684232785" duration="511000" />
       <workItem from="1702685496912" duration="196000" />
       <workItem from="1702685700213" duration="3630000" />
+      <workItem from="1702709004553" duration="70680000" />
     </task>
     <servers />
   </component>
@@ -69,5 +156,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

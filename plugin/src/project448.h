@@ -23,7 +23,11 @@ public:
         return S_OK;
     };
 
+    std::string run_script(const std::string &);
+
     server socket_server;
+
+    int time_to_ms(const std::string &);
 
     void start_server();
 };

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from 'fs'
 import fetch from 'node-fetch'
-import type SpotifyAuth from 'shared/models/SpotifyAuth'
+import SpotifyAuth from '../models/SpotifyAuth'
 
 const cacheFile = '.spotify_cache'
 const cacheExpirationBuffer = 1000 * 60 * 5 // 5 min
