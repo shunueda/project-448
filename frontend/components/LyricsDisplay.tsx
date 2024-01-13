@@ -12,11 +12,9 @@ interface Props {
 }
 
 export default function LyricsDisplay(props: Props) {
-  console.log("".toString())
   const [lyricsData, setLyricsData] = useState<LyricsData>()
   const [lyricsIndex, setLyricsIndex] = useState<number>(0)
   const [marginTop, setMarginTop] = useState<number>(0)
-  const [mainTopBottom, setMainTopBottom] = useState<[number, number]>([0, 0])
   useAsyncEffect(async () => {
     if (!props?.deckState?.filepath || !props?.metadata) {
       return
@@ -32,18 +30,11 @@ export default function LyricsDisplay(props: Props) {
         break
       }
     }
-  }, [props.deckState])
-  useEffect(render, [lyricsIndex])
-
-  function render() {
+  }, [props])
+  useEffect(() => {
     let totalLineHeight = 0
     const mainElement = document.getElementById('lyricsdisplay')!
-    const topBottom = [
-      mainElement.offsetTop,
-      mainElement.offsetHeight + mainElement.offsetTop
-    ] satisfies [number, number]
     const lineHeights = []
-    setMainTopBottom(topBottom)
     for (let i = 0; i < lyricsIndex - 1; i++) {
       const line = document.getElementById(`lyrics-line-${i}`)!
       const lineHeight = line.offsetHeight || 0
@@ -53,8 +44,7 @@ export default function LyricsDisplay(props: Props) {
     const oneLineHeight = Math.min(...lineHeights)
     const mainHeight = mainElement?.offsetHeight || 0
     setMarginTop(totalLineHeight - mainHeight / 2 + oneLineHeight / 2)
-  }
-  useEffect(render, [])
+  }, [lyricsIndex])
   return (
     <div className={styles.main} id='lyricsdisplay'>
       <div className={styles.content} style={{ marginTop: `-${marginTop}px` }}>

@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development yarn start",
-    "start": "node --no-warnings --loader @swc-node/register/esm src/index.ts"
+    "start": "node --no-warnings --trace-uncaught --loader @swc-node/register/esm src/index.ts"
   },
   "devDependencies": {
     "@swc-node/register": "^1.6.8",

@@ -1,5 +1,5 @@
 import spotifyClient from './SpotifyClient'
-import type { Market, PlaylistedTrack } from '@spotify/web-api-ts-sdk'
+import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
 
 export default async function getPlaylistedTracks(
   playlistId: string
@@ -12,8 +12,8 @@ export default async function getPlaylistedTracks(
   ): Promise<PlaylistedTrack[]> {
     const response = await spotifyClient.playlists.getPlaylistItems(
       playlistId,
-      undefined as Market,
-      undefined as string,
+      undefined,
+      undefined,
       limit,
       offset
     )
