@@ -5,15 +5,391 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/downloader/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{073BD8A6-6CBF-4D73-B627-0423A70B24D5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{073BD8A6-6CBF-4D73-B627-0423A70B24D5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0781F5EA-1615-4D62-A8C2-0806A8A66411}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0781F5EA-1615-4D62-A8C2-0806A8A66411}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{07DCE88D-3C3B-4B6F-90BD-73DAE5EFB740}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{07DCE88D-3C3B-4B6F-90BD-73DAE5EFB740}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{08A46A96-5689-4211-BFA1-C87DA2155B31}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{08A46A96-5689-4211-BFA1-C87DA2155B31}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0A98E556-F98E-4D10-97F9-B9E461DD963C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0A98E556-F98E-4D10-97F9-B9E461DD963C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0B27C4DB-024D-4B33-A010-973064DDD278}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0B27C4DB-024D-4B33-A010-973064DDD278}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0B2C78DB-FF26-4B5A-BCC8-C69B841C655B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0B2C78DB-FF26-4B5A-BCC8-C69B841C655B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0C7B3AEE-CB5C-4631-A042-B707B8D8EB43}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0C7B3AEE-CB5C-4631-A042-B707B8D8EB43}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0D210929-A391-498B-B2D2-81C409621C69}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0D210929-A391-498B-B2D2-81C409621C69}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0E02B92A-A9A2-450C-9EBD-D8792CBDF90B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0E02B92A-A9A2-450C-9EBD-D8792CBDF90B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{10749986-1B0C-4DE8-B4AD-619B51AAA5C1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{10749986-1B0C-4DE8-B4AD-619B51AAA5C1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{11115E19-B217-4FCC-9AA3-6D9DB230670E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{11115E19-B217-4FCC-9AA3-6D9DB230670E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{15D7E747-86F5-421E-9022-585A54E767AE}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{15D7E747-86F5-421E-9022-585A54E767AE}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1617465D-3694-45E5-830A-4F7DA861E9C7}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1617465D-3694-45E5-830A-4F7DA861E9C7}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{163890E8-2AEE-4E45-BBBD-03C6D2C0F194}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{163890E8-2AEE-4E45-BBBD-03C6D2C0F194}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{182A08BC-0C9B-4281-9246-5A3EFCF04937}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{182A08BC-0C9B-4281-9246-5A3EFCF04937}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{18814D9D-2770-48EB-82C5-14AE343CE484}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{18814D9D-2770-48EB-82C5-14AE343CE484}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{18C5698D-10B8-4E36-B82F-F4F9E0DD9077}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{18C5698D-10B8-4E36-B82F-F4F9E0DD9077}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1DEAB99E-D5C4-4DF0-8A1D-59171CB6398A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1DEAB99E-D5C4-4DF0-8A1D-59171CB6398A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1FE86EF3-20BB-402C-8A8A-45552A99FF64}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1FE86EF3-20BB-402C-8A8A-45552A99FF64}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2117F0B9-896A-4368-B3FE-109A772E5D9C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2117F0B9-896A-4368-B3FE-109A772E5D9C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{21E45DE4-3D55-4423-A12A-6E4789216606}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{21E45DE4-3D55-4423-A12A-6E4789216606}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2234C67C-990A-4012-9ED6-C56F9FA27442}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2234C67C-990A-4012-9ED6-C56F9FA27442}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{24D2439D-A0AC-4B34-A63B-A4111FFD1FBD}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{24D2439D-A0AC-4B34-A63B-A4111FFD1FBD}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{28077808-5530-4D27-A66C-0F049159F992}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{28077808-5530-4D27-A66C-0F049159F992}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{29BD3F44-5452-4940-BE89-1104C3C5A9A8}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{29BD3F44-5452-4940-BE89-1104C3C5A9A8}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2C9D95AE-A5F4-4985-8E84-4285DC371DF5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2C9D95AE-A5F4-4985-8E84-4285DC371DF5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2F0FFA00-D80F-4DBC-860A-F8E6419286AE}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2F0FFA00-D80F-4DBC-860A-F8E6419286AE}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2F956E7B-3A2B-4C07-BF7F-439B4B7FE19D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{2F956E7B-3A2B-4C07-BF7F-439B4B7FE19D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{32632F16-3C1C-40F2-B49F-9E007243F82F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{32632F16-3C1C-40F2-B49F-9E007243F82F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{34041A07-C801-4DF3-894E-51B29B667131}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{34041A07-C801-4DF3-894E-51B29B667131}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{36119712-7149-401E-A9C8-1460399681CC}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{36119712-7149-401E-A9C8-1460399681CC}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{361C36CD-AEFC-4DA9-A66D-74782AE5237C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{361C36CD-AEFC-4DA9-A66D-74782AE5237C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{36771AE2-880A-4361-81A8-2F433413B42F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{36771AE2-880A-4361-81A8-2F433413B42F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{37EA6853-C79A-4DB8-88B6-C21D20C972B7}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{37EA6853-C79A-4DB8-88B6-C21D20C972B7}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{383A52B1-E52E-4371-9758-376AF9076331}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{383A52B1-E52E-4371-9758-376AF9076331}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B127DBA-6268-45F3-A342-3E53FD1E4090}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B127DBA-6268-45F3-A342-3E53FD1E4090}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B6A5F40-0BFF-44D8-9681-A5D3FE9F0B73}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B6A5F40-0BFF-44D8-9681-A5D3FE9F0B73}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B8AA901-4EC2-4CA5-8B11-8F773A7FAD89}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3B8AA901-4EC2-4CA5-8B11-8F773A7FAD89}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3DBAC630-4CCF-49C8-9297-08E0011E6D8D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3DBAC630-4CCF-49C8-9297-08E0011E6D8D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3DE684A0-EB00-4428-B51D-D0E70450DDD4}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3DE684A0-EB00-4428-B51D-D0E70450DDD4}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3F4079F1-1D39-4D85-AEEE-ADE977320148}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{3F4079F1-1D39-4D85-AEEE-ADE977320148}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{40DF11C3-C553-4161-A04E-88211F2B6A06}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{40DF11C3-C553-4161-A04E-88211F2B6A06}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{413C1405-F6CB-449C-BBA8-11CD3A03DEC1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{413C1405-F6CB-449C-BBA8-11CD3A03DEC1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{42A06430-74DA-4CCD-89ED-6301D22F2486}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{42A06430-74DA-4CCD-89ED-6301D22F2486}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{430C3403-1F55-4104-9FD1-417F01853B23}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{430C3403-1F55-4104-9FD1-417F01853B23}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4327C41E-7587-4B19-9BFA-893CEA76939E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4327C41E-7587-4B19-9BFA-893CEA76939E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{455C3DCD-C245-4807-828A-70417D06B7DC}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{455C3DCD-C245-4807-828A-70417D06B7DC}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{471B970F-F258-4477-8BF1-8EAA7A5FAEB0}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{471B970F-F258-4477-8BF1-8EAA7A5FAEB0}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4756E6E2-5F2C-4DC4-8020-50CDB420BDE4}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4756E6E2-5F2C-4DC4-8020-50CDB420BDE4}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{49893F81-5530-4C93-AC18-89779AA786A6}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{49893F81-5530-4C93-AC18-89779AA786A6}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4ABDD189-2E48-48B3-8619-E652EA6DA243}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4ABDD189-2E48-48B3-8619-E652EA6DA243}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4AFAB77C-B070-4B16-84A1-D9C22F838D8B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4AFAB77C-B070-4B16-84A1-D9C22F838D8B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4BCFAA91-7E65-426C-8CD6-7A49E0284AA8}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4BCFAA91-7E65-426C-8CD6-7A49E0284AA8}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4D787AC9-0CFE-45F2-AD12-63CF8B8A13D2}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4D787AC9-0CFE-45F2-AD12-63CF8B8A13D2}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4DAE7EA3-CD23-4F58-9899-37745B976798}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4DAE7EA3-CD23-4F58-9899-37745B976798}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4EC1CD82-D417-4D24-B1DB-923C225DD186}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{4EC1CD82-D417-4D24-B1DB-923C225DD186}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{51CAB5BA-293C-450D-8C36-9C7C7ED1C35F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{51CAB5BA-293C-450D-8C36-9C7C7ED1C35F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{545AE88B-00B5-4EAA-8526-32E49A6CABF3}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{545AE88B-00B5-4EAA-8526-32E49A6CABF3}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{54BDB029-CBB2-41E9-8E8A-365FC27C27E9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{54BDB029-CBB2-41E9-8E8A-365FC27C27E9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{55362314-42EF-40B1-B90C-D6333A47D60A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{55362314-42EF-40B1-B90C-D6333A47D60A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{56F5DFDC-916F-45DE-8370-D1501C88BB93}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{56F5DFDC-916F-45DE-8370-D1501C88BB93}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{57E21745-B7EB-406F-A007-73E0943E1746}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{57E21745-B7EB-406F-A007-73E0943E1746}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5827AD35-A34E-47F8-B735-0FE4762A1AD2}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5827AD35-A34E-47F8-B735-0FE4762A1AD2}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{59FC6002-CD75-4280-8161-6B47E72B0BE4}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{59FC6002-CD75-4280-8161-6B47E72B0BE4}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5B17F9D4-960F-4AA6-9557-342C7330A951}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5B17F9D4-960F-4AA6-9557-342C7330A951}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5C3DAC3B-EF15-439A-A2B8-C0B44B9C63D8}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5C3DAC3B-EF15-439A-A2B8-C0B44B9C63D8}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5E3CDDF4-3B75-4338-9DAE-20ACDB3E4F33}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{5E3CDDF4-3B75-4338-9DAE-20ACDB3E4F33}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{60BA8CE5-2C28-4DD5-BD94-011B41915808}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{60BA8CE5-2C28-4DD5-BD94-011B41915808}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{62E3F21A-36E9-4AC6-80E5-3B243C48BA2A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{62E3F21A-36E9-4AC6-80E5-3B243C48BA2A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{64961A63-334A-4A1A-8445-4FDD8584450C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{64961A63-334A-4A1A-8445-4FDD8584450C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{690B4A5D-C03B-4F7D-BAA4-D6647DAFCC58}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{690B4A5D-C03B-4F7D-BAA4-D6647DAFCC58}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6B0F4B3F-CA6D-4481-9D74-CD67E95F7DB8}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6B0F4B3F-CA6D-4481-9D74-CD67E95F7DB8}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6ED168A0-3639-444F-8683-2D88E322911F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6ED168A0-3639-444F-8683-2D88E322911F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6FA8A8ED-4A7F-47BC-838D-0D87F098B9CF}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6FA8A8ED-4A7F-47BC-838D-0D87F098B9CF}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{70F24817-2B2E-4FAB-9A0F-DF565E5A6569}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{70F24817-2B2E-4FAB-9A0F-DF565E5A6569}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7173068D-A253-47F2-BFA1-23AC34F9BD3B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7173068D-A253-47F2-BFA1-23AC34F9BD3B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{732A052B-6A4F-41EB-9469-4CB83D988345}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{732A052B-6A4F-41EB-9469-4CB83D988345}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{73A38820-EE12-435F-8187-61891470EB52}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{73A38820-EE12-435F-8187-61891470EB52}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{74107B72-E260-4BF9-AA87-312DD075D9E7}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{74107B72-E260-4BF9-AA87-312DD075D9E7}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7436CE80-A0DE-4840-8F3E-CB8785630995}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7436CE80-A0DE-4840-8F3E-CB8785630995}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{76B42F2C-CC14-41A6-A13E-FE3A24492C31}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{76B42F2C-CC14-41A6-A13E-FE3A24492C31}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{780D36D6-A8A0-4500-A3A9-F281ADAD393D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{780D36D6-A8A0-4500-A3A9-F281ADAD393D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{78AEB251-46A0-43C7-A0F6-C86D42A78841}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{78AEB251-46A0-43C7-A0F6-C86D42A78841}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7A360C17-09AE-4500-A61E-6F1A857F4ED1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7A360C17-09AE-4500-A61E-6F1A857F4ED1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7ABCC96B-0197-4997-85EC-7626F7BBFF83}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7ABCC96B-0197-4997-85EC-7626F7BBFF83}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7ACCDCCC-725A-4E81-A4FB-303DDB7FCDEF}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7ACCDCCC-725A-4E81-A4FB-303DDB7FCDEF}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7BD44FB4-AAAC-4FC0-91F0-248595212C10}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7BD44FB4-AAAC-4FC0-91F0-248595212C10}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7E8909F0-AE57-4CF9-A408-0D492D618437}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{7E8909F0-AE57-4CF9-A408-0D492D618437}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{808944DA-CF95-4459-8F29-404E57F9424C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{808944DA-CF95-4459-8F29-404E57F9424C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{825F3E41-7831-41CE-9162-BE46083423D5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{825F3E41-7831-41CE-9162-BE46083423D5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{83E625C7-E9D7-4194-B803-1A6FE9DDCA13}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{83E625C7-E9D7-4194-B803-1A6FE9DDCA13}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{844EC57B-F280-4666-8CEA-144E79B01D2A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{844EC57B-F280-4666-8CEA-144E79B01D2A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{850C20DF-4019-4711-9CFF-434E96523BE5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{850C20DF-4019-4711-9CFF-434E96523BE5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{85367940-50EC-4706-BD18-D507B1D348FD}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{85367940-50EC-4706-BD18-D507B1D348FD}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{86A9727F-7004-4F29-818A-6C04312B3FC7}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{86A9727F-7004-4F29-818A-6C04312B3FC7}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{86CC4D67-42C6-4C8A-94C4-F3A5BC653AFA}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{86CC4D67-42C6-4C8A-94C4-F3A5BC653AFA}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8736566F-4A1E-4FC0-B09C-48780C4406FD}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8736566F-4A1E-4FC0-B09C-48780C4406FD}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8985BF52-26E9-4275-B3F4-3E08F255E6FB}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8985BF52-26E9-4275-B3F4-3E08F255E6FB}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{898F4F3F-6066-4F4C-8B0B-3CDCE00AAC37}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{898F4F3F-6066-4F4C-8B0B-3CDCE00AAC37}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8D0D6241-D417-4B32-BFBB-551B670B4B29}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8D0D6241-D417-4B32-BFBB-551B670B4B29}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{90E5FCCA-565C-4E6D-8C91-80E41345FB88}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{90E5FCCA-565C-4E6D-8C91-80E41345FB88}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{948F35ED-38D0-49B5-9BDD-74A0C26BFB49}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{948F35ED-38D0-49B5-9BDD-74A0C26BFB49}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{94B18C37-1504-434E-BFCA-776A9497412A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{94B18C37-1504-434E-BFCA-776A9497412A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{959BCEAF-8A77-4257-9C6E-49DA7ADF4A9A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{959BCEAF-8A77-4257-9C6E-49DA7ADF4A9A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{97A28ADF-EEDB-458E-9227-BAF9904B8E0B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{97A28ADF-EEDB-458E-9227-BAF9904B8E0B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9A1307A1-21E2-4118-B78C-8C9582F51154}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9A1307A1-21E2-4118-B78C-8C9582F51154}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9AC67E5E-2B25-4755-B4E7-C93012AFE3B5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9AC67E5E-2B25-4755-B4E7-C93012AFE3B5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9C7A370E-F8AC-4E81-8081-6478A67FC0B1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9C7A370E-F8AC-4E81-8081-6478A67FC0B1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9CF3E92E-B110-4179-B8E5-791359529AD1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9CF3E92E-B110-4179-B8E5-791359529AD1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9D488A29-8258-43D2-AEC2-96B59C41C428}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{9D488A29-8258-43D2-AEC2-96B59C41C428}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A12C1DA8-CF9D-46DB-B4F7-A8675EF4FDD9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A12C1DA8-CF9D-46DB-B4F7-A8675EF4FDD9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A2C5FB84-4702-40E6-AA95-9CE493B8A1FF}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A2C5FB84-4702-40E6-AA95-9CE493B8A1FF}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A31E46C6-79C7-4CAE-93BB-08FA61CD30ED}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A31E46C6-79C7-4CAE-93BB-08FA61CD30ED}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4196A35-9F68-4E59-8513-D834BDA66516}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4196A35-9F68-4E59-8513-D834BDA66516}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A46C11AB-DABA-4E4D-9CAD-57042604F73C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A46C11AB-DABA-4E4D-9CAD-57042604F73C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4DDF3E6-50E4-47BB-9717-5FF543889C46}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4DDF3E6-50E4-47BB-9717-5FF543889C46}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4EB9680-E8C5-4CD5-8CA2-9E3F18160C01}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A4EB9680-E8C5-4CD5-8CA2-9E3F18160C01}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A6102455-691E-408C-BFA1-81E0175ADC51}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A6102455-691E-408C-BFA1-81E0175ADC51}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A9875299-CDDB-4784-9319-2520CFB0FD6C}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{A9875299-CDDB-4784-9319-2520CFB0FD6C}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AA36ECC3-4C04-41C3-A152-B8F913ED9A26}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AA36ECC3-4C04-41C3-A152-B8F913ED9A26}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AAB8BB93-82B8-4319-AA06-949B8761846A}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AAB8BB93-82B8-4319-AA06-949B8761846A}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AC609458-49D6-4FBB-B774-C75B62FB855D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{AC609458-49D6-4FBB-B774-C75B62FB855D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{B378B865-80DD-4696-BC0C-2D86CAB81274}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{B378B865-80DD-4696-BC0C-2D86CAB81274}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{B784375F-DD34-4622-95D1-69A6BD675778}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{B784375F-DD34-4622-95D1-69A6BD675778}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BA7A0F0E-C5C2-41DA-8AAB-A6CD3BA4E261}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BA7A0F0E-C5C2-41DA-8AAB-A6CD3BA4E261}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BE0136D0-6F75-403A-9E10-E2FF5F0A56CA}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BE0136D0-6F75-403A-9E10-E2FF5F0A56CA}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BFDC18FF-7AC6-4DD9-BFF9-E83DB0854F95}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{BFDC18FF-7AC6-4DD9-BFF9-E83DB0854F95}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C0258686-5155-4526-B663-293ECDE131B9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C0258686-5155-4526-B663-293ECDE131B9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C12E1F2B-0770-4A1E-B5CA-B4C664B8090B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C12E1F2B-0770-4A1E-B5CA-B4C664B8090B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C4DD729B-90BC-49B2-A807-C52A2C7BB7C5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C4DD729B-90BC-49B2-A807-C52A2C7BB7C5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C66F8F37-F352-4FB6-B19E-C323172EF549}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C66F8F37-F352-4FB6-B19E-C323172EF549}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C9B7A080-550E-4DEE-9ED3-3526D6A79E0E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{C9B7A080-550E-4DEE-9ED3-3526D6A79E0E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CA0795EA-881A-447D-B8E5-623C7C92C4EB}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CA0795EA-881A-447D-B8E5-623C7C92C4EB}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CB7CC21A-77AA-4C3A-BF2D-AB23DBDF5418}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CB7CC21A-77AA-4C3A-BF2D-AB23DBDF5418}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CBF8662C-5474-4C38-91E2-64BA3E8C7F2D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CBF8662C-5474-4C38-91E2-64BA3E8C7F2D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CC99D995-67D6-4EC5-A6C3-7EFBFC0D7B05}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CC99D995-67D6-4EC5-A6C3-7EFBFC0D7B05}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CD0C8434-2142-4534-AFF6-A33C2C125C86}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CD0C8434-2142-4534-AFF6-A33C2C125C86}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CD26C5FE-E836-4E2A-B95F-78714E5BB437}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CD26C5FE-E836-4E2A-B95F-78714E5BB437}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CF1CC86C-983E-4116-8CBC-BFC691AD0146}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{CF1CC86C-983E-4116-8CBC-BFC691AD0146}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D16D308C-B480-4B42-B3F2-86ADBDED79D5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D16D308C-B480-4B42-B3F2-86ADBDED79D5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D2900005-7D01-4BEF-9885-A59E8D51F649}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D2900005-7D01-4BEF-9885-A59E8D51F649}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D3E082A7-6763-462F-8B74-D5602B156961}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D3E082A7-6763-462F-8B74-D5602B156961}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D4B0D6B7-89E5-4649-927C-6CF05179712B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D4B0D6B7-89E5-4649-927C-6CF05179712B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D51B15D9-5B8B-433C-B105-5102FF8F0CF5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D51B15D9-5B8B-433C-B105-5102FF8F0CF5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D5EF4A54-A5E8-4E7E-8826-C4367E1FEB42}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D5EF4A54-A5E8-4E7E-8826-C4367E1FEB42}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D78452A9-BA80-45C5-B972-57CC153DBDC1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D78452A9-BA80-45C5-B972-57CC153DBDC1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D7D4444B-FBDE-4645-8FE0-C1F5480B8D38}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D7D4444B-FBDE-4645-8FE0-C1F5480B8D38}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D7ED2AA6-7192-4B40-AB14-116E42FCA61E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D7ED2AA6-7192-4B40-AB14-116E42FCA61E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D802F50E-ED25-488B-B7D0-0284F6B1EF8B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D802F50E-ED25-488B-B7D0-0284F6B1EF8B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D80AD460-778D-47DA-B33A-73CCE88E0F60}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{D80AD460-778D-47DA-B33A-73CCE88E0F60}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DA29D60E-5CA6-4D23-B5A9-04BE8B1CA220}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DA29D60E-5CA6-4D23-B5A9-04BE8B1CA220}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DA4BDBAD-7FB1-4E42-BEB3-8B4810C8D2CE}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DA4BDBAD-7FB1-4E42-BEB3-8B4810C8D2CE}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DCA13948-CDD6-4592-AD77-C8622CF57545}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DCA13948-CDD6-4592-AD77-C8622CF57545}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DCE9367F-8E1F-4308-B2F3-E7467CD0EC63}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DCE9367F-8E1F-4308-B2F3-E7467CD0EC63}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD36494A-2D45-4914-B28C-A92DA9D8C509}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD36494A-2D45-4914-B28C-A92DA9D8C509}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD4F15A4-EE0F-4577-97EA-0DE6FF2AEDBA}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD4F15A4-EE0F-4577-97EA-0DE6FF2AEDBA}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD57B880-3503-4A85-91D5-57061AB117D1}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DD57B880-3503-4A85-91D5-57061AB117D1}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DF381A30-FE9B-4D04-A1CF-9A7C27AC3A05}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DF381A30-FE9B-4D04-A1CF-9A7C27AC3A05}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DF49C5E9-0539-4458-9C44-3A3D32DBEE43}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DF49C5E9-0539-4458-9C44-3A3D32DBEE43}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DFD2B05D-4F73-41D5-94D2-F05F7AEA3AFC}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{DFD2B05D-4F73-41D5-94D2-F05F7AEA3AFC}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E00C7E8A-AED7-4484-867F-094212232C2D}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E00C7E8A-AED7-4484-867F-094212232C2D}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E02860CD-E798-4B37-B055-D09F60252304}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E02860CD-E798-4B37-B055-D09F60252304}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E402DC33-D7AD-446D-AA6D-7C53EDA9AACB}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E402DC33-D7AD-446D-AA6D-7C53EDA9AACB}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E40D25CA-A8C4-4AD4-8BCF-00F3F7267ED9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E40D25CA-A8C4-4AD4-8BCF-00F3F7267ED9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E60EEC2C-B29F-49CC-BA72-E50B9654F524}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E60EEC2C-B29F-49CC-BA72-E50B9654F524}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E85F0112-10B8-4650-85FB-64FB60CCB737}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E85F0112-10B8-4650-85FB-64FB60CCB737}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E8883AE7-E1C2-4F8D-8B0E-C2911FF573A9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E8883AE7-E1C2-4F8D-8B0E-C2911FF573A9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E8D33941-1960-4FAF-8094-2D9A05D9335F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{E8D33941-1960-4FAF-8094-2D9A05D9335F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EA22DAD8-3119-4E86-8B87-CB28DD933BD2}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EA22DAD8-3119-4E86-8B87-CB28DD933BD2}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EC3897E1-6217-4FB6-8716-54B67272809B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EC3897E1-6217-4FB6-8716-54B67272809B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{ECB30F70-3698-4A55-AEED-E1BAE1352522}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{ECB30F70-3698-4A55-AEED-E1BAE1352522}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EDCB0C8E-F9E8-438E-9CEA-9B92610C77C2}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EDCB0C8E-F9E8-438E-9CEA-9B92610C77C2}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EEF0DC10-B448-4EC8-AEF3-81EFF1DA14D5}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EEF0DC10-B448-4EC8-AEF3-81EFF1DA14D5}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EF9EDE7B-D7A5-4D68-9F49-CAEAE9AF503E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{EF9EDE7B-D7A5-4D68-9F49-CAEAE9AF503E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F03DC2E3-69C5-47D5-89EB-F8CDADA47DE3}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F03DC2E3-69C5-47D5-89EB-F8CDADA47DE3}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F12FE082-4DBB-4412-A00E-10354422B4E4}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F12FE082-4DBB-4412-A00E-10354422B4E4}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F17457CF-7203-409A-8588-B0DEB1CDBA58}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F17457CF-7203-409A-8588-B0DEB1CDBA58}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F68DEDCD-2F16-45C0-A987-81A3B9046041}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F68DEDCD-2F16-45C0-A987-81A3B9046041}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F8A59494-00C4-4340-97AF-1ADC65AEB038}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F8A59494-00C4-4340-97AF-1ADC65AEB038}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F8B9FAB9-8EC3-41B6-96D9-45AE323D246E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{F8B9FAB9-8EC3-41B6-96D9-45AE323D246E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FA168671-BFDD-4CB7-B6B4-D706B659713B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FA168671-BFDD-4CB7-B6B4-D706B659713B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FB376403-0BC4-473C-B35D-775FB4D2C8B6}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FB376403-0BC4-473C-B35D-775FB4D2C8B6}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FB414433-11C6-45A7-8AB0-2253356B8C91}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FB414433-11C6-45A7-8AB0-2253356B8C91}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FD4799D0-7645-486C-8D1E-EA26A168C9C2}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{FD4799D0-7645-486C-8D1E-EA26A168C9C2}.ssfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/downloadImage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/downloadImage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/downloader/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/models/SpotifyAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/auth/SpotifyAuth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/downloader/src/override.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/override.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/downloader/src/spotify/SpotifyClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/SpotifyClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/getPlaylistedTracks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/getPlaylistedTracks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloader/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/LyricsDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/LyricsDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/accessTokenManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/auth/accessTokenManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/fetchLyrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/youtube/getYouTubeUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/youtube/getYouTubeUrl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +406,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -54,18 +433,24 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.10.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.10.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/project-448/frontend/public/fonts&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/project-448&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/Users/me/.nvm/versions/node/v20.10.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -77,10 +462,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/downloader/src/spotify/auth" />
+      <recent name="$PROJECT_DIR$/downloader/src/spotify" />
       <recent name="$PROJECT_DIR$/frontend/public/fonts/circular" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/downloader/src/models" />
-      <recent name="$PROJECT_DIR$/downloader/src/youtube" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,6 +485,17 @@
       <workItem from="1703007556864" duration="1539000" />
       <workItem from="1703033027695" duration="35000" />
       <workItem from="1703895978408" duration="3081000" />
+      <workItem from="1706062491217" duration="3345000" />
+      <workItem from="1706069215907" duration="8719000" />
+      <workItem from="1706241829653" duration="11247000" />
+      <workItem from="1706648594424" duration="600000" />
+      <workItem from="1706896700970" duration="2582000" />
+      <workItem from="1706900357301" duration="1337000" />
+      <workItem from="1707542407567" duration="4898000" />
+      <workItem from="1707593533736" duration="1401000" />
+      <workItem from="1707595904890" duration="921000" />
+      <workItem from="1707786147709" duration="184000" />
+      <workItem from="1707786339692" duration="5330000" />
     </task>
     <servers />
   </component>

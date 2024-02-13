@@ -9,5 +9,5 @@ export default async function getYouTubeUrl(track: Track, override: Record<strin
     .map(artist => artist.name)
     .join(' ')
   const searchResult = (await searchMusics(`${track.name} ${artists}`)).at(0)
-  return `https://www.youtube.com/watch?v=${searchResult.youtubeId}`
+  return `https://www.youtube.com/watch?v=${searchResult?.youtubeId}`
 }

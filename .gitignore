@@ -1,4 +1,5 @@
 .env*
+*.yml
 **/.DS_Store
 
 .spotify_cache### Node template

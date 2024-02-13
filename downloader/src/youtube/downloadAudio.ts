@@ -9,6 +9,7 @@ import { Writable } from 'stream'
 import { mkdirp } from 'mkdirp'
 import downloadImage from '../downloadImage'
 import fetchLyrics from '../spotify/fetchLyrics'
+import { readdir } from 'node:fs/promises'
 
 const tmp = 'tmp'
 
@@ -26,6 +27,11 @@ export default function downloadAudio(url: string, track: Track, direcotry: stri
         ...track,
         localPath: pathname
       })
+      return
+    }
+    const lyrics = await fetchLyrics(track.id)
+    if (lyrics === undefined) {
+      reject()
       return
     }
     await mkdirp(tmp)
@@ -49,11 +55,6 @@ export default function downloadAudio(url: string, track: Track, direcotry: stri
     const thumbnailPath = `${tmp}/${track.id}.jpg`
     if (!existsSync(thumbnailPath)) {
       await downloadImage(track.album.images[0].url, thumbnailPath)
-    }
-    const lyrics = await fetchLyrics(track.id)
-    if (lyrics === undefined) {
-      reject()
-      return
     }
     ffmpegProcess.on('close', async () => {
       const metadata = {
