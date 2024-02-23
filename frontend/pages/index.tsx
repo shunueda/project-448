@@ -53,7 +53,12 @@ export default function Home() {
     if (deckState?.filepath) {
       const newMetadata = await getMetadata(deckState.filepath)
       setMetadata(newMetadata)
-      setImageUrl(createImageUrlFromBuffer(((newMetadata?.common?.picture?.at(0)?.data) as unknown as ImageBufferData)))
+      setImageUrl(
+        createImageUrlFromBuffer(
+          newMetadata?.common?.picture?.at(0)
+            ?.data as unknown as ImageBufferData
+        )
+      )
     }
   }, [deckState?.filepath])
 

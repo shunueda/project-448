@@ -48,15 +48,18 @@ export default function LyricsDisplay(props: Props) {
   return (
     <div className={styles.main} id='lyricsdisplay'>
       <div className={styles.content} style={{ marginTop: `-${marginTop}px` }}>
-        {
-          lyricsData?.lyrics.lines.map((line, index) => (
-            <p className={styles.lyricLine} id={`lyrics-line-${index}`} key={index} style={{
+        {lyricsData?.lyrics.lines.map((line, index) => (
+          <p
+            className={styles.lyricLine}
+            id={`lyrics-line-${index}`}
+            key={index}
+            style={{
               color: index + 1 === lyricsIndex ? 'red' : 'black'
-            }}>
-              {line.words}
-            </p>
-          ))
-        }
+            }}
+          >
+            {line.words}
+          </p>
+        ))}
       </div>
     </div>
   )

@@ -13,13 +13,14 @@ export default async function fetchLyrics(
         Authorization: `Bearer ${token}`
       }
     })
-    const json = await res.json() as LyricsData
+    const json = (await res.json()) as LyricsData
     json.lyrics.lines.forEach(line => {
       line.startTimeMs = parseInt(line.startTimeMs.toString())
       line.endTimeMs = parseInt(line.endTimeMs.toString())
     })
     return json
   } catch (e) {
+    console.log('Error fetching lyrics', e)
     return undefined
   }
 }

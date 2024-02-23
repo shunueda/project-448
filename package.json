@@ -7,7 +7,13 @@
     "frontend",
     "shared"
   ],
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write"
+  },
   "repository": "https://github.com/shunueda/project-448.git",
   "author": "Shun Ueda <62182668+shunueda@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }

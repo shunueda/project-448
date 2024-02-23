@@ -1,10 +1,7 @@
-import { createWriteStream } from 'fs'
-import fetch from 'node-fetch'
-import { promisify } from 'util'
-import { pipeline } from 'stream'
+import { writeFile } from 'node:fs/promises'
 
 export default async function downloadImage(url: string, localPath: string) {
   const response = await fetch(url)
-  await promisify(pipeline)(response.body!, createWriteStream(localPath))
-  return localPath
+  const arrayBuffer = await response.arrayBuffer()
+  return writeFile(localPath, Buffer.from(arrayBuffer))
 }

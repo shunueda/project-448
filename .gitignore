@@ -1,6 +1,8 @@
 .env*
 *.yml
+*.yaml
 **/.DS_Store
+.cache
 
 .spotify_cache### Node template
 # Logs

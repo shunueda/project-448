@@ -10,7 +10,7 @@ export default async function getMetadata(filepath: string) {
     method: 'POST',
     body: JSON.stringify({ filepath })
   })
-  const json = await res.json() as IAudioMetadata
+  const json = (await res.json()) as IAudioMetadata
   cache.set(filepath, json)
   return json
 }
