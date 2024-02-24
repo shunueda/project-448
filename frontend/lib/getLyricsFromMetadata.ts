@@ -1,5 +1,5 @@
-import { IAudioMetadata } from 'music-metadata'
 import LyricsData from 'downloader/src/models/LyricsData'
+import { IAudioMetadata } from 'music-metadata'
 
 export default function getLyricsFromMetadata(
   metadata: IAudioMetadata

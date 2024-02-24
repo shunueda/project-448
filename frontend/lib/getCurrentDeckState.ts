@@ -1,6 +1,6 @@
-import VDJState, { DeckState } from '@/lib/models/VDJState'
-import getCurrentDeck from '@/lib/getCurrentDeck'
 import Deck from '@/lib/Deck'
+import getCurrentDeck from '@/lib/getCurrentDeck'
+import VDJState, { DeckState } from '@/lib/models/VDJState'
 
 export default function getCurrentDeckState(state: VDJState): DeckState {
   const currentDeck = getCurrentDeck(state)

@@ -1,15 +1,12 @@
-import Config from './config'
-import { MultiBar, SingleBar } from 'cli-progress'
-import getYouTubeUrl from './youtube/getYouTubeUrl'
-import override from './override'
-import downloadAudio from './youtube/downloadAudio'
-import { appendFileSync, readdirSync, statSync, unlinkSync } from 'node:fs'
-import { parseFile } from 'music-metadata'
+import { Track } from '@spotify/web-api-ts-sdk'
+import { MultiBar, Presets } from 'cli-progress'
+import { readdirSync, unlinkSync } from 'node:fs'
+import { appendFile, stat } from 'node:fs/promises'
 import { EOL } from 'node:os'
 import xml from 'xml'
+import Config from './config'
 import getAllPlaylistItems from './spotify/getAllPlaylistItems'
-import { Track } from '@spotify/web-api-ts-sdk'
-import { downloadTrack, getTrack } from 'spottydl'
+import downloadAudio from './youtube/downloadAudio'
 
 readdirSync(`${process.env.VDJ_DIR}/Playlists`)
   .filter(file => file.endsWith('.m3u'))
@@ -17,9 +14,14 @@ readdirSync(`${process.env.VDJ_DIR}/Playlists`)
     unlinkSync(`${process.env.VDJ_DIR}/Playlists/${file}`)
   })
 
-const progressBar = new MultiBar({
-  format: '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}'
-})
+const progressBar = new MultiBar(
+  {
+    format:
+      '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}',
+    stopOnComplete: true
+  },
+  Presets.shades_classic
+)
 
 await Promise.all(
   Config.playlists.map(async playlist => {
@@ -29,34 +31,28 @@ await Promise.all(
     const bar = progressBar.create(tracks.length, 0)
     for (const track of tracks) {
       bar.update({
-        filename: track.name
+        filename: `${playlist.name} | ${track.name}`
       })
       try {
-        // const musicUrl = await getYouTubeUrl(track, override)
         const m3uFilePath = `${process.env.VDJ_DIR}/Playlists/${playlist.name}.m3u`
-        // const trackWithLocalPath = await downloadAudio(musicUrl, track, {
-        //   tracksDir: `${process.env.VDJ_DIR}/Tracks`,
-        //   coverArtDir: `${process.env.VDJ_DIR}/CoverArts`
-        // })
-        const a = await getTrack(track.href)
-        const localPath = `${process.env.VDJ_DIR}/Tracks/${track.name}.mp3`
-        const filesize = statSync(localPath).size
-        const metadata = await parseFile(localPath)
+        const localPath = await downloadAudio(track, {
+          tracksDir: `${process.env.VDJ_DIR}/Tracks`,
+          coverArtDir: `${process.env.VDJ_DIR}/CoverArts`
+        })
+        const filesize = (await stat(localPath)).size
         const artist = track.artists.map(artist => artist.name).join('/')
         const trackInfo = `#EXTVDJ:${xml({
           filesize,
           artist,
           title: track.name,
-          songlength: metadata.format.duration
+          songlength: track.duration_ms
         })}`
-        appendFileSync(m3uFilePath, trackInfo + EOL + localPath + EOL)
+        await appendFile(m3uFilePath, trackInfo + EOL + localPath + EOL)
       } catch (_) {}
       bar.increment()
     }
     bar.update({
-      filename: '✅ Done!'
+      filename: `${playlist.name} | ✔ Done!`
     })
   })
 )
-
-process.exit(0)

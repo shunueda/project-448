@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
 import { IAudioMetadata, parseFile } from 'music-metadata'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export interface GetMetadataBody {
   filepath: string

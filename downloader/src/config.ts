@@ -1,8 +1,9 @@
+import { config } from 'dotenv'
 import { readFileSync } from 'fs'
 import { parse } from 'yaml'
-import { config } from 'dotenv'
 
 interface ConfigDefinition {
+  format: string
   playlists: Playlist[]
 }
 

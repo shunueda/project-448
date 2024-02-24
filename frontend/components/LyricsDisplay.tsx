@@ -1,10 +1,10 @@
-import { DeckState } from '@/lib/models/VDJState'
 import getLyricsFromMetadata from '@/lib/getLyricsFromMetadata'
-import { useEffect, useState } from 'react'
+import { DeckState } from '@/lib/models/VDJState'
 import LyricsData from 'downloader/src/models/LyricsData'
+import { IAudioMetadata } from 'music-metadata'
+import { useEffect, useState } from 'react'
 import useAsyncEffect from 'use-async-effect'
 import styles from './LyricsDisplay.module.scss'
-import { IAudioMetadata } from 'music-metadata'
 
 interface Props {
   deckState: DeckState | undefined

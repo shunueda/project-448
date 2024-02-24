@@ -1,6 +1,6 @@
+import type { AccessToken } from '@spotify/web-api-ts-sdk'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
 import type SpdcAuthResponse from './SpdcAuthResponse'
-import type { AccessToken } from '@spotify/web-api-ts-sdk'
 
 const CACHE_FILENAME = '.spotify_access_token_cache'
 
