@@ -4,8 +4,7 @@
   "private": true,
   "workspaces": [
     "downloader",
-    "frontend",
-    "shared"
+    "frontend"
   ],
   "scripts": {
     "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write"

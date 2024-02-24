@@ -1,5 +1,4 @@
 import { Track } from '@spotify/web-api-ts-sdk'
-import { MultiBar, Presets } from 'cli-progress'
 import { readdirSync, unlinkSync } from 'node:fs'
 import { appendFile, stat } from 'node:fs/promises'
 import { EOL } from 'node:os'
@@ -14,30 +13,31 @@ readdirSync(`${process.env.VDJ_DIR}/Playlists`)
     unlinkSync(`${process.env.VDJ_DIR}/Playlists/${file}`)
   })
 
-const progressBar = new MultiBar(
-  {
-    format:
-      '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}',
-    stopOnComplete: true
-  },
-  Presets.shades_classic
-)
+// const progressBar = new MultiBar(
+//   {
+//     format:
+//       '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}',
+//     stopOnComplete: true
+//   },
+//   Presets.shades_classic
+// )
 
 await Promise.all(
   Config.playlists.map(async playlist => {
     const tracks = (await getAllPlaylistItems(playlist.id)).map(
       ({ track }) => track as Track
     )
-    const bar = progressBar.create(tracks.length, 0)
+    // const bar = progressBar.create(tracks.length, 0)
     for (const track of tracks) {
-      bar.update({
-        filename: `${playlist.name} | ${track.name}`
-      })
+      // bar.update({
+      //   filename: `${playlist.name} | ${track.name}`
+      // })
       try {
         const m3uFilePath = `${process.env.VDJ_DIR}/Playlists/${playlist.name}.m3u`
         const localPath = await downloadAudio(track, {
           tracksDir: `${process.env.VDJ_DIR}/Tracks`,
-          coverArtDir: `${process.env.VDJ_DIR}/CoverArts`
+          coverArtsDir: `${process.env.VDJ_DIR}/CoverArts`,
+          lyricsDir: `${process.env.VDJ_DIR}/Lyrics`
         })
         const filesize = (await stat(localPath)).size
         const artist = track.artists.map(artist => artist.name).join('/')
@@ -49,10 +49,10 @@ await Promise.all(
         })}`
         await appendFile(m3uFilePath, trackInfo + EOL + localPath + EOL)
       } catch (_) {}
-      bar.increment()
+      // bar.increment()
     }
-    bar.update({
-      filename: `${playlist.name} | ✔ Done!`
-    })
+    // bar.update({
+    //   filename: `${playlist.name} | ✔ Done!`
+    // })
   })
 )

@@ -1,6 +1,9 @@
 import { config } from 'dotenv'
-import { readFileSync } from 'fs'
+import { readdirSync, readFileSync } from 'fs'
+import { unlink } from 'node:fs/promises'
 import { parse } from 'yaml'
+
+const isDevelopment = process.env.NODE_ENV === 'development'
 
 interface ConfigDefinition {
   format: string
@@ -18,8 +21,16 @@ config({
 
 const Config = parse(
   readFileSync(
-    `../config${process.env.NODE_ENV === 'development' ? '.development' : ''}.yaml`
+    `../config${isDevelopment ? '.development' : ''}.yaml`
   ).toString()
 ) as ConfigDefinition
+
+if (isDevelopment) {
+  await Promise.all(
+    readdirSync(`${process.env.VDJ_DIR}/Tracks`)
+      .filter(file => file.endsWith(`.${Config.format}`))
+      .map(file => unlink(`${process.env.VDJ_DIR}/Tracks/${file}`))
+  )
+}
 
 export default Config

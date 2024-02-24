@@ -4,15 +4,15 @@ import { getSpotifyAccessToken } from './auth/accessTokenManager'
 export default async function fetchLyrics(
   trackId: string
 ): Promise<LyricsData> {
-  const token = await getSpotifyAccessToken()
+  const { access_token } = await getSpotifyAccessToken()
   const url = `https://spclient.wg.spotify.com/color-lyrics/v2/track/${trackId}?format=json&vocalRemoval=false`
-  const res = await fetch(url, {
+  const response = await fetch(url, {
     headers: {
       'app-platform': 'WebPlayer',
-      Authorization: `Bearer ${token}`
+      Authorization: `Bearer ${access_token}`
     }
   })
-  const json = (await res.json()) as LyricsData
+  const json: LyricsData = await response.json()
   json.lyrics.lines.forEach(line => {
     line.startTimeMs = parseInt(line.startTimeMs.toString())
     line.endTimeMs = parseInt(line.endTimeMs.toString())

@@ -15,22 +15,22 @@ export function isCachedSpotifyTokenExpired(): boolean {
 }
 
 export async function refreshSpotifyAccessToken(): Promise<AccessToken> {
-  const res = await fetch('https://open.spotify.com/get_access_token', {
+  const response = await fetch('https://open.spotify.com/get_access_token', {
     headers: {
       Cookie: `sp_dc=${process.env.SPOTIFY_SP_DC}`
     }
   })
-  const auth = (await res.json()) as SpdcAuthResponse
+  const auth: SpdcAuthResponse = await response.json()
   if (auth.isAnonymous) {
     console.error('Failed to refresh Spotify access token - SP_DC is invalid')
     process.exit(1)
   }
-  const accessToken = {
+  const accessToken: AccessToken = {
     access_token: auth.accessToken,
     token_type: 'Bearer',
     expires_in: Math.round(auth.accessTokenExpirationTimestampMs / 1000),
     refresh_token: ''
-  } satisfies AccessToken
+  }
   writeFileSync(CACHE_FILENAME, JSON.stringify(accessToken))
   return accessToken
 }
