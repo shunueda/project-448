@@ -56,7 +56,6 @@ export default async function downloadAudio(
     artist: track.artists.map(artist => artist.name).join('/'),
     album: track.album.name,
     comment: track.id,
-    // lyrics: readFileSync(lrcFilePath).toString(),
     coverArtPath: coverArtsPath
   }
   await writeMetadata(localPath, metadata)
