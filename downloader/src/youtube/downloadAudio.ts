@@ -26,11 +26,16 @@ export default async function downloadAudio(
     return localPath
   }
   const artists = track.artists.map(artist => artist.name).join(' ')
-  const search = await inntertube.music.search(`${track.name} ${artists}`, {
-    type: 'song'
-  })
   const videoId =
-    search.songs!.contents[0].flex_columns[0].title.endpoint!.payload.videoId
+    config.overrides.find(it => it.spotify === track.id)?.youtube ||
+    (
+      await inntertube.music.search(
+        `${track.name} ${artists} ${track.album.name}`,
+        {
+          type: 'song'
+        }
+      )
+    ).songs!.contents[0].flex_columns[0].title.endpoint!.payload.videoId
   const stream = await inntertube.download(videoId, {
     type: 'audio',
     quality: 'best'
@@ -46,15 +51,6 @@ export default async function downloadAudio(
   if (!existsSync(coverArtsPath)) {
     await downloadImage(track.album.images[0].url, coverArtsPath)
   }
-  // const lrcFilePath = resolve(directoryOptions.lyricsDir, `${track.id}.lrc`)
-  // if (!existsSync(lrcFilePath)) {
-  //   const lyricsData = await fetchLyrics(track.id)
-  //   if (lyricsData.lyrics.syncType !== 'LINE_SYNCED') {
-  //     throw new Error('Lyrics are not line synced')
-  //   }
-  //   const lrc = convertToLrc(lyricsData)
-  //   writeFileSync(lrcFilePath, lrc)
-  // }
   const metadata: AudioMetadata = {
     title: track.name,
     artist: track.artists.map(artist => artist.name).join('/'),

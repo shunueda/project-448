@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="" />
+    <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/spotify/auth/accessTokenManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/spotify/auth/accessTokenManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/youtube/downloadAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloader/src/youtube/inntertube.ts" beforeDir="false" afterPath="$PROJECT_DIR$/downloader/src/youtube/inntertube.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +71,7 @@
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -120,6 +129,13 @@
       <workItem from="1708199749646" duration="1229000" />
       <workItem from="1708570224861" duration="2863000" />
       <workItem from="1708647943241" duration="22789000" />
+      <workItem from="1708747938704" duration="7441000" />
+      <workItem from="1708822101904" duration="279000" />
+      <workItem from="1708911149367" duration="1971000" />
+      <workItem from="1709763856480" duration="1139000" />
+      <workItem from="1709855554161" duration="5138000" />
+      <workItem from="1710699693118" duration="616000" />
+      <workItem from="1711028146334" duration="427000" />
     </task>
     <servers />
   </component>

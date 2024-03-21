@@ -1,6 +1,5 @@
 import { config } from 'dotenv'
-import { readdirSync, readFileSync } from 'fs'
-import { unlink } from 'node:fs/promises'
+import { readFileSync } from 'fs'
 import { parse } from 'yaml'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
@@ -8,11 +7,17 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 interface ConfigDefinition {
   format: string
   playlists: Playlist[]
+  overrides: Override[]
 }
 
 interface Playlist {
   name: string
   id: string
+}
+
+interface Override {
+  spotify: string
+  youtube: string
 }
 
 config({
@@ -25,12 +30,12 @@ const Config = parse(
   ).toString()
 ) as ConfigDefinition
 
-if (isDevelopment) {
-  await Promise.all(
-    readdirSync(`${process.env.VDJ_DIR}/Tracks`)
-      .filter(file => file.endsWith(`.${Config.format}`))
-      .map(file => unlink(`${process.env.VDJ_DIR}/Tracks/${file}`))
-  )
-}
+// if (isDevelopment) {
+//   await Promise.all(
+//     readdirSync(`${process.env.VDJ_DIR}/Tracks`)
+//       .filter(file => file.endsWith(`.${Config.format}`))
+//       .map(file => unlink(`${process.env.VDJ_DIR}/Tracks/${file}`))
+//   )
+// }
 
 export default Config

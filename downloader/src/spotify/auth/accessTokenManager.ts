@@ -2,7 +2,7 @@ import type { AccessToken } from '@spotify/web-api-ts-sdk'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
 import type SpdcAuthResponse from './SpdcAuthResponse'
 
-const CACHE_FILENAME = '.spotify_access_token_cache'
+const CACHE_FILENAME = '../.spotify_access_token_cache'
 
 function readCacheFile(): AccessToken {
   return JSON.parse(readFileSync(CACHE_FILENAME, 'utf-8'))
@@ -10,7 +10,8 @@ function readCacheFile(): AccessToken {
 
 export function isCachedSpotifyTokenExpired(): boolean {
   return (
-    existsSync(CACHE_FILENAME) && readCacheFile().expires_in < Date.now() / 1000
+    !existsSync(CACHE_FILENAME) ||
+    readCacheFile().expires_in < Date.now() / 1000
   )
 }
 

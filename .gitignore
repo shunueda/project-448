@@ -3,6 +3,7 @@
 *.yaml
 **/.DS_Store
 .cache
+.spotify_access_token_cache
 
 .spotify_cache### Node template
 # Logs

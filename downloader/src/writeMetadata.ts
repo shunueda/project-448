@@ -1,4 +1,4 @@
-import ffmpegPath from 'ffmpeg-static'
+import ffmpeg from 'ffmpeg-static'
 import { spawn } from 'node:child_process'
 import { rename, unlink } from 'node:fs/promises'
 import config from './config'
@@ -47,9 +47,9 @@ export default async function writeMetadata(
     'attached_pic',
     tempPath
   ]
-  const ffmpeg = spawn(ffmpegPath!, ffmpegArgs)
+  const childProcess = spawn(ffmpeg!, ffmpegArgs)
   return new Promise<void>(async (resolve, reject) => {
-    ffmpeg.on('close', async code => {
+    childProcess.on('close', async code => {
       if (code === 0) {
         await unlink(localPath)
         await rename(tempPath, localPath)
