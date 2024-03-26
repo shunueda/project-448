@@ -1,0 +1,7 @@
+format: audio_format
+playlists:
+  - name: playlist_name
+    id: playlist_id
+overrides:
+  - spotify: spotify_track_id
+    youtube: youtube_video_id

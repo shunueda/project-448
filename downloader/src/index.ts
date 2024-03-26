@@ -3,9 +3,9 @@ import { MultiBar, Presets } from 'cli-progress'
 import { readdirSync, unlinkSync } from 'node:fs'
 import { appendFile, stat } from 'node:fs/promises'
 import { EOL } from 'node:os'
+import { getAllPlaylistItems } from 'shared'
 import xml from 'xml'
 import Config from './config'
-import getAllPlaylistItems from './spotify/getAllPlaylistItems'
 import downloadAudio from './youtube/downloadAudio'
 
 readdirSync(`${process.env.VDJ_DIR}/Playlists`)

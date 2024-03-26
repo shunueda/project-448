@@ -1,9 +1,12 @@
 .env*
 *.yml
 *.yaml
+!config.example.yaml
 **/.DS_Store
 .cache
 .spotify_access_token_cache
+
+.turbo
 
 .spotify_cache### Node template
 # Logs

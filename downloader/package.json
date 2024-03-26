@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Download Spotify audios",
   "main": "src/index.ts",
-  "author": "Shun Ueda <62182668+shunueda@users.noreply.github.com>",
+  "author": "Shun Ueda <me@shu.nu>",
+  "type": "module",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -28,6 +29,7 @@
     "node-youtube-music": "^0.10.3",
     "xml": "^1.0.1",
     "yaml": "^2.3.4",
-    "youtubei.js": "^9.1.0"
+    "youtubei.js": "^9.1.0",
+    "shared": "*"
   }
 }

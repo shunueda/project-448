@@ -4,13 +4,15 @@
   "private": true,
   "workspaces": [
     "downloader",
-    "frontend"
+    "frontend",
+    "shared"
   ],
   "scripts": {
+    "build:plugin": "sh plugin/build.sh",
     "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write"
   },
   "repository": "https://github.com/shunueda/project-448.git",
-  "author": "Shun Ueda <62182668+shunueda@users.noreply.github.com>",
+  "author": "Shun Ueda <me@shu.nu>",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.2.5",

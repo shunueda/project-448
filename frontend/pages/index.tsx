@@ -1,78 +1,35 @@
-import LyricsDisplay from '@/components/LyricsDisplay'
-import createImageUrlFromBuffer from '@/lib/createImageUrlFromBuffer'
-import getCurrentDeckState from '@/lib/getCurrentDeckState'
-import getMetadata from '@/lib/getMetadata'
-import ImageBufferData from '@/lib/models/ImageBufferData'
-import VDJState, { DeckState } from '@/lib/models/VDJState'
-import runVdjScript from '@/lib/runVdjScript'
-import styles from '@/styles/Home.module.scss'
-import { IAudioMetadata } from 'music-metadata'
-import { Inter } from 'next/font/google'
+import getCurrentDeckState from 'lib/getCurrentDeckState'
+import getMetadata from 'lib/getMetadata'
+import VDJState from 'lib/models/VDJState'
+import runVdjScript from 'lib/runVdjScript'
 import { MutableRefObject, useRef, useState } from 'react'
 import { isEqual } from 'underscore'
 import useAsyncEffect from 'use-async-effect'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   const intervalRef = useRef<NodeJS.Timeout>()
   const [vdjState, setVdjState] = useState<VDJState>()
-  const [deckState, setDeckState] = useState<DeckState>()
-  const [metadata, setMetadata] = useState<IAudioMetadata>()
-  const [imageUrl, setImageUrl] = useState<string>()
-
   function clearIntervalRef(ref: MutableRefObject<NodeJS.Timeout | undefined>) {
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
     }
   }
-
   useAsyncEffect(async () => {
     clearIntervalRef(intervalRef)
     intervalRef.current = setInterval(async () => {
-      const newState = JSON.parse(await runVdjScript('get_state')) as VDJState
-      setVdjState(prevState =>
-        !isEqual(newState, prevState) ? newState : prevState
-      )
+      const newS = JSON.parse(await runVdjScript('get_state')) as VDJState
+      setVdjState(prevS => (!isEqual(newS, prevS) ? newS : prevS))
     }, 250)
     return () => {
       clearIntervalRef(intervalRef)
     }
   }, [])
-
   useAsyncEffect(async () => {
-    if (!vdjState) {
-      return
+    if (vdjState) {
+      const deckState = getCurrentDeckState(vdjState)
+      const metadata = await getMetadata(deckState.filepath)
+      const trackId = metadata.common.comment!.at(0)!
     }
-    setDeckState(prevState => {
-      const newState = getCurrentDeckState(vdjState)
-      return !isEqual(newState, prevState) ? newState : prevState
-    })
   }, [vdjState])
-  useAsyncEffect(async () => {
-    if (deckState?.filepath) {
-      const newMetadata = await getMetadata(deckState.filepath)
-      setMetadata(newMetadata)
-      setImageUrl(
-        createImageUrlFromBuffer(
-          newMetadata?.common?.picture?.at(0)
-            ?.data as unknown as ImageBufferData
-        )
-      )
-    }
-  }, [deckState?.filepath])
-
-  return (
-    <main className={`${styles.main} ${inter.className}`}>
-      <div className={styles.left}>
-        <img src={imageUrl} alt='' className={styles.cover} />
-        <p>{metadata?.common.title}</p>
-      </div>
-      <div className={styles.right}>
-        <div className={styles.lyricsDisplay}>
-          <LyricsDisplay deckState={deckState} metadata={metadata} />
-        </div>
-      </div>
-    </main>
-  )
+  return <>Hello, world!</>
 }

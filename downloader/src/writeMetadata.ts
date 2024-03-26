@@ -9,7 +9,6 @@ export interface AudioMetadata {
   album: string
   comment: string
   coverArtPath: string
-  lyrics?: string
 }
 
 export default async function writeMetadata(
@@ -37,8 +36,6 @@ export default async function writeMetadata(
     `album=${metadata.album}`,
     '-metadata',
     `comment=${metadata.comment}`,
-    // '-metadata',
-    // `lyrics=${metadata.lyrics}`,
     '-c',
     'copy',
     '-c:v',

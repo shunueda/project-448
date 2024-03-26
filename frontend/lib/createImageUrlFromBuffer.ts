@@ -1,4 +1,4 @@
-import ImageBufferData from '@/lib/models/ImageBufferData'
+import ImageBufferData from 'lib/ImageBufferData'
 
 export default function createImageUrlFromBuffer(buffer: ImageBufferData) {
   if (!buffer || !buffer.data) {

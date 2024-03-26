@@ -1,6 +1,6 @@
-import getLyricsFromMetadata from '@/lib/getLyricsFromMetadata'
-import { DeckState } from '@/lib/models/VDJState'
-import LyricsData from 'downloader/src/models/LyricsData'
+import fetchLyrics from 'lib/fetchLyrics'
+import LyricsData from 'lib/models/LyricsData'
+import { DeckState } from 'lib/models/VDJState'
 import { IAudioMetadata } from 'music-metadata'
 import { useEffect, useState } from 'react'
 import useAsyncEffect from 'use-async-effect'
@@ -19,7 +19,7 @@ export default function LyricsDisplay(props: Props) {
     if (!props?.deckState?.filepath || !props?.metadata) {
       return
     }
-    const lyricsData = getLyricsFromMetadata(props.metadata)
+    const lyricsData = await fetchLyrics(props.metadata.common.comment![0])
     setLyricsData(lyricsData)
     let marginTop = 0
     for (let i = 0; i < lyricsData.lyrics.lines.length; i++) {

@@ -4,49 +4,46 @@
 #include <utility>
 #include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
-#include <string>
 
 typedef websocketpp::server<websocketpp::config::asio> server;
 
+using websocketpp::lib::bind;
 using websocketpp::lib::placeholders::_1;
 using websocketpp::lib::placeholders::_2;
-using websocketpp::lib::bind;
 
 HRESULT VDJ_API Project448::OnGetPluginInfo(TVdjPluginInfo8 *infos) {
-    infos->PluginName = "Project448";
-    infos->Author = "Shun Ueda";
-    infos->Description = "Part of Project448";
-    infos->Version = "1.0";
-    infos->Flags = 0x00;
-    infos->Bitmap = nullptr;
-    return S_OK;
+  infos->PluginName = "project-448";
+  infos->Author = "Shun Ueda <me@shu.nu>";
+  infos->Description = "Plugin for project-448";
+  infos->Version = "1.0";
+  infos->Flags = 0x00;
+  infos->Bitmap = nullptr;
+  return S_OK;
 }
 
-HRESULT VDJ_API Project448::OnLoad() {
-    return S_OK;
-}
+HRESULT VDJ_API Project448::OnLoad() { return S_OK; }
 
 ULONG VDJ_API Project448::Release() {
-    delete this;
-    return 0;
+  delete this;
+  return 0;
 }
 
 HRESULT VDJ_API Project448::OnStart() {
-    start_server();
-    return S_OK;
+  start_server();
+  return S_OK;
 }
 
 HRESULT VDJ_API Project448::OnStop() {
-    socket_server.stop_listening();
-    return S_OK;
+  socket_server.stop_listening();
+  return S_OK;
 }
 
 std::string Project448::run_script(const std::string &script) {
-    auto buffer_size = 2048;
-    char buffer[buffer_size];
-    this->GetStringInfo(script.c_str(), buffer, buffer_size);
-    std::string result(buffer);
-    return result;
+  auto buffer_size = 2048;
+  char buffer[buffer_size];
+  this->GetStringInfo(script.c_str(), buffer, buffer_size);
+  std::string result(buffer);
+  return result;
 }
 
 void Project448::start_server() {
@@ -87,19 +84,20 @@ void Project448::start_server() {
 }
 
 int Project448::time_to_ms(const std::string &timestr) {
-    if (timestr.empty()) {
-        return 0;
-    }
-    int minutes, seconds;
-    double fractionalSeconds;
-    char colon, dot;
-    std::istringstream iss(timestr);
-    iss >> minutes >> colon >> seconds >> dot >> fractionalSeconds;
-    if (colon != ':' || dot != '.' || iss.fail()) {
-        std::cerr << "Invalid time format" << std::endl;
-        return -1;
-    }
-    int fractionalPartLength = timestr.substr(timestr.find('.') + 1).length();
-    int milliseconds = static_cast<int>(fractionalSeconds * pow(10, 3 - fractionalPartLength));
-    return (minutes * 60 + seconds) * 1000 + milliseconds;
+  if (timestr.empty()) {
+    return 0;
+  }
+  int minutes, seconds;
+  double fractionalSeconds;
+  char colon, dot;
+  std::istringstream iss(timestr);
+  iss >> minutes >> colon >> seconds >> dot >> fractionalSeconds;
+  if (colon != ':' || dot != '.' || iss.fail()) {
+    std::cerr << "Invalid time format" << std::endl;
+    return -1;
+  }
+  int fractionalPartLength = timestr.substr(timestr.find('.') + 1).length();
+  int milliseconds =
+      static_cast<int>(fractionalSeconds * pow(10, 3 - fractionalPartLength));
+  return (minutes * 60 + seconds) * 1000 + milliseconds;
 }
