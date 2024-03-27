@@ -5,3 +5,6 @@ playlists:
 overrides:
   - spotify: spotify_track_id
     youtube: youtube_video_id
+interceptor_interval: 0
+vdj_ws_port: 8000
+interceptor_ws_port: 8010
