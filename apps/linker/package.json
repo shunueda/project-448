@@ -1,7 +1,7 @@
 {
-  "name": "interceptor",
+  "name": "linker",
   "version": "1.0.0",
-  "description": "Interceptor component for project-448",
+  "description": "Linker component for project-448",
   "main": "src/index.ts",
   "author": "Shun Ueda <me@shu.nu>",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "@types/ws": "^8.5.10",
     "@types/xml": "^1.0.11",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite-node": "^1.4.0"
   },
   "dependencies": {
     "@spotify/web-api-ts-sdk": "^1.1.2",
@@ -32,8 +33,6 @@
     "mkdirp": "^3.0.1",
     "node-youtube-music": "^0.10.3",
     "shared": "*",
-    "underscore": "^1.13.6",
-    "vite-node": "^1.4.0",
     "ws": "^8.16.0",
     "xml": "^1.0.1",
     "yaml": "^2.3.4",

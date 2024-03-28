@@ -1,9 +1,9 @@
 import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
-import SpotifyClient from './SpotifyClient'
+import { SpotifyClient } from './SpotifyClient'
 
 const LIMIT = 50
 
-export default async function getAllPlaylistItems(
+export async function getAllPlaylistItems(
   playlistId: string
 ): Promise<PlaylistedTrack[]> {
   async function fetchTracks(

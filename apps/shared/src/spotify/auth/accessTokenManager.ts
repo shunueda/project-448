@@ -8,14 +8,14 @@ function readCacheFile(): AccessToken {
   return JSON.parse(readFileSync(CACHE_FILENAME, 'utf-8'))
 }
 
-export function isCachedSpotifyTokenExpired(): boolean {
+function isCachedSpotifyTokenExpired(): boolean {
   return (
     !existsSync(CACHE_FILENAME) ||
     readCacheFile().expires_in < Date.now() / 1000
   )
 }
 
-export async function refreshSpotifyAccessToken(): Promise<AccessToken> {
+async function refreshSpotifyAccessToken(): Promise<AccessToken> {
   const response = await fetch('https://open.spotify.com/get_access_token', {
     headers: {
       Cookie: `sp_dc=${process.env.SPOTIFY_SP_DC}`

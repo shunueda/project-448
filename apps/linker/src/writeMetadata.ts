@@ -1,7 +1,7 @@
 import ffmpeg from 'ffmpeg-static'
 import { spawn } from 'node:child_process'
 import { rename, unlink } from 'node:fs/promises'
-import config from './config'
+import config from '../../shared/src/config'
 
 export interface AudioMetadata {
   artist: string

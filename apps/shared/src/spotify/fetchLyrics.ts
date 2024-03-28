@@ -1,9 +1,7 @@
 import type LyricsData from '../LyricsData'
 import { getSpotifyAccessToken } from './auth/accessTokenManager'
 
-export default async function fetchLyrics(
-  trackId: string
-): Promise<LyricsData> {
+export async function fetchLyrics(trackId: string): Promise<LyricsData> {
   const { access_token } = await getSpotifyAccessToken()
   const url = `https://spclient.wg.spotify.com/color-lyrics/v2/track/${trackId}?format=json&vocalRemoval=false`
   const response = await fetch(url, {

@@ -1,2 +1,6 @@
+export { Config } from './config'
+export { getSpotifyAccessToken } from './spotify/auth/accessTokenManager'
+export { fetchLyrics } from './spotify/fetchLyrics'
+export { getAllPlaylistItems } from './spotify/getAllPlaylistItems'
 export type { VdjState } from './vdj/VdjState'
 export { VdjStateChangeEvent } from './vdj/VdjStateChangeEvent'
