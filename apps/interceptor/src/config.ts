@@ -10,6 +10,7 @@ interface ConfigDefinition {
   overrides: Override[]
   interceptor_interval: number
   interceptor_ws_port: number
+  vdj_ws_port: number
 }
 
 interface Playlist {

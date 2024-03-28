@@ -1,5 +1,5 @@
 import { EOL } from 'node:os'
-import type LyricsData from '../models/LyricsData'
+import type LyricsData from '../LyricsData'
 
 export default function convertToLrc(lyricsData: LyricsData) {
   return lyricsData.lyrics.lines

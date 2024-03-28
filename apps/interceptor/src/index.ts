@@ -1,6 +1,6 @@
 import type { Track } from '@spotify/web-api-ts-sdk'
 import { MultiBar, Presets } from 'cli-progress'
-import { readdirSync, unlinkSync } from 'node:fs'
+import { writeFileSync } from 'fs'
 import { appendFile, stat } from 'node:fs/promises'
 import { EOL } from 'node:os'
 import { setInterval } from 'node:timers/promises'
@@ -8,13 +8,8 @@ import { WebSocketServer } from 'ws'
 import xml from 'xml'
 import Config from './config'
 import getAllPlaylistItems from './spotify/getAllPlaylistItems'
+import runVdjScript from './ws/runVdjScript'
 import downloadAudio from './youtube/downloadAudio'
-
-readdirSync(`${process.env.VDJ_DIR}/Playlists`)
-  .filter(file => file.endsWith('.m3u'))
-  .forEach(file => {
-    unlinkSync(`${process.env.VDJ_DIR}/Playlists/${file}`)
-  })
 
 const progressBar = new MultiBar(
   {
@@ -31,12 +26,13 @@ await Promise.all(
       ({ track }) => track as Track
     )
     const bar = progressBar.create(tracks.length, 0)
+    const m3uFilePath = `${process.env.VDJ_DIR}/Playlists/${playlist.name}.m3u`
+    writeFileSync(m3uFilePath, '')
     for (const track of tracks) {
       bar.update({
         filename: `${playlist.name} | ${track.name}`
       })
       try {
-        const m3uFilePath = `${process.env.VDJ_DIR}/Playlists/${playlist.name}.m3u`
         const localPath = await downloadAudio(track, {
           tracksDir: `${process.env.VDJ_DIR}/Tracks`,
           coverArtsDir: `${process.env.VDJ_DIR}/CoverArts`,
@@ -60,7 +56,10 @@ await Promise.all(
   })
 )
 
-const wss = new WebSocketServer({ port: Config.interceptor_ws_port })
+const ws = new WebSocketServer({ port: Config.interceptor_ws_port })
+
+let currentState
 
 for await (const _ of setInterval(Config.interceptor_interval)) {
+  const vdjState = await runVdjScript('get_state')
 }

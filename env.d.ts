@@ -5,6 +5,7 @@ declare global {
       SPOTIFY_SP_DC: string
       SPOTIFY_CLIENT_ID: string
       VDJ_DIR: string
+      ABLY_API_KEY: string
     }
   }
 }

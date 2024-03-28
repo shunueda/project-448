@@ -1,4 +1,4 @@
-import type LyricsData from '../models/LyricsData'
+import type LyricsData from '../LyricsData'
 import { getSpotifyAccessToken } from './auth/accessTokenManager'
 
 export default async function fetchLyrics(
