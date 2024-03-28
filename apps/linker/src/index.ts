@@ -1,9 +1,10 @@
 import type { Track } from '@spotify/web-api-ts-sdk'
 import { MultiBar, Presets } from 'cli-progress'
+import Config from 'config'
 import { writeFileSync } from 'fs'
 import { appendFile, stat } from 'node:fs/promises'
 import { EOL } from 'node:os'
-import { Config, getAllPlaylistItems } from 'shared'
+import { getAllPlaylistItems } from 'shared'
 import xml from 'xml'
 import downloadAudio from './youtube/downloadAudio'
 

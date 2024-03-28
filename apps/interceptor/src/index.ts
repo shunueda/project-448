@@ -1,5 +1,5 @@
+import Config from 'config'
 import { setInterval } from 'node:timers/promises'
-import { Config } from 'shared'
 import { WebSocketServer } from 'ws'
 import runVdjScript from './vdj/runVdjScript'
 

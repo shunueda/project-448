@@ -1,4 +1,5 @@
-import { Config, type VdjState } from 'shared'
+import Config from 'config'
+import type { VdjState } from 'shared'
 import Websocket from 'ws'
 
 const ws = new Websocket(`ws://localhost:${Config.vdj_ws_port}`)

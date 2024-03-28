@@ -32,3 +32,5 @@ export const Config = parse(
     `../../config${isDevelopment ? '.development' : ''}.yaml`
   ).toString()
 ) as ConfigDefinition
+
+export default Config

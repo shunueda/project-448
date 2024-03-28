@@ -5,33 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/linker/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/linker/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/linker/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/shared/src/LyricsData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/shared/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/config/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/config/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/config/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/lib/VdjState.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/interceptor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/LyricsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/LyricsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/PlaylistedTrackWithMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/PlaylistedTrackWithMetadata.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/downloadImage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/downloadImage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/spotify/SpotifyClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/SpotifyClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/spotify/auth/SpdcAuthResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/auth/SpdcAuthResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/spotify/auth/accessTokenManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/auth/accessTokenManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/spotify/getAllPlaylistItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/getAllPlaylistItems.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/util/convertToLrc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/util/convertToLrc.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/writeMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/writeMetadata.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/ws/runVdjScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/youtube/inntertube.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/youtube/inntertube.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/writeMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/writeMetadata.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/src/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/shared/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +70,7 @@
     "javascript.nodejs.core.library.configured.version": "20.11.0",
     "javascript.nodejs.core.library.typings.version": "20.11.5",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/apps/shared",
+    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/apps/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/config" />
       <recent name="$PROJECT_DIR$/apps/shared" />
       <recent name="$PROJECT_DIR$/apps/shared/src" />
       <recent name="$PROJECT_DIR$/apps/linker" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/apps/display/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/shared/src" />

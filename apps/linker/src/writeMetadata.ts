@@ -1,7 +1,7 @@
+import Config from 'config'
 import ffmpeg from 'ffmpeg-static'
 import { spawn } from 'node:child_process'
 import { rename, unlink } from 'node:fs/promises'
-import config from '../../shared/src/config'
 
 export interface AudioMetadata {
   artist: string
@@ -17,8 +17,8 @@ export default async function writeMetadata(
   metadata: AudioMetadata
 ) {
   const tempPath = localPath.replace(
-    `.${config.format}`,
-    `.metadata.${config.format}`
+    `.${Config.format}`,
+    `.metadata.${Config.format}`
   )
   const ffmpegArgs = [
     '-i',

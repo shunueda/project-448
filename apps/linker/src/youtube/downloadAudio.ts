@@ -1,9 +1,9 @@
 import type { Track } from '@spotify/web-api-ts-sdk'
+import Config from 'config'
 import { existsSync } from 'fs'
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { Utils } from 'youtubei.js'
-import config from '../../../shared/src/config'
 import downloadImage from '../downloadImage'
 import writeMetadata, { AudioMetadata } from '../writeMetadata'
 import inntertube from './inntertube'
@@ -20,14 +20,14 @@ export default async function downloadAudio(
 ): Promise<string> {
   const localPath = resolve(
     directoryOptions.tracksDir,
-    `${track.name}.${config.format}`
+    `${track.name}.${Config.format}`
   )
   if (existsSync(localPath)) {
     return localPath
   }
   const artists = track.artists.map(artist => artist.name).join(' ')
   const videoId =
-    config.overrides.find(it => it.spotify === track.id)?.youtube ||
+    Config.overrides.find(it => it.spotify === track.id)?.youtube ||
     (
       await inntertube.music.search(
         `${track.name} ${artists} ${track.album.name}`,
