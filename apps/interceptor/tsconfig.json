@@ -116,11 +116,6 @@
     /* Skip type checking all .d.ts files. */
     "types": [
       "../env.d.ts"
-    ],
-    "paths": {
-      "shared/*": [
-        "../shared/*"
-      ]
-    }
+    ]
   }
 }

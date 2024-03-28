@@ -1,4 +1,4 @@
-import VDJState from 'shared/src/VdjState'
+import VDJState from 'shared/src/vdj/VdjState'
 import Websocket from 'ws'
 import Config from '../config'
 

@@ -1,2 +1,2 @@
-export type { VdjState } from './VdjState'
-export { VdjStateChangeEvent } from './VdjStateChangeEvent'
+export type { VdjState } from './vdj/VdjState'
+export { VdjStateChangeEvent } from './vdj/VdjStateChangeEvent'
