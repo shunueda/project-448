@@ -4,7 +4,7 @@ project(Project448)
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(CURL REQUIRED)
-include_directories(${CURL_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/include)
+include_directories(${CURL_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/include/websocketpp)
 
 set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
