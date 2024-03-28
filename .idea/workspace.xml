@@ -5,102 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plugin/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/base64/base64.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/client.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/close.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/asio.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/asio_ssl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/chrono.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/connection_hdl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/cpp11.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/functional.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/md5.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/memory.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/network.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/platforms.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/random.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/regex.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/stdint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/system_error.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/thread.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/time.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/common/type_traits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/concurrency/basic.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/concurrency/none.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/asio.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/asio_client.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/asio_no_tls.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/asio_no_tls_client.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/boost_config.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/core_client.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/debug.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/debug_asio.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/debug_asio_no_tls.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/minimal_client.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/config/minimal_server.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/connection_base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/endpoint_base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/error.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/extensions/extension.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/extensions/permessage_deflate/disabled.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/extensions/permessage_deflate/enabled.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/frame.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/impl/parser.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/impl/request.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/impl/response.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/parser.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/request.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/http/response.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/impl/connection_impl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/impl/endpoint_impl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/impl/utilities_impl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/logger/basic.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/logger/levels.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/logger/stub.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/logger/syslog.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/message_buffer/alloc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/message_buffer/message.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/message_buffer/pool.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/hybi00.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/hybi07.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/hybi08.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/hybi13.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/processors/processor.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/random/none.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/random/random_device.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/roles/client_endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/roles/server_endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/server.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/sha1/sha1.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/security/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/security/none.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/asio/security/tls.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/base/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/base/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/debug/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/debug/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/debug/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/iostream/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/iostream/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/iostream/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/stub/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/stub/connection.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/transport/stub/endpoint.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/uri.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/utf8_validator.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/utilities.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/include/websocketpp/version.hpp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/display/components/LrcDisplay.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/display/lib/ablyClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/vdjStateDiffUtils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/interceptor/test/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/models/src/vdj/VdjEventNotification.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/config/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/config/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/pages/api/hello.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/api/getLyricsLrc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/interceptor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/LyricsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/LyricsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/PlaylistedTrackWithMetadata.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/util/convertToLrc.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/models/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/models/src/vdj/VdjStateChangeEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/vdj/VdjStateChangeEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.example.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.example.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +82,7 @@
     "javascript.nodejs.core.library.configured.version": "20.11.0",
     "javascript.nodejs.core.library.typings.version": "20.11.5",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/apps/models/src",
+    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/apps/linker",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -160,7 +90,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/Users/me/dev/shunueda/project-448/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "ts.external.directory.path": "/Users/me/dev/shunueda/project-448/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -172,18 +102,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/linker" />
       <recent name="$PROJECT_DIR$/apps/models/src" />
       <recent name="$PROJECT_DIR$/apps/models" />
       <recent name="$PROJECT_DIR$/apps/config" />
       <recent name="$PROJECT_DIR$/apps/shared" />
-      <recent name="$PROJECT_DIR$/apps/shared/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/display" />
+      <recent name="$PROJECT_DIR$/apps/shared" />
+      <recent name="$PROJECT_DIR$/apps/models/src" />
       <recent name="$PROJECT_DIR$/apps/shared/src" />
       <recent name="$PROJECT_DIR$/apps/linker/src" />
-      <recent name="$PROJECT_DIR$/apps/interceptor/src/vdj" />
-      <recent name="$PROJECT_DIR$/apps/linker" />
-      <recent name="$PROJECT_DIR$/apps/shared" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -58,8 +58,8 @@ void Project448::start_server() {
                         std::string crossfader = run_script("crossfader");
                         std::string left_filepath = run_script("deck 1 get_filepath");
                         std::string right_filepath = run_script("deck 2 get_filepath");
-                        std::string left_position = run_script("deck 1 get_time 'elapsed'");
-                        std::string right_position = run_script("deck 2 get_time 'elapsed'");
+                        std::string left_position = run_script("deck 1 get_time 'elapsed' 'absolute'");
+                        std::string right_position = run_script("deck 2 get_time 'elapsed' 'absolute'");
                         result = "{"
                                  "  \"leftDeck\": {"
                                  "    \"filepath\": \"" + left_filepath + "\","

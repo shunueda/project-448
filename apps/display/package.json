@@ -9,13 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ably": "^2.0.1",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "models": "*",
+    "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.4",
-    "models": "*"
+    "sass": "^1.72.0",
+    "use-async-effect": "^2.2.7"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18"

@@ -32,7 +32,7 @@ async function refreshSpotifyAccessToken(): Promise<AccessToken> {
     expires_in: Math.round(auth.accessTokenExpirationTimestampMs / 1000),
     refresh_token: ''
   }
-  writeFileSync(CACHE_FILENAME, JSON.stringify(accessToken))
+  writeFileSync(CACHE_FILENAME, JSON.stringify(accessToken, null, 2))
   return accessToken
 }
 

@@ -1,15 +1,15 @@
 import { config } from 'dotenv'
-import { readFileSync } from 'fs'
+import { readFileSync } from 'node:fs'
 import { parse } from 'yaml'
 
-const isDevelopment = process.env.NODE_ENV === 'development'
+const isDevelopment = false // just for now
 
 interface ConfigDefinition {
   format: string
   playlists: Playlist[]
   overrides: Override[]
   interceptor_interval: number
-  interceptor_ws_port: number
+  interceptor_tolerance: number
   vdj_ws_port: number
 }
 

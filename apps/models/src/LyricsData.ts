@@ -1,4 +1,4 @@
-export default interface LyricsData {
+export interface LyricsData {
   lyrics: {
     syncType: 'LINE_SYNCED' | 'UNSYNCED'
     lines: Array<{
