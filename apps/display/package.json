@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@spotify/web-api-ts-sdk": "^1.2.0",
     "ably": "^2.0.1",
     "body-scroll-lock": "^4.0.0-beta.0",
     "models": "*",
