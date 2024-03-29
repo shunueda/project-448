@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { spotifyClient } from 'shared'
+import { spotifyClient } from '../../lib/spotifyClient'
 
 const cache = new Map<string, string>()
 

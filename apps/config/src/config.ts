@@ -23,14 +23,21 @@ interface Override {
   youtube: string
 }
 
-config({
-  path: '../../.env'
-})
+try {
+  config({
+    path: '../../.env'
+  })
+} catch (e) {}
 
-export const Config = parse(
-  readFileSync(
-    `../../config${isDevelopment ? '.development' : ''}.yaml`
-  ).toString()
-) as ConfigDefinition
+let Config: ConfigDefinition | undefined
+try {
+  Config = parse(
+    readFileSync(
+      `../../config${isDevelopment ? '.development' : ''}.yaml`
+    ).toString()
+  ) as ConfigDefinition
+} catch (e) {}
+
+Object.freeze(Config)
 
 export default Config
