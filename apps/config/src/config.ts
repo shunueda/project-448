@@ -9,7 +9,7 @@ interface ConfigDefinition {
   playlists: Playlist[]
   overrides: Override[]
   interceptor_interval: number
-  interceptor_tolerance: number
+  interceptor_position_buffer: number
   vdj_ws_port: number
 }
 

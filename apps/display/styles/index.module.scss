@@ -1,24 +1,21 @@
-$track-info-area-height: 10%;
-$lines: 9;
-
 .main {
   height: 100vh;
   width: 100vw;
   text-align: center;
-}
-
-.trackInfoArea {
-  height: $track-info-area-height;
+  background-color: #262626;
 }
 
 .lyricsArea {
-  background-color: #36622b;
-  height: calc(100% - #{$track-info-area-height});
-  padding: 5%;
+  display: flex;
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  line-height: 2em;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .shelf {
-  height: calc(calc(100% - #{$track-info-area-height}) / #{$lines});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,5 +23,40 @@ $lines: 9;
   p.line {
     font-size: 1.5em;
     color: white;
+  }
+}
+
+.trackInfoArea {
+  position: absolute;
+  height: 8vh;
+  width: 95vw;
+  background-color: #ffffff;
+  bottom: 15vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .coverArt {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 3px;
+    margin-left: 1vh;
+    background-position: center;
+    background-size: contain;
+  }
+  .textarea {
+    margin-left: 0.75em;
+    text-align: left;
+  }
+  .musicTitle {
+    color: #313131;
+  }
+  .musicArtist {
+    font-size: 0.7em;
+    color: #a1a1a1;
   }
 }

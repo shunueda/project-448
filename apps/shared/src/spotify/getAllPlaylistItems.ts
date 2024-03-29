@@ -1,5 +1,5 @@
 import type { PlaylistedTrack } from '@spotify/web-api-ts-sdk'
-import { SpotifyClient } from './SpotifyClient'
+import { spotifyClientWithAccessToken } from './SpotifyClient'
 
 const LIMIT = 50
 
@@ -10,13 +10,14 @@ export async function getAllPlaylistItems(
     offset: number,
     accumulatedTracks: PlaylistedTrack[] = []
   ): Promise<PlaylistedTrack[]> {
-    const response = await SpotifyClient.playlists.getPlaylistItems(
-      playlistId,
-      undefined,
-      undefined,
-      LIMIT,
-      offset
-    )
+    const response =
+      await spotifyClientWithAccessToken.playlists.getPlaylistItems(
+        playlistId,
+        undefined,
+        undefined,
+        LIMIT,
+        offset
+      )
     const newAccumulatedTracks = accumulatedTracks.concat(response.items)
     return response.items.length < LIMIT
       ? newAccumulatedTracks

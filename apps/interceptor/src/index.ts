@@ -10,48 +10,56 @@ import runVdjScript from './vdj/runVdjScript'
 let latestNotification: DisplayUpdateNotification | undefined = undefined
 const ably = ablyClient.channels.get(AblyChannel.MAIN)
 
-const LINES = 9
+const LINES = 7
 
 for await (const _ of setInterval(Config.interceptor_interval)) {
-  const vdjState = await runVdjScript('get_state')
-  const deckState = getCurrentDeckState(vdjState)
-  const metadata = await parseMetadata(deckState.filepath)
-  const lyricsData = await fetchLyrics(metadata.common.comment![0])
-  const currentIndex = lyricsData.lyrics.lines.findIndex(
-    line => line.startTimeMs > deckState.position
-  )
-  const lines = lyricsData.lyrics.lines
-    .slice(
-      Math.max(currentIndex - Math.ceil(LINES / 2), 0),
-      Math.min(
-        currentIndex + Math.floor(LINES / 2),
-        lyricsData.lyrics.lines.length
-      )
+  try {
+    const vdjState = await runVdjScript('get_state')
+    const deckState = getCurrentDeckState(vdjState)
+    const metadata = await parseMetadata(deckState.filepath)
+    const trackId = metadata.common.comment![0]
+    const lyricsData = await fetchLyrics(trackId)
+    const currentIndex = lyricsData.lyrics.lines.findIndex(
+      line =>
+        line.startTimeMs >
+        deckState.position + Config.interceptor_position_buffer
     )
-    .map(line => line.words)
-  const startEmptyLinesCount = Math.max(Math.ceil(LINES / 2) - currentIndex, 0)
-  const endEmptyLinesCount = LINES - (lines.length + startEmptyLinesCount)
-  for (let i = 0; i < startEmptyLinesCount; i++) {
-    lines.unshift('')
-  }
-  for (let i = 0; i < endEmptyLinesCount; i++) {
-    lines.push('')
-  }
-  const displayUpdateNotification: DisplayUpdateNotification = {
-    lines,
-    trackInfo: {
-      cover: '',
-      artist: metadata.common.artist!,
-      title: metadata.common.title!,
-      album: metadata.common.album!
+    const lines = lyricsData.lyrics.lines
+      .slice(
+        Math.max(currentIndex - Math.ceil(LINES / 2), 0),
+        Math.min(
+          currentIndex + Math.floor(LINES / 2),
+          lyricsData.lyrics.lines.length
+        )
+      )
+      .map(line => line.words)
+    const startEmptyLinesCount = Math.max(
+      Math.ceil(LINES / 2) - currentIndex,
+      0
+    )
+    const endEmptyLinesCount = LINES - (lines.length + startEmptyLinesCount)
+    for (let i = 0; i < startEmptyLinesCount; i++) {
+      lines.unshift('')
     }
-  }
-  if (
-    JSON.stringify(displayUpdateNotification) !==
-    JSON.stringify(latestNotification)
-  ) {
-    latestNotification = displayUpdateNotification
-    console.log(latestNotification.lines)
-    await ably.publish(AblyEvent.DISPLAY_UPDATE, latestNotification)
-  }
+    for (let i = 0; i < endEmptyLinesCount; i++) {
+      lines.push('')
+    }
+    const displayUpdateNotification: DisplayUpdateNotification = {
+      lines,
+      trackInfo: {
+        trackId,
+        artist: metadata.common.artist!,
+        title: metadata.common.title!,
+        album: metadata.common.album!
+      }
+    }
+    if (
+      JSON.stringify(displayUpdateNotification) !==
+      JSON.stringify(latestNotification)
+    ) {
+      latestNotification = displayUpdateNotification
+      console.log(latestNotification.lines)
+      await ably.publish(AblyEvent.DISPLAY_UPDATE, latestNotification)
+    }
+  } catch (e) {}
 }
