@@ -1,3 +1,4 @@
+import { Realtime } from 'ably'
 import { disableBodyScroll } from 'body-scroll-lock'
 import {
   AblyChannel,
@@ -6,11 +7,9 @@ import {
   SimpleTrackInfo
 } from 'models'
 import { useEffect, useRef, useState } from 'react'
-import ablyClient from '../lib/ablyClient'
 import styles from '../styles/index.module.scss'
 
 export default function Home() {
-  const ably = ablyClient.channels.get(AblyChannel.MAIN)
   const [lines, setLines] = useState<string[]>([])
   const [menuOpen, setMenuOpen] = useState(false)
   const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
@@ -18,6 +17,10 @@ export default function Home() {
 
   useEffect(() => {
     disableBodyScroll(mainRef.current as HTMLElement)
+    const ablyClient = new Realtime(
+      'wYnVEA.Ge4Eag:AhrNqn5M9oxZxGqJk6vwz1BYZF419EnDmjpLOD5r9_0'
+    )
+    const ably = ablyClient.channels.get(AblyChannel.MAIN)
     ably.publish(AblyEvent.JOIN, {}).then()
     ably
       .subscribe(AblyEvent.DISPLAY_UPDATE, async notification => {
@@ -28,6 +31,7 @@ export default function Home() {
       .then()
     return () => {
       ably.unsubscribe()
+      ablyClient.close()
     }
   }, [])
 
