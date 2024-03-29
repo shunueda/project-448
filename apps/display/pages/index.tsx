@@ -46,7 +46,10 @@ export default function Home() {
             <p
               className={styles.line}
               style={{
-                opacity: i === Math.floor(lines.length / 2) ? 1 : 0.5
+                color:
+                  i < Math.floor(lines.length / 2)
+                    ? '#3f3f3f'
+                    : `rgba(220, 220, 220, ${1 - Math.abs(i - Math.floor(lines.length / 2)) / 2.2})`
               }}
             >
               {line}
