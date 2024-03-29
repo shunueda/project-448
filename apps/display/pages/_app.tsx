@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import localFont from 'next/font/local'
+import Head from 'next/head'
 import '../styles/globals.css'
 
 const circular = localFont({
@@ -19,8 +20,14 @@ const circular = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={circular.className}>
-      <Component {...pageProps} />
-    </main>
+    <>
+      <Head>
+        <title>Project 448</title>
+        <link rel='icon shortcut' href='/favicon.ico' sizes='any' />
+      </Head>
+      <main className={circular.className}>
+        <Component {...pageProps} />
+      </main>
+    </>
   )
 }

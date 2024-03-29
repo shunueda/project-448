@@ -26,7 +26,7 @@ export default function Home() {
       })
       .then()
     return () => {
-      ably.unsubscribe(AblyEvent.DISPLAY_UPDATE)
+      ably.unsubscribe()
     }
   }, [])
 
@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <main className={styles.main} ref={mainRef}>
-      {/*<div className={styles.topbar}>Topbar</div>*/}
+      <div className={styles.topbar}>Topbar</div>
       <div className={styles.lyricsArea}>
         {lines.map((line, i) => (
           <div className={styles.shelf}>
@@ -67,7 +67,7 @@ export default function Home() {
         <div className={styles.textarea}>
           <p className={styles.musicTitle}>{simpleTrackInfo?.title}</p>
           <p className={styles.musicArtist}>
-            {simpleTrackInfo?.artist} - {simpleTrackInfo?.album}
+            {simpleTrackInfo?.artist} · {simpleTrackInfo?.album}
           </p>
         </div>
       </div>
