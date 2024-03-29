@@ -12,6 +12,7 @@ import styles from '../styles/index.module.scss'
 export default function Home() {
   const ably = ablyClient.channels.get(AblyChannel.MAIN)
   const [lines, setLines] = useState<string[]>([])
+  const [menuOpen, setMenuOpen] = useState(false)
   const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
   const mainRef = useRef<HTMLDivElement>(null)
 
@@ -39,7 +40,47 @@ export default function Home() {
 
   return (
     <main className={styles.main} ref={mainRef}>
-      <div className={styles.topbar}>Topbar</div>
+      <div className={styles.topbar}>
+        <img
+          className={styles.menuIcon}
+          src={menuOpen ? '/close.svg' : '/meatballs-menu.svg'}
+          alt='menu'
+          onClickCapture={() => {
+            setMenuOpen(curr => !curr)
+          }}
+        />
+      </div>
+      <div
+        className={styles.menuIsland}
+        style={{
+          right: menuOpen ? '73vw' : 0
+        }}
+      >
+        <div className={styles.menuContent}>
+          <h1>Project 448</h1>
+          <h2>By Shun</h2>
+          <ul>
+            <li>
+              Request a Song <i>(Coming soon)</i>
+            </li>
+            <li>
+              Contribute on{' '}
+              <a target='_blank' href='https://github.com/shunueda/project-448'>
+                GitHub
+              </a>
+            </li>
+            <li>
+              Make a donation:{' '}
+              <a
+                target='_blank'
+                href='https://account.venmo.com/pay?recipients=Kirk-Yap'
+              >
+                @Kirk-Yap
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className={styles.lyricsArea}>
         {lines.map((line, i) => (
           <div className={styles.shelf}>

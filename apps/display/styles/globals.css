@@ -1,4 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 1em;
+}
+
+body{
+    background-color: #262626;
+}
+
+a {
+    text-decoration: underline;
+    color: #55ad98;
+}
+
+a:visited {
+    color: #55ad98;
 }
