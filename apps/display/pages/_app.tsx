@@ -6,13 +6,13 @@ const circular = localFont({
   src: [
     {
       path: './lineto-circular-bold.ttf',
-      weight: '400',
+      weight: '600',
       style: 'bold'
     },
     {
       path: './lineto-circular-medium.ttf',
       weight: '400',
-      style: 'italic'
+      style: 'normal'
     }
   ]
 })

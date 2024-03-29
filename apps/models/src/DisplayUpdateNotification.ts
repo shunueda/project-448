@@ -5,6 +5,7 @@ export interface DisplayUpdateNotification {
 
 export interface SimpleTrackInfo {
   trackId: string
+  coverArtUrl: string
   album: string
   artist: string
   title: string

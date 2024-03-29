@@ -29,7 +29,7 @@ try {
   })
 } catch (e) {}
 
-let Config: ConfigDefinition | undefined
+let Config: ConfigDefinition = {} as ConfigDefinition
 try {
   Config = parse(
     readFileSync(

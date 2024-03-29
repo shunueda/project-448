@@ -13,12 +13,11 @@ export default function Home() {
   const ably = ablyClient.channels.get(AblyChannel.MAIN)
   const [lines, setLines] = useState<string[]>([])
   const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
-  const [coverArtUrl, setCoverArtUrl] = useState<string>('')
   const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     disableBodyScroll(mainRef.current as HTMLElement)
-    fetchCoverArt()
+    ably.publish(AblyEvent.JOIN, {}).then()
     ably
       .subscribe(AblyEvent.DISPLAY_UPDATE, async notification => {
         handleDisplayUpdateNotification(
@@ -31,31 +30,16 @@ export default function Home() {
     }
   }, [])
 
-  useEffect(() => {
-    if (simpleTrackInfo) {
-      fetchCoverArt()
-    }
-  }, [simpleTrackInfo])
-
   function handleDisplayUpdateNotification(
     displayUpdateNotificaiton: DisplayUpdateNotification
   ) {
-    fetchCoverArt()
     setLines(displayUpdateNotificaiton.lines)
     setSimpleTrackInfo(displayUpdateNotificaiton.trackInfo)
   }
 
-  function fetchCoverArt() {
-    const trackId = simpleTrackInfo?.trackId
-    if (trackId) {
-      fetch(`/api/getCoverArt?trackId=${trackId}`)
-        .then(res => res.json())
-        .then(({ url }) => setCoverArtUrl(url))
-    }
-  }
-
   return (
     <main className={styles.main} ref={mainRef}>
+      {/*<div className={styles.topbar}>Topbar</div>*/}
       <div className={styles.lyricsArea}>
         {lines.map((line, i) => (
           <div className={styles.shelf}>
@@ -74,7 +58,7 @@ export default function Home() {
         <div
           className={styles.coverArt}
           style={{
-            backgroundImage: `url(${coverArtUrl})`
+            backgroundImage: `url(${simpleTrackInfo?.coverArtUrl || ''})`
           }}
         />
         <div className={styles.textarea}>

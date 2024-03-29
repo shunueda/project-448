@@ -5,12 +5,17 @@
   background-color: #262626;
 }
 
+.topbar {
+  height: 5vh;
+  width: 100vw;
+}
+
 .lyricsArea {
   display: flex;
   height: 80%;
   width: 80%;
   margin-left: 10%;
-  line-height: 2em;
+  line-height: 2.5em;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -22,15 +27,15 @@
 
   p.line {
     font-size: 1.5em;
-    color: white;
+    color: #f8f8f8;
   }
 }
 
 .trackInfoArea {
   position: absolute;
   height: 8vh;
-  width: 95vw;
-  background-color: #ffffff;
+  width: 88vw;
+  background-color: #f6f6f6;
   bottom: 15vh;
   left: 0;
   right: 0;
@@ -40,6 +45,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border: solid 3px transparent;
+
   .coverArt {
     height: 6vh;
     width: 6vh;
@@ -47,14 +54,29 @@
     margin-left: 1vh;
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(133, 133, 133);
+    -moz-box-shadow: 0px 0px 5px 0px rgb(133, 133, 133);
+    box-shadow: 0px 0px 5px 0px rgb(133, 133, 133);
   }
+
   .textarea {
     margin-left: 0.75em;
     text-align: left;
+    width: 80%;
+
+    * {
+      width: 99%;
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
+
   .musicTitle {
     color: #313131;
   }
+
   .musicArtist {
     font-size: 0.7em;
     color: #a1a1a1;

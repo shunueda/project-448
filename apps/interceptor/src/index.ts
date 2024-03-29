@@ -3,14 +3,21 @@ import { AblyChannel, AblyEvent, type DisplayUpdateNotification } from 'models'
 import { setInterval } from 'node:timers/promises'
 import { fetchLyrics } from 'shared'
 import ablyClient from './ably/ablyClient'
+import getTrack from './getTrack'
 import parseMetadata from './parseMetadata'
 import getCurrentDeckState from './vdj/getCurrentDeckState'
 import runVdjScript from './vdj/runVdjScript'
 
+const LINES = 5
+
 let latestNotification: DisplayUpdateNotification | undefined = undefined
 const ably = ablyClient.channels.get(AblyChannel.MAIN)
 
-const LINES = 7
+await ably.subscribe(AblyEvent.JOIN, async () => {
+  if (latestNotification) {
+    await ably.publish(AblyEvent.DISPLAY_UPDATE, latestNotification)
+  }
+})
 
 for await (const _ of setInterval(Config.interceptor_interval)) {
   try {
@@ -44,10 +51,12 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
     for (let i = 0; i < endEmptyLinesCount; i++) {
       lines.push('')
     }
+    const track = await getTrack(trackId)
     const displayUpdateNotification: DisplayUpdateNotification = {
       lines,
       trackInfo: {
         trackId,
+        coverArtUrl: track!.album.images[0].url,
         artist: metadata.common.artist!,
         title: metadata.common.title!,
         album: metadata.common.album!
@@ -58,7 +67,6 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
       JSON.stringify(latestNotification)
     ) {
       latestNotification = displayUpdateNotification
-      console.log(latestNotification.lines)
       await ably.publish(AblyEvent.DISPLAY_UPDATE, latestNotification)
     }
   } catch (e) {}
