@@ -12,7 +12,7 @@ export default function Home() {
   const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
   const mainRef = useRef<HTMLDivElement>(null)
   const client = new Realtime({
-    authUrl: 'https://project-448/api/ably-auth'
+    authUrl: 'https://project-448.vercel.app/api/ably-auth'
   })
 
   useEffect(() => {
