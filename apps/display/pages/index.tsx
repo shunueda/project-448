@@ -8,7 +8,9 @@ const LyricsDisplay = dynamic(() => import('../components/LyricsDisplay'), {
 })
 
 export default function Home() {
-  const client = new Ably.Realtime({ authUrl: '/api/ably-auth/' })
+  const client = new Ably.Realtime({
+    authUrl: 'https://project-448.vercel.app/api/ably-auth'
+  })
   return (
     <AblyProvider client={client}>
       <LyricsDisplay />

@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/pages/api/ably-auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/LrcDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/display/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/styles/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/styles/index.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +135,7 @@
       <workItem from="1711230469309" duration="17504000" />
       <workItem from="1711397014593" duration="7701000" />
       <workItem from="1711570713835" duration="5293000" />
-      <workItem from="1711823070428" duration="1501000" />
+      <workItem from="1711823070428" duration="1869000" />
     </task>
     <servers />
   </component>
