@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/display/components/LrcDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/lib/ablyClient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/vdjStateDiffUtils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/interceptor/test/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/models/src/vdj/VdjEventNotification.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/config/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/config/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/api/hello.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/api/getLyricsLrc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/display/pages/api/ably-auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/components/LrcDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/display/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/vdj/runVdjScript.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/linker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/linker/src/LyricsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/LyricsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/linker/src/PlaylistedTrackWithMetadata.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/linker/src/util/convertToLrc.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/src/vdj/VdjStateChangeEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/vdj/VdjStateChangeEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.example.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.example.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/styles/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/styles/index.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,35 +51,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "20.11.0",
-    "javascript.nodejs.core.library.typings.version": "20.11.5",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/apps/linker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/Users/me/dev/shunueda/project-448/node_modules/prettier",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "ts.external.directory.path": "/Users/me/dev/shunueda/project-448/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/project-448/apps/linker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/linker" />
@@ -160,6 +140,7 @@
       <workItem from="1711230469309" duration="17504000" />
       <workItem from="1711397014593" duration="7701000" />
       <workItem from="1711570713835" duration="5293000" />
+      <workItem from="1711823070428" duration="1501000" />
     </task>
     <servers />
   </component>
