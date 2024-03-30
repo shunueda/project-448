@@ -7,7 +7,6 @@ declare global {
       SPOTIFY_CLIENT_SECRET: string
       VDJ_DIR: string
       ABLY_API_KEY: string
-      ABLY_API_SERVER_KEY: string
     }
   }
 }
