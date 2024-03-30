@@ -1,7 +1,11 @@
-'use client'
-
+import { Realtime } from 'ably'
 import { disableBodyScroll } from 'body-scroll-lock'
-import { DisplayUpdateNotification, SimpleTrackInfo } from 'models'
+import {
+  AblyChannel,
+  AblyEvent,
+  type DisplayUpdateNotification,
+  type SimpleTrackInfo
+} from 'models'
 import { useEffect, useRef, useState } from 'react'
 import styles from './LyricsDisplay.module.scss'
 
@@ -13,22 +17,22 @@ export default function LyricsDisplay() {
 
   useEffect(() => {
     disableBodyScroll(mainRef.current as HTMLElement)
-    // const ablyClient = new Realtime(
-    //   'wYnVEA.Ge4Eag:AhrNqn5M9oxZxGqJk6vwz1BYZF419EnDmjpLOD5r9_0'
-    // )
-    // const ably = ablyClient.channels.get(AblyChannel.MAIN)
-    // ably.publish(AblyEvent.JOIN, {}).then()
-    // ably
-    //   .subscribe(AblyEvent.DISPLAY_UPDATE, async notification => {
-    //     handleDisplayUpdateNotification(
-    //       notification.data as DisplayUpdateNotification
-    //     )
-    //   })
-    //   .then()
-    // return () => {
-    //   ably.unsubscribe()
-    //   ablyClient.close()
-    // }
+    const ablyClient = new Realtime(
+      'wYnVEA.Ge4Eag:AhrNqn5M9oxZxGqJk6vwz1BYZF419EnDmjpLOD5r9_0'
+    )
+    const ably = ablyClient.channels.get(AblyChannel.MAIN)
+    ably.publish(AblyEvent.JOIN, {}).then()
+    ably
+      .subscribe(AblyEvent.DISPLAY_UPDATE, async notification => {
+        handleDisplayUpdateNotification(
+          notification.data as DisplayUpdateNotification
+        )
+      })
+      .then()
+    return () => {
+      ably.unsubscribe()
+      ablyClient.close()
+    }
   }, [])
 
   function handleDisplayUpdateNotification(
@@ -53,7 +57,7 @@ export default function LyricsDisplay() {
       <div
         className={styles.menuIsland}
         style={{
-          right: menuOpen ? '73vw' : 0
+          zIndex: menuOpen ? 99 : -99
         }}
       >
         <div className={styles.menuContent}>

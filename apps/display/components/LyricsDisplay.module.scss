@@ -24,9 +24,9 @@
 .menuIsland {
   position: absolute;
   width: 70vw;
-  margin-right: -70vw;
+  z-index: -999;
   top: 0;
-  transition: right 0.15s ease-in-out;
+  right: 4vw;
   margin-left: auto;
   background: #f8f8f8;
   border-radius: 10px;
