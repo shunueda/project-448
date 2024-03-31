@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/display/pages/requests.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/styles/util.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/config/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/public/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/close.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/public/meatballs-menu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/meatballs-menu.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/getAllPlaylistItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/getAllPlaylistItems.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
