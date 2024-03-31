@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/display/pages/requests.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/display/styles/util.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/config/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/styles/index.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/public/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/public/meatballs-menu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/meatballs-menu.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/linker/src/youtube/downloadAudio.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/models/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/models/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/getAllPlaylistItems.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/getAllPlaylistItems.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -35,6 +50,9 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/apps/interceptor/package.json" />
     <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -79,6 +97,23 @@
     ]
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="/private/var/folders/9j/63kgst5x23s0j14ktw2xr4mw0000gn/T/qodana_output/qodana.sarif.json" />
+        <option name="reportGuid" value="1a3488d0-b688-4d9d-bfe6-f86b67c5759d" />
+        <option name="reportName" value="project-448/qodana/2024-03-30" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/9j/63kgst5x23s0j14ktw2xr4mw0000gn/T/qodana_output/qodana.sarif.json" reportGuid="1a3488d0-b688-4d9d-bfe6-f86b67c5759d" reportId="project-448/qodana/2024-03-30" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/linker" />

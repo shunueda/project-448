@@ -24,7 +24,6 @@
 .menuIsland {
   position: absolute;
   width: 70vw;
-  z-index: -999;
   top: 0;
   right: 4vw;
   margin-left: auto;
@@ -32,6 +31,8 @@
   border-radius: 10px;
   padding-top: 5vh;
   padding-bottom: 5vh;
+  transition: opacity 0.15s ease-in-out;
+  box-shadow: 0 0 5px 0 rgb(133, 133, 133);
 
   .menuContent {
     width: 80%;
@@ -39,18 +40,43 @@
     margin-left: auto;
     text-align: left;
     color: #313131;
+
     h1 {
       color: #313131;
       font-size: 1.6em;
     }
+
     h2 {
       font-size: 0.8em;
     }
+
     li {
+      margin-left: 2em;
       padding-top: 0.5em;
       font-size: 1.1em;
-      margin-left: 2em;
       padding-bottom: 0.5em;
+    }
+
+    input {
+      width: 90%;
+      font-size: 1em;
+      height: 1.5em;
+      border: 2px solid #4b4b4b;
+      border-radius: 5px;
+      margin-top: 0.4em;
+      margin-bottom: 0.5em;
+      padding: 0 5%;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .sendButton {
+      display: inline-block;
+      margin-left: 34vw;
+      padding: 0.1em 0.3em;
+      border: #262626 1px solid;
     }
   }
 }

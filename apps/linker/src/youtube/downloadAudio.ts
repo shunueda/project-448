@@ -44,19 +44,16 @@ export default async function downloadAudio(
   for await (const chunk of Utils.streamToIterable(stream)) {
     file.write(chunk)
   }
-  const coverArtsPath = resolve(
-    directoryOptions.coverArtsDir,
-    `${track.id}.jpg`
-  )
-  if (!existsSync(coverArtsPath)) {
-    await downloadImage(track.album.images[0].url, coverArtsPath)
+  const coverArtPath = resolve(directoryOptions.coverArtsDir, `${track.id}.jpg`)
+  if (!existsSync(coverArtPath)) {
+    await downloadImage(track.album.images[0].url, coverArtPath)
   }
   const metadata: AudioMetadata = {
     title: track.name,
     artist: track.artists.map(artist => artist.name).join('/'),
     album: track.album.name,
     comment: track.id,
-    coverArtPath: coverArtsPath
+    coverArtPath
   }
   await writeMetadata(localPath, metadata)
   return localPath

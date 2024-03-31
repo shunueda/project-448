@@ -10,10 +10,10 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './LyricsDisplay.module.scss'
 
 export default function LyricsDisplay() {
+  const mainRef = useRef<HTMLDivElement>(null)
   const [lines, setLines] = useState<string[]>([])
   const [menuOpen, setMenuOpen] = useState(false)
   const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
-  const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     disableBodyScroll(mainRef.current as HTMLElement)
@@ -36,10 +36,10 @@ export default function LyricsDisplay() {
   }, [])
 
   function handleDisplayUpdateNotification(
-    displayUpdateNotificaiton: DisplayUpdateNotification
+    displayUpdateNotification: DisplayUpdateNotification
   ) {
-    setLines(displayUpdateNotificaiton.lines)
-    setSimpleTrackInfo(displayUpdateNotificaiton.trackInfo)
+    setLines(displayUpdateNotification.lines)
+    setSimpleTrackInfo(displayUpdateNotification.trackInfo)
   }
 
   return (
@@ -57,7 +57,8 @@ export default function LyricsDisplay() {
       <div
         className={styles.menuIsland}
         style={{
-          zIndex: menuOpen ? 99 : -99
+          pointerEvents: menuOpen ? 'auto' : 'none',
+          opacity: menuOpen ? 1 : 0
         }}
       >
         <div className={styles.menuContent}>
@@ -65,13 +66,11 @@ export default function LyricsDisplay() {
           <h2>By Shun</h2>
           <ul>
             <li>
-              Request a Song <i>(Coming soon)</i>
-            </li>
-            <li>
-              Contribute on{' '}
-              <a target='_blank' href='https://github.com/shunueda/project-448'>
-                GitHub
-              </a>
+              <div>
+                Request a Song
+                <input type='text' />
+                <span className={styles.sendButton}>Send</span>
+              </div>
             </li>
             <li>
               Make a donation:{' '}
@@ -80,6 +79,12 @@ export default function LyricsDisplay() {
                 href='https://account.venmo.com/pay?recipients=Kirk-Yap'
               >
                 @Kirk-Yap
+              </a>
+            </li>
+            <li>
+              Contribute on{' '}
+              <a target='_blank' href='https://github.com/shunueda/project-448'>
+                GitHub
               </a>
             </li>
           </ul>
