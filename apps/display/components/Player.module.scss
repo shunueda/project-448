@@ -1,0 +1,95 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em 1em 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94vw;
+  height: 95%;
+  background-color: #f5f5f5;
+  outline: none;
+
+  .header {
+    padding: 1em;
+    border-radius: 1em 1em 0 0;
+    flex: 1;
+  }
+
+  .gripBar {
+    width: 4em;
+    height: 0.375em;
+    flex-shrink: 0;
+    border-radius: 1em;
+    background-color: #777777;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+  }
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 2em);
+  display: grid;
+  place-items: center;
+
+  .coverArt {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 3px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 rgb(133, 133, 133);
+  }
+
+  * {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .titleArea {
+    margin-top: 5%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    width: 95%;
+
+    .title {
+      font-family: "Lineto Circular", sans-serif;
+      font-size: 2em;
+    }
+  }
+
+  .subtitle {
+    width: 90%;
+    margin-top: 4%;
+    font-size: 0.7em;
+    font-family: "SF Pro Regular", sans-serif;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .line {
+    margin: 2em;
+  }
+
+  .icons {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.credit {
+  font-size: 0.5em;
+  text-align: center;
+  color: #6e6e6e;
+  font-family: "SF Pro Regular", sans-serif;
+}

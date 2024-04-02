@@ -11,6 +11,8 @@ interface ConfigDefinition {
   interceptor_interval: number
   interceptor_position_buffer: number
   vdj_ws_port: number
+  display_lines_before: number
+  display_lines_after: number
 }
 
 interface Playlist {

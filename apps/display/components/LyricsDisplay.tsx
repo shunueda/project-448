@@ -1,126 +1,38 @@
-import { Realtime } from 'ably'
-import { disableBodyScroll } from 'body-scroll-lock'
-import {
-  AblyChannel,
-  AblyEvent,
-  type DisplayUpdateNotification,
-  type SimpleTrackInfo
-} from 'models'
-import { useEffect, useRef, useState } from 'react'
+import { type DisplayUpdateNotification } from 'models'
 import styles from './LyricsDisplay.module.scss'
 
-export default function LyricsDisplay() {
-  const mainRef = useRef<HTMLDivElement>(null)
-  const [lines, setLines] = useState<string[]>([])
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [simpleTrackInfo, setSimpleTrackInfo] = useState<SimpleTrackInfo>()
+interface Props {
+  notification: DisplayUpdateNotification
+}
 
-  useEffect(() => {
-    disableBodyScroll(mainRef.current as HTMLElement)
-    const ablyClient = new Realtime(
-      'wYnVEA.Ge4Eag:AhrNqn5M9oxZxGqJk6vwz1BYZF419EnDmjpLOD5r9_0'
-    )
-    const ably = ablyClient.channels.get(AblyChannel.MAIN)
-    ably.publish(AblyEvent.JOIN, {}).then()
-    ably
-      .subscribe(AblyEvent.DISPLAY_UPDATE, async notification => {
-        handleDisplayUpdateNotification(
-          notification.data as DisplayUpdateNotification
-        )
-      })
-      .then()
-    return () => {
-      ably.unsubscribe()
-      ablyClient.close()
-    }
-  }, [])
-
-  function handleDisplayUpdateNotification(
-    displayUpdateNotification: DisplayUpdateNotification
-  ) {
-    setLines(displayUpdateNotification.lines)
-    setSimpleTrackInfo(displayUpdateNotification.trackInfo)
-  }
-
+export default function LyricsDisplay({ notification }: Props) {
+  const mainIndex = notification.lines.findIndex(line => line.current)
   return (
-    <main className={styles.main} ref={mainRef}>
-      <div className={styles.topbar}>
-        <img
-          className={styles.menuIcon}
-          src={menuOpen ? '/close.svg' : '/meatballs-menu.svg'}
-          alt='menu'
-          onClickCapture={() => {
-            setMenuOpen(curr => !curr)
-          }}
-        />
-      </div>
-      <div
-        className={styles.menuIsland}
-        style={{
-          pointerEvents: menuOpen ? 'auto' : 'none',
-          opacity: menuOpen ? 1 : 0
-        }}
-      >
-        <div className={styles.menuContent}>
-          <h1>Project 448</h1>
-          <h2>By Shun</h2>
-          <ul>
-            <li>
-              <div>
-                Request a Song
-                <input type='text' />
-                <span className={styles.sendButton}>Send</span>
-              </div>
-            </li>
-            <li>
-              Make a donation:{' '}
-              <a
-                target='_blank'
-                href='https://account.venmo.com/pay?recipients=Kirk-Yap'
-              >
-                @Kirk-Yap
-              </a>
-            </li>
-            <li>
-              Contribute on{' '}
-              <a target='_blank' href='https://github.com/shunueda/project-448'>
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div className={styles.main}>
       <div className={styles.lyricsArea}>
-        {lines.map((line, i) => (
-          <div className={styles.shelf}>
+        {notification.lines.map((line, i) => (
+          <div className={styles.shelf} key={i}>
             <p
               className={styles.line}
               style={{
                 color:
-                  i < Math.floor(lines.length / 2)
-                    ? '#3f3f3f'
-                    : `rgba(220, 220, 220, ${1 - Math.abs(i - Math.floor(lines.length / 2)) / 2.2})`
+                  i === mainIndex
+                    ? '#e5e5e5'
+                    : i < mainIndex
+                      ? '#3d3d3d'
+                      : '#888888',
+                opacity:
+                  i <= mainIndex
+                    ? 1
+                    : 1 -
+                      (i - mainIndex) * (1 / (notification.lines.length - 1.7))
               }}
             >
-              {line}
+              {line.words}
             </p>
           </div>
         ))}
       </div>
-      <div className={styles.trackInfoArea}>
-        <div
-          className={styles.coverArt}
-          style={{
-            backgroundImage: `url(${simpleTrackInfo?.coverArtUrl || ''})`
-          }}
-        />
-        <div className={styles.textarea}>
-          <p className={styles.musicTitle}>{simpleTrackInfo?.title}</p>
-          <p className={styles.musicArtist}>
-            {simpleTrackInfo?.artist} · {simpleTrackInfo?.album}
-          </p>
-        </div>
-      </div>
-    </main>
+    </div>
   )
 }

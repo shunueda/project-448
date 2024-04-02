@@ -1,5 +1,6 @@
 export type {
   DisplayUpdateNotification,
+  LyricsLine,
   SimpleTrackInfo
 } from './DisplayUpdateNotification'
 export type { LyricsData } from './LyricsData'

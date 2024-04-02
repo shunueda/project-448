@@ -1,92 +1,32 @@
 .main {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   text-align: center;
-  background-color: #262626;
 }
 
-.topbar {
-  height: 5vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+//.topbar {
+//  height: 5%;
+//  width: 100%;
+//  display: flex;
+//  justify-content: flex-end;
+//  align-items: center;
+//
+//  .menuIcon {
+//    height: 100%;
+//    object-fit: cover;
+//    margin-right: 5%;
+//    z-index: 999;
+//  }
+//}
 
-  .menuIcon {
-    height: 5vh;
-    width: 5vh;
-    object-fit: cover;
-    margin-right: 5vw;
-    z-index: 999;
-  }
-}
-
-.menuIsland {
-  position: absolute;
-  width: 70vw;
-  top: 0;
-  right: 4vw;
-  margin-left: auto;
-  background: #f8f8f8;
-  border-radius: 10px;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  transition: opacity 0.15s ease-in-out;
-  box-shadow: 0 0 5px 0 rgb(133, 133, 133);
-
-  .menuContent {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    color: #313131;
-
-    h1 {
-      color: #313131;
-      font-size: 1.6em;
-    }
-
-    h2 {
-      font-size: 0.8em;
-    }
-
-    li {
-      margin-left: 2em;
-      padding-top: 0.5em;
-      font-size: 1.1em;
-      padding-bottom: 0.5em;
-    }
-
-    input {
-      width: 90%;
-      font-size: 1em;
-      height: 1.5em;
-      border: 2px solid #4b4b4b;
-      border-radius: 5px;
-      margin-top: 0.4em;
-      margin-bottom: 0.5em;
-      padding: 0 5%;
-    }
-
-    input:focus {
-      outline: none;
-    }
-
-    .sendButton {
-      display: inline-block;
-      margin-left: 34vw;
-      padding: 0.1em 0.3em;
-      border: #262626 1px solid;
-    }
-  }
-}
 
 .lyricsArea {
   display: flex;
-  height: 80%;
+  height: 85%;
   width: 80%;
-  margin-left: 10%;
-  line-height: 2.5em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 2.3em;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -96,57 +36,9 @@
   justify-content: center;
   align-items: center;
 
-  p.line {
+  .line {
+    font-family: "SF Pro Medium", sans-serif;
+    font-weight: bold;
     font-size: 1.5em;
-    color: #f8f8f8;
-  }
-}
-
-.trackInfoArea {
-  position: absolute;
-  height: 8vh;
-  width: 88vw;
-  background-color: #f8f8f8;
-  bottom: 15vh;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  .coverArt {
-    height: 6vh;
-    width: 6vh;
-    border-radius: 3px;
-    margin-left: 1vh;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    box-shadow: 0 0 5px 0 rgb(133, 133, 133);
-  }
-
-  .textarea {
-    margin-left: 0.75em;
-    text-align: left;
-    width: 80%;
-
-    * {
-      width: 99%;
-      overflow-x: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-
-  .musicTitle {
-    color: #313131;
-  }
-
-  .musicArtist {
-    font-size: 0.7em;
-    color: #a1a1a1;
   }
 }

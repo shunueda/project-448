@@ -8,8 +8,6 @@ import parseMetadata from './parseMetadata'
 import getCurrentDeckState from './vdj/getCurrentDeckState'
 import runVdjScript from './vdj/runVdjScript'
 
-const LINES = 5
-
 let latestNotification: DisplayUpdateNotification | undefined = undefined
 const ably = ablyClient.channels.get(AblyChannel.MAIN)
 
@@ -26,34 +24,59 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
     const metadata = await parseMetadata(deckState.filepath)
     const trackId = metadata.common.comment![0]
     const lyricsData = await fetchLyrics(trackId)
-    const currentIndex = lyricsData.lyrics.lines.findIndex(
-      line =>
-        line.startTimeMs >
-        deckState.position + Config.interceptor_position_buffer
-    )
-    const lines = lyricsData.lyrics.lines
-      .slice(
-        Math.max(currentIndex - Math.ceil(LINES / 2), 0),
-        Math.min(
-          currentIndex + Math.floor(LINES / 2),
-          lyricsData.lyrics.lines.length
-        )
-      )
-      .map(line => line.words)
-    const startEmptyLinesCount = Math.max(
-      Math.ceil(LINES / 2) - currentIndex,
-      0
-    )
-    const endEmptyLinesCount = LINES - (lines.length + startEmptyLinesCount)
-    for (let i = 0; i < startEmptyLinesCount; i++) {
-      lines.unshift('')
+    if (!lyricsData) {
+      continue
     }
-    for (let i = 0; i < endEmptyLinesCount; i++) {
-      lines.push('')
+    const { lyrics } = lyricsData
+    const currentPositionMs =
+      deckState.position + Config.interceptor_position_buffer
+    let currentLineIndex = lyrics.lines.findIndex(
+      line => currentPositionMs < line.startTimeMs
+    )
+    if (currentLineIndex === -1) currentLineIndex = lyrics.lines.length
+    const emptyLine = { words: '', current: false }
+    const startIndex = Math.max(
+      0,
+      currentLineIndex - Config.display_lines_before - 1
+    )
+    const endIndex = Math.min(
+      lyrics.lines.length,
+      currentLineIndex + Config.display_lines_after
+    )
+    const displayLines = lyrics.lines
+      .slice(startIndex, endIndex)
+      .map((line, index) => ({
+        words: line.words,
+        current: index + startIndex === currentLineIndex - 1
+      }))
+    if (startIndex > 0) {
+      for (
+        let i = 0;
+        i < Config.display_lines_before - (currentLineIndex - 1 - startIndex);
+        i++
+      ) {
+        displayLines.unshift(emptyLine)
+      }
+    }
+    while (
+      displayLines.length <
+      Config.display_lines_before + Config.display_lines_after + 1
+    ) {
+      displayLines.push(emptyLine)
+    }
+    if (
+      currentPositionMs < lyrics.lines[0].startTimeMs &&
+      displayLines.length > 0
+    ) {
+      displayLines[0] = { ...displayLines[0], current: false }
+      displayLines.unshift(emptyLine)
     }
     const track = await getTrack(trackId)
     const displayUpdateNotification: DisplayUpdateNotification = {
-      lines,
+      lines: displayLines.slice(
+        0,
+        Config.display_lines_before + Config.display_lines_after + 1
+      ),
       trackInfo: {
         trackId,
         coverArtUrl: track!.album.images[0].url,
@@ -62,12 +85,15 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
         album: metadata.common.album!
       }
     }
+
     if (
       JSON.stringify(displayUpdateNotification) !==
       JSON.stringify(latestNotification)
     ) {
       latestNotification = displayUpdateNotification
-      await ably.publish(AblyEvent.DISPLAY_UPDATE, latestNotification)
+      await ably.publish(AblyEvent.DISPLAY_UPDATE, displayUpdateNotification)
     }
-  } catch (e) {}
+  } catch (e) {
+    console.error(e)
+  }
 }

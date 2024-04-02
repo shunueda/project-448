@@ -1,6 +1,11 @@
 export interface DisplayUpdateNotification {
-  lines: string[]
+  lines: LyricsLine[]
   trackInfo: SimpleTrackInfo
+}
+
+export interface LyricsLine {
+  words: string
+  current: boolean
 }
 
 export interface SimpleTrackInfo {
