@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Icon.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Island.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Island.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Player.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/components/Player.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/pages/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/fonts/SF-Pro-Text-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/fonts/SF-Pro-Text-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/fonts/SF-Pro-Text-Semibold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/icons/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/icons/spotify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/icons/venmo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/repeat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/public/spcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/display/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/config/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/config/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/LyricsDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/api/ably-auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/lineto-circular-bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/fonts/lineto-circular-bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/pages/lineto-circular-medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/public/fonts/lineto-circular-medium.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/public/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/getTrack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/getTrack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/src/DisplayUpdateNotification.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/DisplayUpdateNotification.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/models/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/SpotifyClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/SpotifyClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/spotify/fetchLyrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.example.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.example.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/components/Player.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Player.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/components/Player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Player.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +146,7 @@
       <workItem from="1711397014593" duration="7701000" />
       <workItem from="1711570713835" duration="5293000" />
       <workItem from="1711823070428" duration="1869000" />
-      <workItem from="1712095339528" duration="4109000" />
+      <workItem from="1712095339528" duration="4834000" />
     </task>
     <servers />
   </component>
