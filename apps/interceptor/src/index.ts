@@ -79,7 +79,7 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
       ),
       trackInfo: {
         trackId,
-        coverArtUrl: track!.album.images[0].url,
+        coverArtUrl: track.album.images[0].url,
         artist: metadata.common.artist!,
         title: metadata.common.title!,
         album: metadata.common.album!
@@ -93,7 +93,5 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
       latestNotification = displayUpdateNotification
       await ably.publish(AblyEvent.DISPLAY_UPDATE, displayUpdateNotification)
     }
-  } catch (e) {
-    console.error(e)
-  }
+  } catch (_) {}
 }
