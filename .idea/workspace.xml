@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/Icon.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Icon.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/Player.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Player.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +151,9 @@
       <workItem from="1711823070428" duration="1869000" />
       <workItem from="1712095339528" duration="7081000" />
       <workItem from="1712168939934" duration="3588000" />
+      <workItem from="1712359324449" duration="1912000" />
+      <workItem from="1712374695212" duration="24000" />
+      <workItem from="1712374726619" duration="663000" />
     </task>
     <servers />
   </component>

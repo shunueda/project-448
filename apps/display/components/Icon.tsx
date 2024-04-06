@@ -17,7 +17,7 @@ export default function Icon({ src, caption, url }: Props) {
         style={{
           backgroundImage: `url(${src})`
         }}
-      ></div>
+      />
       <p className={styles.caption}>{caption}</p>
     </div>
   )
