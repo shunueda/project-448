@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/display/components/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/display/components/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchVenues.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,10 @@
 import Config from 'config'
-import { AblyChannel, AblyEvent, type DisplayUpdateNotification } from 'models'
+import {
+  AblyChannel,
+  AblyEvent,
+  SimpleTrackInfo,
+  type DisplayUpdateNotification
+} from 'models'
 import { setInterval } from 'node:timers/promises'
 import { fetchLyrics } from 'shared'
 import ablyClient from './ably/ablyClient'
@@ -23,8 +28,27 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
     const deckState = getCurrentDeckState(vdjState)
     const metadata = await parseMetadata(deckState.filepath)
     const trackId = metadata.common.comment![0]
+    const track = await getTrack(trackId)
+    const trackInfo: SimpleTrackInfo = {
+      trackId,
+      coverArtUrl: track.album.images[0].url,
+      artist: metadata.common.artist!,
+      title: metadata.common.title!,
+      album: metadata.common.album!
+    }
     const lyricsData = await fetchLyrics(trackId)
     if (!lyricsData) {
+      const displayUpdateNotification = {
+        lines: [],
+        trackInfo
+      }
+      if (
+        JSON.stringify(displayUpdateNotification) !==
+        JSON.stringify(latestNotification)
+      ) {
+        latestNotification = displayUpdateNotification
+        await publishDisplayUpdate(displayUpdateNotification)
+      }
       continue
     }
     const { lyrics } = lyricsData
@@ -71,27 +95,25 @@ for await (const _ of setInterval(Config.interceptor_interval)) {
       displayLines[0] = { ...displayLines[0], current: false }
       displayLines.unshift(emptyLine)
     }
-    const track = await getTrack(trackId)
     const displayUpdateNotification: DisplayUpdateNotification = {
       lines: displayLines.slice(
         0,
         Config.display_lines_before + Config.display_lines_after + 1
       ),
-      trackInfo: {
-        trackId,
-        coverArtUrl: track.album.images[0].url,
-        artist: metadata.common.artist!,
-        title: metadata.common.title!,
-        album: metadata.common.album!
-      }
+      trackInfo
     }
-
     if (
       JSON.stringify(displayUpdateNotification) !==
       JSON.stringify(latestNotification)
     ) {
       latestNotification = displayUpdateNotification
-      await ably.publish(AblyEvent.DISPLAY_UPDATE, displayUpdateNotification)
+      await publishDisplayUpdate(displayUpdateNotification)
     }
   } catch (_) {}
+}
+
+async function publishDisplayUpdate(
+  displayUpdateNotification: DisplayUpdateNotification
+) {
+  await ably.publish(AblyEvent.DISPLAY_UPDATE, displayUpdateNotification)
 }
