@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c8f840-8daa-40bc-baeb-2d25f2b0a346" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0A9A52BF-1394-40CA-8A9E-293CCA1A7F9E}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{0A9A52BF-1394-40CA-8A9E-293CCA1A7F9E}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1BCB4AB9-5D5D-4CC1-BB76-59B465D5EE3B}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{1BCB4AB9-5D5D-4CC1-BB76-59B465D5EE3B}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{231304C1-BA7A-43BB-AC22-E97A8E5BBEF3}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{231304C1-BA7A-43BB-AC22-E97A8E5BBEF3}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{42D415F8-F77A-4A60-A887-F4363EBB9CFA}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{42D415F8-F77A-4A60-A887-F4363EBB9CFA}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{58D87F58-57D8-438F-8418-518E73F6716F}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{58D87F58-57D8-438F-8418-518E73F6716F}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6C3CF572-5774-4431-AC94-CCCED0B79553}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{6C3CF572-5774-4431-AC94-CCCED0B79553}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8B4A9264-074A-44EC-B7DF-17E6FD04D3F9}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{8B4A9264-074A-44EC-B7DF-17E6FD04D3F9}.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{91D80535-8539-4701-A599-A7FEEA492C83}.ssa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ssproj/{91D80535-8539-4701-A599-A7FEEA492C83}.ssfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/interceptor/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/interceptor/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/display/public/icons/github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/LyricsData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" beforeDir="false" afterPath="$PROJECT_DIR$/main.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/apps/interceptor/src/index.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -60,9 +82,9 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.5&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/project-448/apps/display/public/icons&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/project-448&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -70,7 +92,7 @@
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/project-448/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -100,6 +122,14 @@
       <recent name="$PROJECT_DIR$/apps/display/pages" />
       <recent name="$PROJECT_DIR$/apps/display" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -151,6 +181,18 @@
       <workItem from="1712359324449" duration="1912000" />
       <workItem from="1712374695212" duration="24000" />
       <workItem from="1712374726619" duration="663000" />
+      <workItem from="1712723710455" duration="66000" />
+      <workItem from="1713061041107" duration="837000" />
+      <workItem from="1713911322485" duration="770000" />
+      <workItem from="1714237062948" duration="85000" />
+      <workItem from="1714660038935" duration="1279000" />
+      <workItem from="1715375654093" duration="14000" />
+      <workItem from="1715391022126" duration="444000" />
+      <workItem from="1715392433430" duration="2156000" />
+      <workItem from="1715542856322" duration="6000" />
+      <workItem from="1715562300785" duration="1178000" />
+      <workItem from="1715565178920" duration="208000" />
+      <workItem from="1716795155926" duration="11000" />
     </task>
     <servers />
   </component>
