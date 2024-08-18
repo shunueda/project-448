@@ -1,0 +1,19 @@
+{
+  "name": "bridge",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/index.js"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/xml": "^1.0.11"
+  },
+  "dependencies": {
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "cli-progress": "^3.12.0",
+    "node-youtube-music": "^0.10.3",
+    "xml": "^1.0.1",
+    "youtubei.js": "^10.3.0"
+  }
+}

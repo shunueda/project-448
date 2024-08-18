@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/lefthook.json",
+  "pre-commit": {
+    "commands": {
+      "check": {
+        "run": "pnpm check",
+        "stage_fixed": true
+      }
+    }
+  },
+  "pre-push": {
+    "commands": {
+      "check": {
+        "run": "pnpm check",
+        "stage_fixed": true
+      }
+    }
+  }
+}

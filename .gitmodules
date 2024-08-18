@@ -1,3 +1,0 @@
-[submodule "plugin/include/websocketpp"]
-	path = plugin/include/websocketpp
-	url = https://github.com/zaphoyd/websocketpp.git
