@@ -1,50 +1,43 @@
-import config from 'configs/development.yaml'
-// import { writeFileSync } from 'node:fs'
-// import { appendFile, stat } from 'node:fs/promises'
-// import { EOL } from 'node:os'
-// import type { Track } from '@spotify/web-api-ts-sdk'
-// import { MultiBar, Presets } from 'cli-progress'
-// import xml from 'xml'
-// import downloadAudio from './youtube/downloadAudio'
-//
+import { writeFile } from 'node:fs/promises'
+import type { Track } from '@spotify/web-api-ts-sdk'
+import { config } from 'config'
+import { Charset } from './lib/Charset'
+import { Directory } from './lib/Directory'
+import { getAllPlaylistItems } from './spotify/getAllPlaylistItems'
+import { spotifyClient } from './spotify/spotifyClient'
+import { createVirtualFolderFromPaths } from './virtualdj/createVirtualFolderFromPaths'
+import downloadAudio from './youtube/downloadAudio'
+
 // const progressBar = new MultiBar(
 //   {
-//     format: '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}',
+//     format:
+//       '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {filename}',
 //     stopOnComplete: true
 //   },
 //   Presets.shades_classic
 // )
-//
-// await Promise.all(
-//   Config.playlists.map(async playlist => {
-//     const tracks = (await getAllPlaylistItems(playlist.id)).map(({ track }) => track as Track)
-//     const bar = progressBar.create(tracks.length, 0)
-//     const m3uFilePath = `${process.env.VDJ_DIR}/Playlists/${playlist.name}.m3u`
-//     writeFileSync(m3uFilePath, '')
-//     for (const track of tracks) {
-//       bar.update({
-//         filename: `${playlist.name} | ${track.name}`
-//       })
-//       try {
-//         const localPath = await downloadAudio(track, {
-//           tracksDir: `${process.env.VDJ_DIR}/Tracks`,
-//           coverArtsDir: `${process.env.VDJ_DIR}/CoverArts`,
-//           lyricsDir: `${process.env.VDJ_DIR}/Lyrics`
-//         })
-//         const filesize = (await stat(localPath)).size
-//         const artist = track.artists.map(artist => artist.name).join('/')
-//         const trackInfo = `#EXTVDJ:${xml({
-//           filesize,
-//           artist,
-//           title: track.name,
-//           songlength: track.duration_ms
-//         })}`
-//         await appendFile(m3uFilePath, trackInfo + EOL + localPath + EOL)
-//       } catch (_) {}
-//       bar.increment()
-//     }
-//     bar.update({
-//       filename: `${playlist.name} | √ Done!`
-//     })
-//   })
-// )
+
+config.playlists.map(async playlistId => {
+  const playlist = await spotifyClient.playlists.getPlaylist(playlistId)
+  const tracks = (await getAllPlaylistItems(playlistId)).map(
+    ({ track }) => track as Track
+  )
+  // const bar = progressBar.create(tracks.length, 0)
+  const virtualFolderSongEntries: string[] = []
+  for (const track of tracks) {
+    const path = await downloadAudio(track, {
+      tracks: Directory.TRACKS,
+      covers: Directory.COVERS
+    })
+    virtualFolderSongEntries.push(path)
+  }
+  await writeFile(
+    `${Directory.MY_LISTS}/${playlist.name}.vdjfolder`,
+    createVirtualFolderFromPaths(virtualFolderSongEntries),
+    Charset.UTF_8
+  )
+  // bar.increment()
+  // bar.update({
+  //   filename: `${playlist.name} | √ Done!`
+  // })
+})

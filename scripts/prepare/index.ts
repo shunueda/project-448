@@ -1,8 +1,21 @@
+import { writeFileSync } from 'node:fs'
+import { EOL } from 'node:os'
 import { $ } from 'zx'
-import { envTypeGen } from './typegen/env.ts'
-import { yamlTypeGen } from './typegen/yaml.ts'
 
+// env
+const envdts = `declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      ${Object.keys(process.env)
+        .map(key => `${key}: string`)
+        .join(`${EOL}      `)}
+    }
+  }
+}
+
+export {}
+`
+writeFileSync('env.d.ts', envdts)
+
+// precommit hook
 await $`lefthook install`
-
-yamlTypeGen('configs/development.yaml')
-envTypeGen('.env.development')

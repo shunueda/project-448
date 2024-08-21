@@ -16,8 +16,6 @@
 
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false,
-
-    "types": ["env.d.ts"]
+    "noPropertyAccessFromIndexSignature": false
   }
 }

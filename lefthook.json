@@ -3,15 +3,7 @@
   "pre-commit": {
     "commands": {
       "check": {
-        "run": "pnpm check",
-        "stage_fixed": true
-      }
-    }
-  },
-  "pre-push": {
-    "commands": {
-      "check": {
-        "run": "pnpm check",
+        "run": "pnpm precommit",
         "stage_fixed": true
       }
     }

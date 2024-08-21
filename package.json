@@ -2,30 +2,25 @@
   "name": "project-448",
   "type": "module",
   "scripts": {
-    "prepare": "tsx scripts/prepare",
+    "precommit": "tsx scripts/precommit",
+    "prepare": "tsx --env-file=.env scripts/prepare",
     "format": "biome format --write",
     "lint": "biome lint --write",
     "check": "biome check --write",
-    "commit": "git add . && cz"
+    "typecheck": "tsc",
+    "commit": "git add --all && cz"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.4.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "dotenv": "^16.4.5",
     "lefthook": "^1.7.14",
     "tsx": "^4.17.0",
-    "yaml-dts-gen": "^0.0.4",
     "zx": "^8.1.4"
   },
   "peerDependencies": {
     "typescript": "^5.5.4"
   },
-  "packageManager": "pnpm@9.7.0",
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "ts-morph": "^23.0.0"
-  }
+  "packageManager": "pnpm@9.7.0"
 }
