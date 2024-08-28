@@ -1,0 +1,22 @@
+{
+  "name": "linker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV='production' tsx --env-file=../../.env src",
+    "dev": "tsx --env-file=../../.env src"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/fluent-ffmpeg": "^2.1.25",
+    "@types/xml": "^1.0.11"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "cli-progress": "^3.12.0",
+    "common": "workspace:*",
+    "xml": "^1.0.1",
+    "youtubei.js": "^10.3.0"
+  }
+}

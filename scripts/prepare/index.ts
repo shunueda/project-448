@@ -1,12 +1,14 @@
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { EOL } from 'node:os'
+import { parseEnv } from 'node:util'
 import { $ } from 'zx'
 
 // env
+const env = parseEnv(readFileSync('.env').toString())
 const envdts = `declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      ${Object.keys(process.env)
+      ${['NODE_ENV', ...Object.keys(env)]
         .map(key => `${key}: string`)
         .join(`${EOL}      `)}
     }

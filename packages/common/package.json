@@ -1,0 +1,11 @@
+{
+  "name": "common",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "mkdirp": "^3.0.1",
+    "project-448": "workspace:*",
+    "yaml": "^2.5.0"
+  }
+}

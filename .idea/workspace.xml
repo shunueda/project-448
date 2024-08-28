@@ -10,41 +10,182 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/production.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/lib/Charset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/lib/Directory.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/lib/Endpoint.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/metadata/writeMetadata.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/LyricsData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/auth/SpdcAuthResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/auth/getSpotifyAccessToken.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/fetchLyrics.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/getAllPlaylistItems.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/spotify/spotifyClient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/utils/download.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/virtualdj/createVirtualFolder.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/youtube/downloadAudio.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/bridge/src/youtube/innertube.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/precommit/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.development" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/.ssproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop1.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop10.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop100.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop101.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop102.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop103.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop104.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop105.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop106.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop107.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop108.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop109.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop11.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop110.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop111.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop112.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop113.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop114.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop115.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop116.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop117.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop118.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop119.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop12.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop120.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop121.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop122.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop123.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop124.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop125.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop126.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop127.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop128.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop13.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop14.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop15.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop16.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop17.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop18.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop19.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop2.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop20.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop21.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop22.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop23.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop24.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop25.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop26.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop27.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop28.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop29.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop3.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop30.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop31.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop32.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop33.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop34.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop35.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop36.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop37.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop38.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop39.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop4.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop40.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop41.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop42.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop43.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop44.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop45.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop46.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop47.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop48.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop49.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop5.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop50.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop51.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop52.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop53.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop54.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop55.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop56.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop57.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop58.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop59.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop6.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop60.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop61.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop62.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop63.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop64.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop65.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop66.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop67.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop68.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop69.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop7.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop70.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop71.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop72.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop73.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop74.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop75.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop76.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop77.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop78.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop79.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop8.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop80.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop81.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop82.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop83.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop84.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop85.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop86.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop87.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop88.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop89.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop9.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop90.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop91.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop92.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop93.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop94.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop95.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop96.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop97.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop98.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SSAutoLoop99.ssfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SoundSwitchAutoLoops.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SoundSwitchAutoLoopsEx.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SoundSwitchTrackMap.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/SoundSwitchVenues.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/recordable/01bede4d8ea57b3b58574d71826dc1f5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/recordable/7ce5eb8b689a957b8032d703a1ace534.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/recordable/f87a4dfc2a52298e7e4f71fa8a89395a.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/.ssproj/recordable/fd852d1031114df1c6fcd630a41553d3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/handleSubscriptionData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/os2l/Os2lEvents.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/os2l/Os2lProtocol.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/os2l/Server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/virtualdj/SubscriptionData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/bridge/src/virtualdj/Triggers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/errors/Errors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/lib/Charset.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/lib/Directory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/lib/Endpoint.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/lib/Environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biome.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/biome.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/development.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/production.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lefthook.json" beforeDir="false" afterPath="$PROJECT_DIR$/lefthook.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/production.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/bridge/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/bridge/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/lib/Charset.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/lib/Directory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/lib/Endpoint.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/metadata/writeMetadata.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/LyricsData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/auth/SpdcAuthResponse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/auth/getSpotifyAccessToken.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/fetchLyrics.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/getAllPlaylistItems.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/spotify/spotifyClient.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/utils/download.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/virtualdj/createVirtualFolderFromPaths.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/youtube/downloadAudio.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/youtube/innertube.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/precommit/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/prepare/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/prepare/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/prepare/typegen/env.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/prepare/typegen/yaml.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +218,12 @@
     &quot;accountId&quot;: &quot;8567a8aa-e384-4c1c-8dfe-8af6d70bffa7&quot;
   }
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/bridge/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/common/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/linker/package.json" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -86,6 +233,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
@@ -102,7 +250,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/packages/config",
+    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/packages/bridge",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -123,16 +271,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/bridge" />
+      <recent name="$PROJECT_DIR$/packages/common" />
       <recent name="$PROJECT_DIR$/packages/config" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/plugin/include" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/bridge/src/spotify/auth" />
-      <recent name="$PROJECT_DIR$/configs" />
-      <recent name="$PROJECT_DIR$/packages/config" />
-      <recent name="$PROJECT_DIR$/scripts/prepare" />
-      <recent name="$PROJECT_DIR$/apps" />
+      <recent name="$PROJECT_DIR$/packages/bridge/src" />
+      <recent name="$PROJECT_DIR$/packages/bridge/src/virtualdj" />
+      <recent name="$PROJECT_DIR$/packages/common/src/errors" />
+      <recent name="$PROJECT_DIR$/packages/common/src" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -155,6 +305,13 @@
       <workItem from="1723953907774" duration="5499000" />
       <workItem from="1723963018078" duration="9306000" />
       <workItem from="1724032761610" duration="28505000" />
+      <workItem from="1724188143802" duration="27609000" />
+      <workItem from="1724304732628" duration="624000" />
+      <workItem from="1724354598046" duration="1286000" />
+      <workItem from="1724365328370" duration="4036000" />
+      <workItem from="1724369438760" duration="1070000" />
+      <workItem from="1724370513947" duration="1125000" />
+      <workItem from="1724372047100" duration="22317000" />
     </task>
     <servers />
   </component>

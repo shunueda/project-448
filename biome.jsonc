@@ -25,13 +25,9 @@
       "complexity": {
         "noForEach": "off",
         "noStaticOnlyClass": "off"
-      },
-      "suspicious": {
-        "noAssignInExpressions": "off",
-        "noExplicitAny": "off"
       }
     },
-    "ignore": ["env.d.ts"]
+    "ignore": ["*.d.ts"]
   },
   "javascript": {
     "formatter": {
