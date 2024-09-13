@@ -10,31 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/model/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/model/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/components.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/next.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/postcss.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/src/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/src/app/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/src/app/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/src/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/tailwind.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/display/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bridge/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/bridge/src/BridgeStateManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/BridgeStateManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bridge/src/io/readLyricsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/io/readLyricsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bridge/src/os2l/Os2lServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/os2l/Os2lServer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/ably/Channel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/ably/Channel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/ably/Event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/ably/Event.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/ably/Notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/ably/Notifications.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/lib/Charset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/lib/Charset.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/lib/Directory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/Directory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/lib/Endpoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/lib/Endpoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/lib/Environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/lib/Environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/spotify/LyricsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/model/src/spotify/LyricsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/spotify/getCoverArtFromId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/spotify/getCoverArtFromId.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/linker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/linker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/linker/src/spotify/auth/getSpotifyAccessToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/linker/src/spotify/auth/getSpotifyAccessToken.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/linker/src/spotify/downloadLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/linker/src/spotify/downloadLyrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/linker/src/spotify/fetchLyrics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/linker/src/spotify/fetchLyrics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/linker/src/virtualdj/createVirtualFolder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/linker/src/virtualdj/createVirtualFolder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/marker/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/marker/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bridge/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +163,7 @@
       <workItem from="1726157195251" duration="21000" />
       <workItem from="1726157222352" duration="98000" />
       <workItem from="1726157369560" duration="25000" />
-      <workItem from="1726157401039" duration="17057000" />
+      <workItem from="1726157401039" duration="20338000" />
     </task>
     <servers />
   </component>

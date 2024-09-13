@@ -41,8 +41,6 @@ export class BridgeStateManager extends EventEmitter {
     lyrics: this.defaultLyrics
   }
 
-  i = 0
-
   public async update(data: SubscriptionData) {
     this.updateState(data)
     const { id, position } = this.getCurrentDeckstate()
