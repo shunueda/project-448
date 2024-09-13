@@ -1,0 +1,14 @@
+{
+  "name": "marker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV='production' tsx --env-file=../../.env src",
+    "dev": "tsx --env-file=../../.env src"
+  },
+  "dependencies": {
+    "common": "workspace:*",
+    "fast-xml-parser": "^4.4.1",
+    "zod": "^3.23.8"
+  }
+}

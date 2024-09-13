@@ -1,0 +1,12 @@
+{
+  "name": "common",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "find-process": "^1.4.7",
+    "mkdirp": "^3.0.1",
+    "project-448": "workspace:*",
+    "yaml": "^2.5.0"
+  }
+}
