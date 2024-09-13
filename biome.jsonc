@@ -26,9 +26,7 @@
         "noForEach": "off",
         "noStaticOnlyClass": "off"
       },
-      "correctness": {
-        "noUnusedImports": "warn"
-      }
+      "correctness": {}
     },
     "ignore": ["*.d.ts"]
   },

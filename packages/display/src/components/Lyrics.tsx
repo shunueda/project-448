@@ -6,7 +6,7 @@ interface Props {
   notification: LyricsNotification
 }
 
-export default function Lyrics({ notification }: Props) {
+export function Lyrics({ notification }: Props) {
   const middle = Math.floor(notification.lyrics.length / 2)
   const opacity = 0.45
   return (

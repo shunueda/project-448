@@ -8,21 +8,24 @@ import {
   type TrackNotification
 } from 'model'
 import { nanoid } from 'nanoid'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useAsyncEffect from 'use-async-effect'
-import Island from '../components/Island'
-import Lyrics from '../components/Lyrics'
+import { Drawer } from 'vaul'
+import { Dragger } from '../components/Dragger'
+import { Island } from '../components/Island'
+import { Lyrics } from '../components/Lyrics'
 import styles from './page.module.scss'
 
 export default function Home() {
-  const ref = useRef<HTMLDivElement>(null)
+  const lyricsHeighRatio = 0.85
+  const root = useRef<HTMLDivElement>(null)
   const [height, setHeight] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
   const [lyrics, setlyrics] = useState<LyricsNotification>()
   const [track, setTrack] = useState<TrackNotification>()
-  const lyricsHeighRatio = 0.85
   useAsyncEffect(async () => {
-    if (ref.current) {
-      disableBodyScroll(ref.current)
+    if (root.current) {
+      disableBodyScroll(root.current)
     }
     setHeight(window.innerHeight)
     const ably = new Realtime({
@@ -43,23 +46,35 @@ export default function Home() {
     }
   }, [])
   return (
-    <main ref={ref} className={styles.root} style={{ height }}>
-      <section
-        className={styles.lyrics}
-        style={{
-          height: height * lyricsHeighRatio
-        }}
-      >
-        {lyrics && <Lyrics notification={lyrics} />}
-      </section>
-      <section
-        className={styles.island}
-        style={{
-          height: height * (1 - lyricsHeighRatio)
-        }}
-      >
-        {track && <Island notification={track} />}
-      </section>
-    </main>
+    <Drawer.Root
+      open={isOpen}
+      onOpenChange={setIsOpen}
+      onClose={() => setIsOpen(false)}
+    >
+      <main ref={root} className={styles.root} style={{ height }}>
+        <section
+          className={styles.lyrics}
+          style={{
+            height: height * lyricsHeighRatio
+          }}
+        >
+          {lyrics && <Lyrics notification={lyrics} />}
+        </section>
+        <section
+          className={styles.island}
+          style={{
+            marginTop: isOpen ? height * (1 - lyricsHeighRatio) : 0,
+            height: height * (1 - lyricsHeighRatio)
+          }}
+        >
+          {track && <Island notification={track} setIsOpen={setIsOpen} />}
+        </section>
+      </main>
+      <Drawer.Portal>
+        <Drawer.Content className={styles.drawer}>
+          {track && <Dragger track={track} />}
+        </Drawer.Content>
+      </Drawer.Portal>
+    </Drawer.Root>
   )
 }
