@@ -2,7 +2,7 @@ import { EventEmitter } from 'node:events'
 import type net from 'node:net'
 import { type Socket, createServer } from 'node:net'
 import { type CiaoService, getResponder } from '@homebridge/ciao'
-import { Charset } from 'common'
+import { Charset } from 'model'
 import { Event } from './Event'
 import { Protocol } from './Protocol'
 

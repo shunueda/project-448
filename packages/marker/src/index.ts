@@ -1,7 +1,8 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { EOL } from 'node:os'
 import { join } from 'node:path'
-import { Directory, ensureVirtualDjState } from 'common'
+import { ensureVirtualDjState } from 'common'
+import { Directory } from 'common'
 import { XMLBuilder, XMLParser } from 'fast-xml-parser'
 import type { CuePoi, SongMetadata } from './schema'
 

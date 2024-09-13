@@ -1,17 +1,13 @@
 import { EventEmitter } from 'node:events'
 import { basename, extname } from 'node:path'
-import { promisify } from 'node:util'
-import { deflate } from 'node:zlib'
-import {
-  Channel as AblyChannel,
-  type Event as AblyEvent,
-  type LyricsNotification,
-  StringUtils,
-  type TrackNotification,
-  config,
-  notEquals
-} from 'common'
+import { StringUtils, config, notEquals } from 'common'
 import { getCoverArtFromId } from 'common'
+import {
+  Event as AblyEvent,
+  Channel,
+  type LyricsNotification,
+  type TrackNotification
+} from 'model'
 import { ablyRealtime } from './ably/ablyRealtime'
 import { readLyricsData } from './io/readLyricsData'
 import { readMetadata } from './io/readMetadata'
@@ -21,8 +17,7 @@ import type { SubscriptionData } from './virtualdj/SubscriptionData'
 import { Trigger } from './virtualdj/Trigger'
 
 export class BridgeStateManager extends EventEmitter {
-  private readonly ablyChannel = ablyRealtime.channels.get(AblyChannel.MAIN)
-  private readonly deflate = promisify(deflate)
+  private readonly ablyChannel = ablyRealtime.channels.get(Channel.MAIN)
   private readonly defaultLyrics = this.center('No lyrics... yet.')
   private readonly state: DeckState = {
     left: {
@@ -54,16 +49,12 @@ export class BridgeStateManager extends EventEmitter {
     const lyricsNotification = await this.createLyricsNotification(id, position)
     if (notEquals(this.lyricsNotification, lyricsNotification)) {
       this.lyricsNotification = lyricsNotification
-      console.log(this.i++)
-      console.log(lyricsNotification)
-      // TODO: await this.ablyChannel.publish(AblyEvent.LYRICS, this.lyricsNotification)
+      await this.publish(AblyEvent.LYRICS, this.lyricsNotification)
     }
     const trackNotification = await this.createTrackNotification(id)
     if (this.trackNotification.id !== trackNotification.id) {
       this.trackNotification = trackNotification
-      console.log(this.i++)
-      console.log(trackNotification)
-      // TODO: await this.ablyChannel.publish(AblyEvent.TRACK, this.trackNotification)
+      await this.publish(AblyEvent.TRACK, this.trackNotification)
     }
   }
 
@@ -151,7 +142,6 @@ export class BridgeStateManager extends EventEmitter {
   }
 
   private async publish<T>(event: AblyEvent, data: T) {
-    const compressed = await this.deflate(JSON.stringify(data))
-    await this.ablyChannel.publish(event, compressed)
+    await this.ablyChannel.publish(event, data)
   }
 }

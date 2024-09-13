@@ -1,4 +1,4 @@
-import { Endpoint, type LyricsData, lyricsDataSchema } from 'common'
+import { Endpoint, type LyricsData, lyricsDataSchema } from 'model'
 import { getSpotifyAccessToken } from './auth/getSpotifyAccessToken'
 
 export async function fetchLyrics(

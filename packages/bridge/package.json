@@ -13,7 +13,7 @@
     "get-port": "^7.1.0",
     "music-metadata": "^10.5.0",
     "project-448": "workspace:*",
-    "sharp": "^0.33.5"
+    "model": "workspace:*"
   },
   "devDependencies": {
     "@types/death": "^1.1.5"

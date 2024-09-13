@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { getEnvironment } from 'model'
 import { parse } from 'yaml'
 import { number, object, record, string } from 'zod'
-import { Directory } from './lib/Directory'
-import { getEnvironment } from './lib/Environment'
+import { Directory } from './Directory'
 
 const configSchema = object({
   playlistIds: string().array(),

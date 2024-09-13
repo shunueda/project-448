@@ -1,4 +1,4 @@
-import { Charset } from 'common'
+import { Charset } from 'model'
 import xml from 'xml'
 
 export function createVirtualFolder(paths: string[]) {
