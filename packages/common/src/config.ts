@@ -1,13 +1,16 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { parse } from 'yaml'
-import { object, record, string } from 'zod'
+import { number, object, record, string } from 'zod'
 import { Directory } from './lib/Directory'
 import { getEnvironment } from './lib/Environment'
 
 const configSchema = object({
   playlistIds: string().array(),
-  overrides: record(string(), string())
+  overrides: record(string(), string()),
+  lyrics: object({
+    lines: number()
+  })
 })
 
 const yaml = parse(

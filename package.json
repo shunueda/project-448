@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "precommit": "pnpm run check",
-    "prepare": "tsx --env-file=.env scripts/prepare",
+    "prepare": "tsx scripts/prepare",
     "format": "biome format --write",
     "lint": "biome lint --write",
     "check": "biome check --write",
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "zx": "^8.1.4",
-    "common": "workspace:*"
+    "common": "workspace:*",
+    "@spotify/web-api-ts-sdk": "^1.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",

@@ -1,5 +1,4 @@
-import { Endpoint } from 'common'
-import { type LyricsData, lyricsDataSchema } from './LyricsData'
+import { Endpoint, type LyricsData, lyricsDataSchema } from 'common'
 import { getSpotifyAccessToken } from './auth/getSpotifyAccessToken'
 
 export async function fetchLyrics(
@@ -7,9 +6,12 @@ export async function fetchLyrics(
 ): Promise<LyricsData | undefined> {
   try {
     const { access_token } = await getSpotifyAccessToken()
-    const url = new URL(
-      `${Endpoint.SPOTIFY_LYRICS}/${trackId}?format=json&vocalRemoval=false`
-    )
+    const url = new URL(`${Endpoint.SPOTIFY_LYRICS}/${trackId}`)
+    const params = new URLSearchParams({
+      format: 'json',
+      vocalRemoval: 'false'
+    })
+    url.search = params.toString()
     const response = await fetch(url, {
       headers: {
         'app-platform': 'WebPlayer',

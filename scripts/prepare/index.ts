@@ -8,9 +8,7 @@ const env = parseEnv(readFileSync('.env').toString())
 const envdts = `declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      ${['NODE_ENV', ...Object.keys(env)]
-        .map(key => `${key}: string`)
-        .join(`${EOL}      `)}
+      ${['NODE_ENV', ...Object.keys(env)].map(key => `${key}: string`).join(`${EOL}      `)}
     }
   }
 }

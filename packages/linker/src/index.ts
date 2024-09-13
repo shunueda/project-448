@@ -1,11 +1,16 @@
 import { writeFile } from 'node:fs/promises'
 import type { Track } from '@spotify/web-api-ts-sdk'
 import { MultiBar, Presets } from 'cli-progress'
-import { Directory, config } from 'common'
+import { Directory, config, ensureVirtualDjState } from 'common'
+import { downloadLyrics } from './spotify/downloadLyrics'
 import { getAllPlaylistItems } from './spotify/getAllPlaylistItems'
 import { spotifyClient } from './spotify/spotifyClient'
 import { createVirtualFolder } from './virtualdj/createVirtualFolder'
 import { downloadAudio } from './youtube/downloadAudio'
+
+await ensureVirtualDjState({
+  active: false
+})
 
 const progressBar = new MultiBar(
   {
@@ -30,9 +35,9 @@ config.playlistIds.forEach(async playlistId => {
     try {
       const path = await downloadAudio(track, {
         tracks: Directory.TRACKS,
-        covers: Directory.COVERS,
-        lyrics: Directory.LYRICS
+        covers: Directory.COVERS
       })
+      await downloadLyrics(track.id, Directory.LYRICS)
       virtualFolderSongEntries.push(path)
     } catch (error) {}
     bar.increment()

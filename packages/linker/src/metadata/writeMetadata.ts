@@ -1,12 +1,12 @@
 import { rename, unlink } from 'node:fs/promises'
 import { basename } from 'node:path'
+import { path as ffmpeg } from '@ffmpeg-installer/ffmpeg'
 import { $, tempfile } from 'zx'
 
 export interface AudioMetadata {
   artist: string[]
   title: string
   album: string
-  comment: string
   coverArtPath: string
 }
 
@@ -35,11 +35,11 @@ export async function writeMetadata(
     ['-metadata', `artist=${metadata.artist.join('/')}`],
     ['-metadata', `title=${metadata.title}`],
     ['-metadata', `album=${metadata.album}`],
-    ['-metadata', `comment=${metadata.comment}`],
+    // ['-metadata', `comment=${metadata.comment}`],
     // ['-metadata', `lyrics=${JSON.stringify(metadata.lyricsData, null, 2)}`],
     tempPath
   ].flat()
-  await $`ffmpeg ${options}`
+  await $`${ffmpeg} ${options}`
   await unlink(localPath)
   await rename(tempPath, localPath)
 }

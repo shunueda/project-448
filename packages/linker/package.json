@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@spotify/web-api-ts-sdk": "^1.2.0",
     "cli-progress": "^3.12.0",
     "common": "workspace:*",
     "xml": "^1.0.1",

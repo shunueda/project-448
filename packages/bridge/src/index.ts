@@ -1,31 +1,40 @@
+import death from 'death'
 import getPort, { portNumbers } from 'get-port'
-import { handleSubscriptionData } from './handleSubscriptionData'
-import { Os2lEvents } from './os2l/Os2lEvents'
-import { Os2lProtocol } from './os2l/Os2lProtocol'
-import { Server } from './os2l/Server'
-import type { SubscriptionData } from './virtualdj/SubscriptionData'
-import { Triggers } from './virtualdj/Triggers'
+import { name } from 'project-448/package.json'
+import { BridgeStateManager } from './BridgeStateManager'
+import { Event } from './os2l/Event'
+import { Os2lServer } from './os2l/Os2lServer'
+import { Protocol } from './os2l/Protocol'
+import { Trigger } from './virtualdj/Trigger'
 
-const server = new Server({
-  port: await getPort({
-    port: portNumbers(Os2lProtocol.PORT_MIN, Os2lProtocol.PORT_MAX)
+const bridgeStatemanager = new BridgeStateManager()
+
+const port = await getPort({
+  port: portNumbers(Protocol.PORT_MIN, Protocol.PORT_MAX)
+})
+const server = new Os2lServer({ name, port })
+
+await server
+  .on(Event.CONNECTION, () => {
+    console.log('Connected')
+    server.write({
+      evt: Event.SUBSCRIBE,
+      trigger: Object.values(Trigger),
+      frequency: 100
+    })
   })
-})
-
-server.on(Os2lEvents.CONNECTION, () => {
-  server.write({
-    evt: 'subscribe',
-    trigger: [Triggers.DECK_1_FILENAME, Triggers.CROSSFADER],
-    frequency: '25'
+  .on(Event.SUBSCRIBED, async data => {
+    try {
+      await bridgeStatemanager.update(data)
+    } catch (e) {
+      console.error(e)
+    }
   })
-})
+  .on(Event.ERROR, console.error)
+  .on(Event.WARNING, console.warn)
+  .start()
 
-server.on(Os2lEvents.DATA, data => {
-  if (data.evt !== 'subscribed') {
-    return
-  }
-  console.log(data)
-  handleSubscriptionData(data as SubscriptionData)
+death(async () => {
+  await server.stop()
+  process.exit()
 })
-
-await server.start()
