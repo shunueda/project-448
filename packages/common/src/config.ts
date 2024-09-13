@@ -9,7 +9,8 @@ const configSchema = object({
   playlistIds: string().array(),
   overrides: record(string(), string()),
   lyrics: object({
-    lines: number()
+    lines: number(),
+    offset: number()
   })
 })
 

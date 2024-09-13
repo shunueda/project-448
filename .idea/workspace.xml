@@ -10,24 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/display/src/components/ui/drawer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biome.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/biome.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bridge/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/development.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/development.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/production.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/production.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/bridge/src/BridgeStateManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/BridgeStateManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bridge/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bridge/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/common/src/utils/StringUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/utils/StringUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/app/fonts/lineto-circular-black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/app/fonts/lineto-circular-book.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/app/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/app/page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/common/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/common/src/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/display/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/Island.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/components/Island.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/Island.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/components/Island.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/Lyrics.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/components/Lyrics.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/Lyrics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/components/Lyrics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/ui/drawer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

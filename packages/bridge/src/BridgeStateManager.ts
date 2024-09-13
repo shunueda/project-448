@@ -56,7 +56,11 @@ export class BridgeStateManager {
     if (!id) {
       return
     }
-    const lyricsNotification = await this.createLyricsNotification(id, position)
+    const offsettedPosition = position + config.lyrics.offset
+    const lyricsNotification = await this.createLyricsNotification(
+      id,
+      offsettedPosition
+    )
     if (notEquals(this.lyricsNotification, lyricsNotification)) {
       this.lyricsNotification = lyricsNotification
       await this.publish(AblyEvent.LYRICS, this.lyricsNotification)
