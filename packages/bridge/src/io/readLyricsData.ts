@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { Charset, Directory, type LyricsData, lyricsDataSchema } from 'common'
+import { Directory } from 'common'
+import { Charset, type LyricsData, lyricsDataSchema } from 'model'
 
 const cache = new Map<string, LyricsData | null>()
 

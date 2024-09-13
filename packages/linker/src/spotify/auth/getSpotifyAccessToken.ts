@@ -1,7 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import type { AccessToken } from '@spotify/web-api-ts-sdk'
-import { Charset } from 'common'
-import { Endpoint } from 'common'
+import { Charset, Endpoint } from 'model'
 import type { SpdcAuthResponse } from './SpdcAuthResponse'
 
 const CACHE_FILENAME = '.spotify-access-token'

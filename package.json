@@ -1,5 +1,6 @@
 {
   "name": "project-448",
+  "description": "Project 448",
   "type": "module",
   "scripts": {
     "precommit": "pnpm run check",

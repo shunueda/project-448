@@ -1,5 +1,5 @@
 import type { Album, SimplifiedTrack } from '@spotify/web-api-ts-sdk'
-import { Endpoint } from 'common'
+import { Endpoint } from 'model'
 
 const url = new URL(Endpoint.SPOTIFY_COVER_ART)
 

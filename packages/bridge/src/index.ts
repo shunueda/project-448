@@ -26,9 +26,7 @@ await server
   .on(Event.SUBSCRIBED, async data => {
     try {
       await bridgeStatemanager.update(data)
-    } catch (e) {
-      console.error(e)
-    }
+    } catch (e) {}
   })
   .on(Event.ERROR, console.error)
   .on(Event.WARNING, console.warn)

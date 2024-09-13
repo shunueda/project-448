@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { SyncType } from 'common'
+import { SyncType } from 'model'
 import { fetchLyrics } from './fetchLyrics'
 
 export async function downloadLyrics(id: string, directory: string) {
