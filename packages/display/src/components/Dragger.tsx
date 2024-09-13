@@ -1,8 +1,13 @@
+import { HandMetalIcon } from 'lucide-react'
 import type { TrackNotification } from 'model'
 import Image from 'next/image'
 import Link from 'next/link'
+import { cn } from '../lib/utils'
 import styles from './Dragger.module.scss'
 import { DragHandle } from './tools/DragHandle'
+import { Alert, AlertDescription, AlertTitle } from './ui/alert'
+import { badgeVariants } from './ui/badge'
+import { Button } from './ui/button'
 import { Separator } from './ui/separator'
 
 interface Props {
@@ -23,17 +28,18 @@ export function Dragger({ track }: Props) {
         </p>
       </div>
       <Separator className="my-4" />
-      <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Support the Party</h4>
-        <p className="text-sm text-muted-foreground">
+      <Alert>
+        <HandMetalIcon className="h-4 w-4" />
+        <AlertTitle className="text-zinc-600">Support the Party</AlertTitle>
+        <AlertDescription className="text-zinc-500">
           All donators will receive a special gift at the upcoming party!
-        </p>
-      </div>
+        </AlertDescription>
+      </Alert>
       <Separator className="my-4" />
-      <div className="flex h-4 items-center space-x-2 text-sm">
-        <Link href="https://account.venmo.com/pay?recipients=ushun">
+      <div className="flex h-4 space-x-2 text-xs justify-end">
+        <div>
           Venmo <span className="text-xs">(@ushun)</span>
-        </Link>
+        </div>
         <Separator orientation="vertical" />
         <Link target="_blank" href="https://www.instagram.com/448japchae/">
           Instagram <span className="text-xs">(@448japchae)</span>

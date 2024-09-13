@@ -1,6 +1,7 @@
 {
   "name": "project-448",
   "description": "Project 448",
+  "homepage": "https://github.com/shunueda/project-448",
   "type": "module",
   "scripts": {
     "precommit": "pnpm run check",
