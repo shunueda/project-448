@@ -1,19 +1,22 @@
+import type { TrackNotification } from 'model'
 import Image from 'next/image'
 import styles from './Island.module.scss'
 
-export default function Island() {
+interface Props {
+  notification: TrackNotification
+}
+
+export default function Island({ notification }: Props) {
   return (
     <div className={styles.island}>
       <div className={styles.picture}>
-        <Image
-          alt={Island.name}
-          src="https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5"
-          fill
-        />
+        <Image alt={Island.name} src={notification.picture} fill />
       </div>
       <div className={styles.text}>
-        <p>Taste</p>
-        <p>Sabrina Carpenter - Taste</p>
+        <p>{notification.title}</p>
+        <p>
+          {notification.artist} - {notification.album}
+        </p>
       </div>
     </div>
   )

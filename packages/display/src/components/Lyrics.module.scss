@@ -1,0 +1,33 @@
+.lyrics {
+  width: 90%;
+  height: 100%;
+  color: ghostwhite;
+  font-size: 2.5cqh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.box {
+  width: 100%;
+  container-type: size;
+  resize: both;
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  justify-items: start;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line {
+  font-size: 1.75em;
+  overflow: hidden;
+}
+
+.done {
+  color: #4d4d4d;
+}

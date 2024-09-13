@@ -11,9 +11,9 @@
     "ably": "^2.4.0",
     "death": "^1.1.0",
     "get-port": "^7.1.0",
+    "model": "workspace:*",
     "music-metadata": "^10.5.0",
-    "project-448": "workspace:*",
-    "model": "workspace:*"
+    "project-448": "workspace:*"
   },
   "devDependencies": {
     "@types/death": "^1.1.5"

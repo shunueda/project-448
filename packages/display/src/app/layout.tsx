@@ -12,11 +12,6 @@ export const metadata: Metadata = {
 const circular = localFont({
   src: [
     {
-      path: 'fonts/lineto-circular-book.ttf',
-      weight: '400',
-      style: 'normal'
-    },
-    {
       path: 'fonts/lineto-circular-medium.ttf',
       weight: '500',
       style: 'normal'
@@ -24,11 +19,6 @@ const circular = localFont({
     {
       path: 'fonts/lineto-circular-bold.ttf',
       weight: '700',
-      style: 'normal'
-    },
-    {
-      path: 'fonts/lineto-circular-black.ttf',
-      weight: '900',
       style: 'normal'
     }
   ]

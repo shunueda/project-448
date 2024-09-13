@@ -1,4 +1,3 @@
-import { EventEmitter } from 'node:events'
 import { basename, extname } from 'node:path'
 import { StringUtils, config, notEquals } from 'common'
 import { getCoverArtFromId } from 'common'
@@ -16,7 +15,7 @@ import type { DeckState } from './virtualdj/DeckState'
 import type { SubscriptionData } from './virtualdj/SubscriptionData'
 import { Trigger } from './virtualdj/Trigger'
 
-export class BridgeStateManager extends EventEmitter {
+export class BridgeStateManager {
   private readonly ablyChannel = ablyRealtime.channels.get(Channel.MAIN)
   private readonly defaultLyrics = this.center('No lyrics... yet.')
   private readonly state: DeckState = {
@@ -41,9 +40,22 @@ export class BridgeStateManager extends EventEmitter {
     lyrics: this.defaultLyrics
   }
 
+  constructor() {
+    this.ablyChannel.presence
+      .subscribe('enter', async () => {
+        await this.publish(AblyEvent.TRACK, this.trackNotification)
+        await this.publish(AblyEvent.LYRICS, this.lyricsNotification)
+      })
+      .then()
+      .catch()
+  }
+
   public async update(data: SubscriptionData) {
     this.updateState(data)
     const { id, position } = this.getCurrentDeckstate()
+    if (!id) {
+      return
+    }
     const lyricsNotification = await this.createLyricsNotification(id, position)
     if (notEquals(this.lyricsNotification, lyricsNotification)) {
       this.lyricsNotification = lyricsNotification
@@ -58,13 +70,14 @@ export class BridgeStateManager extends EventEmitter {
 
   private async createLyricsNotification(id: string, position: number) {
     const lyricsData = await readLyricsData(id)
+    const defaultNotification = { lyrics: this.defaultLyrics }
     if (!lyricsData) {
-      return { lyrics: this.defaultLyrics }
+      return defaultNotification
     }
     const { lines } = lyricsData.lyrics
-    const current = lines.findIndex(line => position < line.startTimeMs) - 1
-    if (current < 0) {
-      return { lyrics: this.defaultLyrics }
+    const current = lines.findIndex(line => position <= line.startTimeMs) - 1
+    if (current < -1) {
+      return defaultNotification
     }
     const total = config.lyrics.lines
     const before = Math.floor(total / 2)
@@ -72,7 +85,7 @@ export class BridgeStateManager extends EventEmitter {
     const end = Math.min(lines.length, current + before + 1)
     const lyrics = []
     for (let i = start; i < end; i++) {
-      lyrics.push(lines[i].words || StringUtils.EMPTY)
+      lyrics.push(StringUtils.orEmpty(lines[i].words))
     }
     for (let i = 0; i < Math.max(0, before - current); i++) {
       lyrics.unshift(StringUtils.EMPTY)
@@ -87,9 +100,9 @@ export class BridgeStateManager extends EventEmitter {
     const { title, album, artist } = (await readMetadata(id)).common
     return {
       id,
-      title: title || StringUtils.EMPTY,
-      album: album || StringUtils.EMPTY,
-      artist: artist || StringUtils.EMPTY,
+      title: StringUtils.orEmpty(title),
+      album: StringUtils.orEmpty(album),
+      artist: StringUtils.orEmpty(artist),
       picture: await getCoverArtFromId(id)
     } satisfies TrackNotification
   }
