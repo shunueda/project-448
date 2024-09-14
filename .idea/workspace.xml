@@ -9,15 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/display/src/components/ui/alert.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/display/src/components/ui/badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/display/src/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/app/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/app/page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/display/src/components/Dragger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/display/src/components/Dragger.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

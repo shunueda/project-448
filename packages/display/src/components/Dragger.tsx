@@ -2,12 +2,9 @@ import { HandMetalIcon } from 'lucide-react'
 import type { TrackNotification } from 'model'
 import Image from 'next/image'
 import Link from 'next/link'
-import { cn } from '../lib/utils'
 import styles from './Dragger.module.scss'
 import { DragHandle } from './tools/DragHandle'
 import { Alert, AlertDescription, AlertTitle } from './ui/alert'
-import { badgeVariants } from './ui/badge'
-import { Button } from './ui/button'
 import { Separator } from './ui/separator'
 
 interface Props {
