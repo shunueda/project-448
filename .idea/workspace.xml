@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="" />
+    <list default="true" id="597dc7df-a827-4300-840d-7a0a18fa5ad9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/display/src/app/lemon.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +76,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/packages/display/src/app/fonts",
+    "last_opened_file_path": "/Users/me/dev/shunueda/project-448/packages/display/src/app/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -95,18 +97,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/display/src/app/public" />
       <recent name="$PROJECT_DIR$/packages/display/src/app/fonts" />
       <recent name="$PROJECT_DIR$/packages/models" />
       <recent name="$PROJECT_DIR$/packages/model" />
       <recent name="$PROJECT_DIR$/packages/common/src/spotify" />
-      <recent name="$PROJECT_DIR$/packages/bridge/src/spotify" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/display/src/app" />
       <recent name="$PROJECT_DIR$/packages/display/src/components" />
       <recent name="$PROJECT_DIR$/packages/common/src" />
       <recent name="$PROJECT_DIR$/packages/bridge/src/io" />
       <recent name="$PROJECT_DIR$/packages/common/src/ably/notification" />
-      <recent name="$PROJECT_DIR$/packages/common/src/ably" />
     </key>
   </component>
   <component name="SharedIndexes">
