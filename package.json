@@ -4,30 +4,28 @@
   "homepage": "https://github.com/shunueda/project-448",
   "type": "module",
   "scripts": {
-    "precommit": "pnpm run check",
-    "prepare": "tsx scripts/prepare",
-    "format": "biome format --write",
-    "lint": "biome lint --write",
-    "check": "biome check --write",
-    "typecheck": "tsc",
-    "commit": "git add --all && cz"
+    "check": "biome check --write && sort-package-json",
+    "precommit": "pnpm type-check & pnpm check",
+    "commit": "git add --all && cz",
+    "start": "tsx --env-file=.env src/index.ts",
+    "type-check": "tsc"
   },
   "dependencies": {
-    "zx": "^8.1.4",
-    "common": "workspace:*",
-    "@spotify/web-api-ts-sdk": "^1.2.0"
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "tsx": "^4.19.2",
+    "xml": "^1.0.1",
+    "youtubei.js": "^13.0.0",
+    "zx": "^8.3.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@types/node": "^22.4.0",
-    "commitizen": "^4.3.0",
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.10",
+    "@types/xml": "^1.0.11",
+    "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "lefthook": "^1.7.14",
-    "tsx": "^4.17.0",
-    "zod": "^3.23.8"
+    "sort-package-json": "^2.14.0",
+    "typescript": "^5.7.3"
   },
-  "peerDependencies": {
-    "typescript": "^5.5.4"
-  },
-  "packageManager": "pnpm@9.7.0"
+  "packageManager": "pnpm@9.15.4"
 }

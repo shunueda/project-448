@@ -1,5 +1,5 @@
-*.d.ts
-.spotify_access_token_cache
+!.gitkeep
+assets
 
 ### Intellij template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -157,7 +157,10 @@ web_modules/
 
 # dotenv environment variable files
 .env
-.env.keys
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -237,4 +240,3 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-.vercel
