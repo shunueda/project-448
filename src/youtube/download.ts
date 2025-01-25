@@ -4,12 +4,12 @@ import { client } from '#youtube/client'
 
 export async function download(
   track: Track
-): Promise<AsyncGenerator<Uint8Array>> {
+): Promise<AsyncGenerator<Uint8Array, void, unknown>> {
   const artists = track.artists.map(it => it.name).join(' ')
-  const search = await client.search(`${track.name} - ${artists} "Audio"`, {
+  const search = await client.search(`${track.name} - ${artists} Audio`, {
     type: 'video'
   })
-  const id = search.results.filterType(YTNodes.Video).first().id
+  const { id } = search.results.filterType(YTNodes.Video).first()
   const stream = await client.download(id, {
     type: 'audio',
     quality: 'best',

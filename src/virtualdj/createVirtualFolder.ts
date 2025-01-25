@@ -1,6 +1,6 @@
 import xml from 'xml'
 
-export function createVirtualFolder(paths: string[]): string {
+export function createVirtualFolder(paths: Set<string>): string {
   return xml(
     {
       VirtualFolder: [
@@ -9,7 +9,7 @@ export function createVirtualFolder(paths: string[]): string {
             noDuplicates: 'yes'
           }
         },
-        ...paths.map(path => ({
+        ...paths.values().map(path => ({
           song: [
             {
               _attr: {

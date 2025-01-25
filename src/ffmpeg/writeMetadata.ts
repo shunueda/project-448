@@ -14,9 +14,9 @@ export async function writeMetadata(track: Track, path: string): Promise<void> {
   const temp = tempfile(basename(path))
   const options = [
     // allow overwriting
-    '-y',
+    ['-y'],
     // supress logging
-    '-hide_banner',
+    ['-hide_banner'],
     ['-loglevel', 'error'],
     // inputs
     ['-i', path],
@@ -32,7 +32,8 @@ export async function writeMetadata(track: Track, path: string): Promise<void> {
     ['-metadata', `artist=${track.artists.map(it => it.name).join('/')}`],
     ['-metadata', `title=${track.name}`],
     ['-metadata', `album=${track.album.name}`],
-    temp
+    // output
+    [temp]
   ].flat()
   await $`${ffmpeg} ${options}`
   await unlink(path)
