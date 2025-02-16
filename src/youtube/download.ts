@@ -1,19 +1,22 @@
+import assert from 'node:assert/strict'
 import type { Track } from '@spotify/web-api-ts-sdk'
-import { Utils, YTNodes } from 'youtubei.js'
+import { Utils } from 'youtubei.js'
 import { client } from '#youtube/client'
 
 export async function download(
   track: Track
 ): Promise<AsyncGenerator<Uint8Array, void, unknown>> {
   const artists = track.artists.map(it => it.name).join(' ')
-  const search = await client.search(`${track.name} - ${artists} Audio`, {
-    type: 'video'
+  const search = await client.music.search(`${artists} ${track.name}`, {
+    type: 'song'
   })
-  const { id } = search.results.filterType(YTNodes.Video).first()
-  const stream = await client.download(id, {
-    type: 'audio',
-    quality: 'best',
-    client: 'IOS'
-  })
-  return Utils.streamToIterable(stream)
+  const item = search.songs?.contents.at(0)
+  assert(item?.id)
+  return client
+    .download(item.id, {
+      type: 'audio',
+      quality: 'best',
+      client: 'IOS'
+    })
+    .then(Utils.streamToIterable)
 }

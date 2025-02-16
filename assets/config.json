@@ -1,4 +1,7 @@
 {
+  "directory": {
+    "virtual_dj": "Library/Application Support/VirtualDJ"
+  },
   "playlists": [
     {
       "name": "The 448",

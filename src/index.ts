@@ -1,27 +1,32 @@
-import { createWriteStream, existsSync } from 'node:fs'
+import { type PathLike, createWriteStream, existsSync } from 'node:fs'
 import { writeFile } from 'node:fs/promises'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { pipeline } from 'node:stream/promises'
-import { playlists } from '~/assets/config.json'
+import { directory, playlists } from '~/assets/config.json'
 import { writeMetadata } from '#ffmpeg/writeMetadata'
 import { getPlaylistItems } from '#spotify/getPlaylistItems'
-import { createVirtualFolder } from '#virtualdj/createVirtualFolder'
+import { createVdjFolder } from '#virtualdj/createVdjFolder'
 import { download } from '#youtube/download'
 
 for (const { id, name } of playlists) {
   const tracks = await getPlaylistItems(id)
-  const paths = new Set<string>()
+  const paths = new Set<PathLike>()
   for (const track of tracks) {
-    const path = join(process.cwd(), `assets/tracks/${track.id}.m4a`)
+    const path = join(
+      homedir(),
+      directory.virtual_dj,
+      'Tracks',
+      `${track.id}.m4a`
+    )
     if (existsSync(path)) {
       paths.add(path)
       continue
     }
     try {
       const source = await download(track)
-      const ws = createWriteStream(path)
-      await pipeline(source, ws)
+      const writeStream = createWriteStream(path)
+      await pipeline(source, writeStream)
       await writeMetadata(track, path)
       paths.add(path)
     } catch (_) {
@@ -33,11 +38,11 @@ for (const { id, name } of playlists) {
       )
     }
   }
-  await writeFile(
-    join(
-      homedir(),
-      `Library/Application Support/VirtualDJ/MyLists/${name}.vdjfolder`
-    ),
-    createVirtualFolder(paths)
+  const vdjfolder = join(
+    homedir(),
+    directory.virtual_dj,
+    'MyLists',
+    `${name}.vdjfolder`
   )
+  await writeFile(vdjfolder, createVdjFolder(paths))
 }

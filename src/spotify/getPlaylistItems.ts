@@ -6,17 +6,18 @@ const limit = 50
 export async function getPlaylistItems(id: string): Promise<Track[]> {
   const tracks: PlaylistedTrack[] = []
   let offset = 0
-  let next = true
-  while (next) {
-    const response = await client.playlists.getPlaylistItems(
+  while (true) {
+    const { items } = await client.playlists.getPlaylistItems(
       id,
       undefined,
       undefined,
       limit,
       offset
     )
-    tracks.push(...response.items)
-    next = response.items.length === limit
+    tracks.push(...items)
+    if (items.length < limit) {
+      break
+    }
     offset += limit
   }
   return tracks.map(it => it.track as Track)

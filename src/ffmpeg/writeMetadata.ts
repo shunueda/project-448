@@ -1,17 +1,21 @@
+import type { PathLike } from 'node:fs'
 import { rename, unlink, writeFile } from 'node:fs/promises'
-import { basename } from 'node:path'
 import { path as ffmpeg } from '@ffmpeg-installer/ffmpeg'
 import type { Track } from '@spotify/web-api-ts-sdk'
 import { $, tempfile } from 'zx'
 
-export async function writeMetadata(track: Track, path: string): Promise<void> {
+export async function writeMetadata(
+  track: Track,
+  path: PathLike
+): Promise<void> {
   // download the cover art
-  const cover = `assets/covers/${track.id}.jpg`
-  const response = await fetch(track.album.images[0].url)
-  const buffer = await response.arrayBuffer().then(Buffer.from)
-  await writeFile(cover, buffer)
+  const cover = tempfile()
+  await fetch(track.album.images[0].url)
+    .then(it => it.arrayBuffer())
+    .then(it => new Uint8Array(it))
+    .then(it => writeFile(cover, it))
 
-  const temp = tempfile(basename(path))
+  const audio = tempfile()
   const options = [
     // allow overwriting
     ['-y'],
@@ -23,6 +27,8 @@ export async function writeMetadata(track: Track, path: string): Promise<void> {
     ['-i', cover],
     // copy the codecs
     ['-c', 'copy'],
+    // output in m4a format
+    ['-f', 'ipod'],
     // map inputs to outputs
     ['-map', '0:0'],
     ['-map', '1:0'],
@@ -33,9 +39,9 @@ export async function writeMetadata(track: Track, path: string): Promise<void> {
     ['-metadata', `title=${track.name}`],
     ['-metadata', `album=${track.album.name}`],
     // output
-    [temp]
+    [audio]
   ].flat()
   await $`${ffmpeg} ${options}`
   await unlink(path)
-  await rename(temp, path)
+  await rename(audio, path)
 }

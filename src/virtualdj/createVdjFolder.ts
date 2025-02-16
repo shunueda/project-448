@@ -1,6 +1,7 @@
+import type { PathLike } from 'node:fs'
 import xml from 'xml'
 
-export function createVirtualFolder(paths: Set<string>): string {
+export function createVdjFolder(paths: Set<PathLike>): string {
   return xml(
     {
       VirtualFolder: [
