@@ -15,6 +15,7 @@ export async function writeMetadata(
     .then(it => new Uint8Array(it))
     .then(it => writeFile(cover, it))
 
+  // write the metadata
   const audio = tempfile()
   const options = [
     // allow overwriting

@@ -7,7 +7,8 @@ export async function download(
   track: Track
 ): Promise<AsyncGenerator<Uint8Array, void, unknown>> {
   const artists = track.artists.map(it => it.name).join(' ')
-  const search = await client.music.search(`${artists} ${track.name}`, {
+  const query = `${artists} ${track.name}`
+  const search = await client.music.search(query, {
     type: 'song'
   })
   const item = search.songs?.contents.at(0)
